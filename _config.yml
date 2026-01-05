@@ -4,5 +4,10 @@ description: My professional portfolio
 baseurl: "/Portfolio"
 url: "https://mohammadmasah.github.io"
 theme: minima
+
 plugins:
   - jekyll-feed
+
+collections:
+  projects:
+    output: true
