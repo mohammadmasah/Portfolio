@@ -305,6 +305,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-feed (~> 0.12)
   jekyll-relative-links
   webrick (~> 1.8)
 
