@@ -32,3 +32,9 @@ I'm currently working on several web projects at Epitech. You can find my latest
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohammadmasah)
 
 <a href="{{ '/assets/docs/CV_2026-01-06_Mohammad Haroon_Masah.pdf' | relative_url }}" class="btn" style="background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">📥 Download My CV (PDF)</a>
+
+<style>
+    .home .page-heading{
+        display: none;
+    }
+    </style>
