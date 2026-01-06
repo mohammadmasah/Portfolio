@@ -1,0 +1,28 @@
+---
+layout: page
+title: 🎓 Klivio – Professional Learning Platform
+thumbnail: "/assets/images/Kilio1.png"
+description: A high-fidelity landing page designed using semantic HTML5 and advanced CSS3."
+---
+
+### 🎯 Project Overview
+
+**Klivio** is a modern, responsive landing page designed for an educational platform. The focus of this project was to master **UI/UX transition** from design to a clean, maintainable codebase with professional aesthetics.
+
+### ✨ Key Features
+
+- **Modern Hero Architecture:** Features sophisticated multi-layered gradients and high-quality visual assets.
+- **Structured Course Catalog:** Managed "Popular" and "Recent" courses using advanced **CSS Grid** layouts.
+- **Optimized UX:** Implemented social proof sections, customer reviews, and professional lead-generation forms.
+- **Semantic SEO:** Built using 100% semantic HTML5 tags for superior accessibility and search engine ranking.
+
+### 🛠️ Tech Stack
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
+![Flexbox](https://img.shields.io/badge/Layout-Flexbox%20%26%20Grid-blueviolet)
+![Typography](https://img.shields.io/badge/Fonts-Montserrat-success)
+
+---
+
+🔗 [View Live Demo](https://mohammadmasah.github.io/Klivio-static/) | 📁 [Source Code](https://github.com/mohammadmasah/Klivio-static)

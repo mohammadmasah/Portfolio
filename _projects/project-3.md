@@ -1,0 +1,27 @@
+---
+layout: page
+title: "⚡ Klivio – Tailwind CSS Edition"
+thumbnail: "/assets/images/Kilio2.png"
+description: "A high-performance educational interface built by me using Tailwind CSS and Utility-First principles."
+---
+
+### 🎯 Project Overview
+
+In this version of **Klivio**, I migrated the entire design to **Tailwind CSS** to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses on rapid styling without leaving the HTML.
+
+### ✨ Key Features
+
+- **Tailwind Architecture:** Utilized utility-first classes for consistent spacing, typography, and brand identity.
+- **Modular Components:** Built reusable UI components including a Hero section with gradient overlays and a grid-based Course Catalog.
+- **Performance Focused:** Clean codebase optimized for fast rendering and professional aesthetics.
+- **Modern Branding:** Integrated Montserrat typography and Font Awesome icons for a premium look.
+
+### 🛠️ Tech Stack
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)
+![PostCSS](https://img.shields.io/badge/PostCSS-FF6B6B?style=flat&logo=postcss&logoColor=white)
+
+---
+
+🔗 [View Live Demo](https://mohammadmasah.github.io/Klivio-tailwind/) | 📁 [Source Code](https://github.com/mohammadmasah/Klivio-tailwind)

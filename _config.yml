@@ -5,8 +5,13 @@ baseurl: "/Portfolio"
 url: "https://mohammadmasah.github.io"
 theme: minima
 
+header_pages:
+- about.markdown
+- project-1.md
+
 plugins:
   - jekyll-feed
+  - jekyll-relative-links
 
 collections:
   projects:
