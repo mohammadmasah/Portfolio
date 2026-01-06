@@ -1,13 +1,15 @@
-title: Mohammad Masah Portfolio
 email: mohammad-haroon.masah@epitech.eu
-description: My professional portfolio
+description: >-
+  Web Development Student at Epitech Paris. 
+  Focused on building modern web applications with HTML, CSS, and JavaScript.
 baseurl: "/Portfolio"
 url: "https://mohammadmasah.github.io"
 theme: minima
 
 header_pages:
-- about.markdown
-- project-1.md
+  - about.markdown
+  - projects.md
+  - index.markdown
 
 plugins:
   - jekyll-feed

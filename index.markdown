@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Home
+nav_order: 1
 ---
 
 # Hi, I'm Mohammad Haroon MASAH 👋🏻
@@ -30,4 +31,4 @@ I'm currently working on several web projects at Epitech. You can find my latest
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammad-masah)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohammadmasah)
 
-Check out my [Projects]({{'/_projects |url}}) or learn more [About Me]({{'about | url}})
+<a href="{{ '/assets/docs/CV_2026-01-06_Mohammad Haroon_Masah.pdf' | relative_url }}" class="btn" style="background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">📥 Download My CV (PDF)</a>
