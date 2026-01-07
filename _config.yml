@@ -1,3 +1,4 @@
+title: "Mohammad Masah Portfolio"
 email: "mohammad-haroon.masah@epitech.eu"
 description: >-
   Web Development Student at Epitech Paris. 
@@ -9,7 +10,6 @@ theme: minima
 header_pages:
   - about.markdown
   - projects.md
-  - index.markdown
 
 plugins:
   - jekyll-feed
