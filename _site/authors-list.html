@@ -101,7 +101,7 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-jane.html",
     "title": "Jane",
-    "body": "                    Jane Follow:         https://www. wowthemes. net         Blogger, fashionista, love to explore new ideas and write on my morning coffee!                                   Posts by Jane:               "
+    "body": "                    Jane Follow:                                                    Posts by Jane:               "
     }, {
     "id": 3,
     "url": "http://localhost:4000/author-sal.html",
@@ -111,7 +111,7 @@ var documents = [{
     "id": 4,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
-    "body": "Authors:                                             Mohammad H. Masah :       (View Posts)      Student at Epitech | Passionate about software development and creating innovative solutions.                          &nbsp;       &nbsp;                                                                             Jane :       (View Posts)      Blogger, fashionista, love to explore new ideas and write on my morning coffee!                         &nbsp;       &nbsp;                                      "
+    "body": "Authors:                                             Mohammad H. Masah :       (View Posts)      Student at Epitech | Passionate about software development and creating innovative solutions.                          &nbsp;       &nbsp;                                      "
     }, {
     "id": 5,
     "url": "http://localhost:4000/buy-me-a-coffee.html",
@@ -131,7 +131,7 @@ var documents = [{
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Mundana Free Jekyll Theme",
-    "body": " {% if page. url ==  /  %}      {% assign latest_post = site. posts[0] %}              &lt;div class= topfirstimage       style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{ latest_post. image | relative_url }}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;                   {{ latest_post. title }}     :            {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}                        In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                          {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}       {% if second_post. image %}               &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;             {% endif %}               {{ second_post. title }}     :            In        {% for category in second_post. categories %}       {{ category }},        {% endfor %}                      {{ second_post. date | date: '%b %d, %Y' }}                  {%- assign third_post = site. posts[2] -%}       {% if third_post. image %}               &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{ third_post. image | relative_url }}{% endif %}  alt= {{ third_post. title }} &gt;             {% endif %}               {{ third_post. title }}     :            In        {% for category in third_post. categories %}       {{ category }},        {% endfor %}                      {{ third_post. date | date: '%b %d, %Y' }}                  {%- assign fourth_post = site. posts[3] -%}       {% if fourth_post. image %}               &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}/{{ fourth_post. image | relative_url }}{% endif %}  alt= {{ fourth_post. title }} &gt;             {% endif %}               {{ fourth_post. title }}     :            In        {% for category in fourth_post. categories %}       {{ category }},        {% endfor %}                      {{ fourth_post. date | date: '%b %d, %Y' }}                 {% for post in site. posts %}  {% if post. tags contains  sticky  %}                    {{post. title}}             {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}             Read More                          {% endif %} {% endfor %} {% endif %}        All Stories:    {% for post in paginator. posts %}   {% include main-loop-card. html %}   {% endfor %}           {% if paginator. total_pages &gt; 1 %}         {% if paginator. previous_page %}     &laquo; Prev     {% else %}     &laquo;     {% endif %}     {% for page in (1. . paginator. total_pages) %}     {% if page == paginator. page %}     {{ page }}     {% elsif page == 1 %}     {{ page }}     {% else %}     {{ page }}     {% endif %}     {% endfor %}     {% if paginator. next_page %}     Next &raquo;     {% else %}     &raquo;     {% endif %}        {% endif %}          {% include sidebar-featured. html %}   "
+    "body": " {% if page. url ==  /  %}      {% assign latest_post = site. posts[0] %}              &lt;div class= topfirstimage       style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{ latest_post. image | relative_url }}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;                   {{ latest_post. title }}     :            {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}                        In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                          {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}       {% if second_post. image %}               &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;             {% endif %}               {{ second_post. title }}     :            In        {% for category in second_post. categories %}       {{ category }},        {% endfor %}                      {{ second_post. date | date: '%b %d, %Y' }}                  {%- assign third_post = site. posts[2] -%}       {% if third_post. image %}               &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{ third_post. image | relative_url }}{% endif %}  alt= {{ third_post. title }} &gt;             {% endif %}               {{ third_post. title }}     :            In        {% for category in third_post. categories %}       {{ category }},        {% endfor %}                      {{ third_post. date | date: '%b %d, %Y' }}                  {%- assign fourth_post = site. posts[3] -%}       {% if fourth_post. image %}               &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}/{{ fourth_post. image | relative_url }}{% endif %}  alt= {{ fourth_post. title }} &gt;             {% endif %}               {{ fourth_post. title }}     :            In        {% for category in fourth_post. categories %}       {{ category }},        {% endfor %}                      {{ fourth_post. date | date: '%b %d, %Y' }}                 {% for post in site. posts %}  {% if post. tags contains  sticky  %}                    {{post. title}}             {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}             Read More                          {% endif %} {% endfor %} {% endif %}        Personal Projects:    {% for post in paginator. posts %}   {% include main-loop-card. html %}   {% endfor %}           {% if paginator. total_pages &gt; 1 %}         {% if paginator. previous_page %}     &laquo; Prev     {% else %}     &laquo;     {% endif %}     {% for page in (1. . paginator. total_pages) %}     {% if page == paginator. page %}     {{ page }}     {% elsif page == 1 %}     {{ page }}     {% else %}     {{ page }}     {% endif %}     {% endfor %}     {% if paginator. next_page %}     Next &raquo;     {% else %}     &raquo;     {% endif %}        {% endif %}          {% include sidebar-featured. html %}   "
     }, {
     "id": 9,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -237,7 +237,7 @@ function lunr_search(term) {
         <div class="col-lg-6 mb-4">
             <div class="p-4 border rounded">
             <div class="row">
-            <div class="col-md-3 mb-4 mb-md-0"><img alt="Mohammad H. Masah" src="/assets/images/MASAH.jpg" class="rounded-circle" height="80" width="80" style="object-fit: cover; object-position: 0 8%"></div>
+            <div class="col-md-3 mb-4 mb-md-0"><img alt="Mohammad H. Masah" src="/assets/images/avatar1.jpg" class="rounded-circle" height="80" width="80"></div>
             <div class="col-md-9">
             <a href="/author-mohammad-h-masah">
             <h4 class="text-dark mb-0"> Mohammad H. Masah </h4>
@@ -254,27 +254,6 @@ function lunr_search(term) {
             </div>
             </div>
         </div>
-    
-        <!-- <div class="col-lg-6 mb-4">
-            <div class="p-4 border rounded">
-            <div class="row">
-            <div class="col-md-3 mb-4 mb-md-0"><img alt="Jane" src="/assets/images/avatar2.jpg" class="rounded-circle" height="80" width="80"></div>
-            <div class="col-md-9">
-            <a href="/author-jane">
-            <h4 class="text-dark mb-0"> Jane </h4>
-            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
-            <div class="excerpt">Blogger, fashionista, love to explore new ideas and write on my morning coffee!</div>
-            </a>
-            <div class="icon-block mt-3 d-flex justify-content-between">
-            <div>
-            <a target="_blank" href="https://twitter.com/wowthemesnet"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a>  &nbsp;
-            <a target="_blank" href="https://www.wowthemes.net"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-        </div> -->
     
     </div>
 </div>
