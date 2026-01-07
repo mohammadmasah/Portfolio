@@ -1,20 +1,48 @@
+# Site
+name: "Mohammad H. Masah"
+description: "Student at Epitech | Portfolio"
+logo: "assets/images/logo.png"
 email: "mohammad-haroon.masah@epitech.eu"
-description: >-
-  Web Development Student at Epitech Paris. 
-  Focused on building modern web applications with HTML, CSS, and JavaScript.
-baseurl: "/Portfolio"
-url: "https://mohammadmasah.github.io"
-theme: minima
 
-header_pages:
-  - about.markdown
-  - projects.md
-  - index.markdown
+include: ["_pages"]
+permalink: /:title/
 
 plugins:
   - jekyll-feed
-  - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
 
-collections:
-  projects:
-    output: true
+authors:
+  Mohammad:
+    name: "Mohammad H. Masah"
+    site: https://mohammadrasah.github.io/Portfolio/
+    avatar: /assets/images/avatar1.jpg
+    bio: "Student at Epitech | Passionate about software development and creating innovative solutions."
+    email: "mohammad-haroon.masah@epitech.eu"
+
+  jane:
+    name: Jane
+    site: https://www.wowthemes.net
+    avatar: /assets/images/avatar2.jpg
+    bio: "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+    email: fakemail@gmail.com
+    twitter: https://twitter.com/wowthemesnet
+
+defaults:
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: Mohammad
+      avatar: /assets/images/avatar1.jpg
+
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+# Paginate
+paginate: 10

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-07T17:24:31+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mohammad H. Masah</title><subtitle>Student at Epitech | Portfolio</subtitle><entry><title type="html">🌐 Epitalk – Team Project</title><link href="http://localhost:4000/project-1/" rel="alternate" type="text/html" title="🌐 Epitalk – Team Project" /><published>2026-01-07T00:00:00+01:00</published><updated>2026-01-07T00:00:00+01:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1/"><![CDATA[<h3 id="-overview">🧩 Overview</h3>
+
+<p><strong>Epitalk</strong> is a collaborative front-end web application designed for students, developed during my time at <strong>Web@cadémie</strong>. It simulates a smart assistant platform with a focus on user interaction.</p>
+
+<h3 id="-key-features">✨ Key Features</h3>
+
+<ul>
+  <li><strong>Chatbot UI:</strong> An interactive interface for quick student Q&amp;A.</li>
+  <li><strong>Student ID Generator:</strong> (My Role) Developed a dynamic tool that generates personalized student ID cards based on user input.</li>
+  <li><strong>Auth System:</strong> A clean login interface to simulate user access control.</li>
+</ul>
+
+<h3 id="️-tech-stack">🛠️ Tech Stack</h3>
+
+<p><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&amp;logo=css3&amp;logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=flat&amp;logo=javascript&amp;logoColor=black" alt="JavaScript" /></p>
+
+<hr />
+
+<p>🔗 <a href="https://github.com/mohammadmasah/Epitalk-Team-Project">View Source on GitHub</a></p>]]></content><author><name>mohammad</name></author><category term="Project" /><summary type="html"><![CDATA[An interactive educational platform built with HTML, CSS, and JavaScript.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/Epitalk.png" /><media:content medium="image" url="http://localhost:4000/assets/images/Epitalk.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">🎓 Klivio – Professional Learning Platform</title><link href="http://localhost:4000/project-2/" rel="alternate" type="text/html" title="🎓 Klivio – Professional Learning Platform" /><published>2026-01-07T00:00:00+01:00</published><updated>2026-01-07T00:00:00+01:00</updated><id>http://localhost:4000/project-2</id><content type="html" xml:base="http://localhost:4000/project-2/"><![CDATA[<h3 id="-project-overview">🎯 Project Overview</h3>
+
+<p><strong>Klivio</strong> is a modern, responsive landing page designed for an educational platform. The focus of this project was to master <strong>UI/UX transition</strong> from design to a clean, maintainable codebase with professional aesthetics.</p>
+
+<h3 id="-key-features">✨ Key Features</h3>
+
+<ul>
+  <li><strong>Modern Hero Architecture:</strong> Features sophisticated multi-layered gradients and high-quality visual assets.</li>
+  <li><strong>Structured Course Catalog:</strong> Managed “Popular” and “Recent” courses using advanced <strong>CSS Grid</strong> layouts.</li>
+  <li><strong>Optimized UX:</strong> Implemented social proof sections, customer reviews, and professional lead-generation forms.</li>
+  <li><strong>Semantic SEO:</strong> Built using 100% semantic HTML5 tags for superior accessibility and search engine ranking.</li>
+</ul>
+
+<h3 id="️-tech-stack">🛠️ Tech Stack</h3>
+
+<p><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&amp;logo=css3&amp;logoColor=white" alt="CSS3" />
+<img src="https://img.shields.io/badge/Layout-Flexbox%20%26%20Grid-blueviolet" alt="Flexbox" />
+<img src="https://img.shields.io/badge/Fonts-Montserrat-success" alt="Typography" /></p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>🔗 <a href="https://mohammadmasah.github.io/Klivio-static/">View Live Demo</a></td>
+      <td>📁 <a href="https://github.com/mohammadmasah/Klivio-static">Source Code</a></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>mohammad</name></author><category term="Project" /><summary type="html"><![CDATA[A high-fidelity landing page designed using semantic HTML5 and advanced CSS3.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/Kilio1.png" /><media:content medium="image" url="http://localhost:4000/assets/images/Kilio1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">⚡ Klivio – Tailwind CSS Edition</title><link href="http://localhost:4000/project-3/" rel="alternate" type="text/html" title="⚡ Klivio – Tailwind CSS Edition" /><published>2026-01-07T00:00:00+01:00</published><updated>2026-01-07T00:00:00+01:00</updated><id>http://localhost:4000/project-3</id><content type="html" xml:base="http://localhost:4000/project-3/"><![CDATA[<h3 id="-project-overview">🎯 Project Overview</h3>
+
+<p>In this version of <strong>Klivio</strong>, I migrated the entire design to <strong>Tailwind CSS</strong> to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses on rapid styling without leaving the HTML.</p>
+
+<h3 id="-key-features">✨ Key Features</h3>
+
+<ul>
+  <li><strong>Tailwind Architecture:</strong> Utilized utility-first classes for consistent spacing, typography, and brand identity.</li>
+  <li><strong>Modular Components:</strong> Built reusable UI components including a Hero section with gradient overlays and a grid-based Course Catalog.</li>
+  <li><strong>Performance Focused:</strong> Clean codebase optimized for fast rendering and professional aesthetics.</li>
+  <li><strong>Modern Branding:</strong> Integrated Montserrat typography and Font Awesome icons for a premium look.</li>
+</ul>
+
+<h3 id="️-tech-stack">🛠️ Tech Stack</h3>
+
+<p><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
+<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&amp;logo=tailwind-css&amp;logoColor=white" alt="Tailwind CSS" />
+<img src="https://img.shields.io/badge/PostCSS-FF6B6B?style=flat&amp;logo=postcss&amp;logoColor=white" alt="PostCSS" /></p>
+
+<hr />
+
+<table>
+  <tbody>
+    <tr>
+      <td>🔗 <a href="https://mohammadmasah.github.io/Klivio-tailwind/">View Live Demo</a></td>
+      <td>📁 <a href="https://github.com/mohammadmasah/Klivio-tailwind">Source Code</a></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>mohammad</name></author><category term="Project" /><summary type="html"><![CDATA[A high-performance educational interface built by me using Tailwind CSS and Utility-First principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/Kilio2.png" /><media:content medium="image" url="http://localhost:4000/assets/images/Kilio2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
