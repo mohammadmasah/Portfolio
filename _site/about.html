@@ -15,13 +15,11 @@
 <link rel="canonical" href="http://localhost:4000/about.html" />
 <meta property="og:url" content="http://localhost:4000/about.html" />
 <meta property="og:site_name" content="Mohammad H. Masah" />
-<meta property="og:image" content="http://localhost:4000/assets/images/screenshot.jpg" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/images/screenshot.jpg" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Student at Epitech Portfolio","headline":"About","image":"http://localhost:4000/assets/images/screenshot.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/about.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Student at Epitech Portfolio","headline":"About","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/about.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -98,7 +96,7 @@ var documents = [{
     "id": 1,
     "url": "http://localhost:4000/about.html",
     "title": "About",
-    "body": "Made with by Sal @wowthemesnet. "
+    "body": " "
     }, {
     "id": 2,
     "url": "http://localhost:4000/author-jane.html",
@@ -237,10 +235,26 @@ function lunr_search(term) {
   <div class="row">
     <div class="col-md-8">
       
-      <img class="card-img-top mb-5 shadow-lg" src="http://localhost:4000/assets/images/screenshot.jpg" alt="About">
-      
       <div class="page-content">
-        <p>Made with <i class="fa fa-heart text-danger"></i> by Sal <a href="https://www.wowthemes.net/category/free-themes-templates/">@wowthemesnet</a>.</p>
+        <style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .my-profile-img {
+    width: 350px; 
+    height: 350px; 
+    object-fit: cover; 
+    object-position: 0 5%; 
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(21, 27, 111, 0.4);
+    animation: float 4s ease-in-out infinite; 
+  }
+</style>
+
+<p><img src="/assets/images/MASAH.jpg" alt="Mohammad Haroon" class="my-profile-img" /></p>
 
         <!-- Comments -->
         
@@ -266,13 +280,28 @@ function lunr_search(term) {
       </div>
     </div>
     <div class="col-md-4">
-      <h5 class="mb-3">Welcome</h5>
+      <h5 class="mb-3">Hello 👋🏻</h5>
 
-<p>Hi! The website you are previewing is a demonstration for Mundana Jekyll theme, hosted on Github, made by <a href="https://www.wowthemes.net/donate/">Sal</a>.</p>
+<p><span style="font-weight: bold;"> Web Development Student | Aspiring Full-Stack Developer</span>
+<p>I am a Web Development student at Epitech Paris, developing a solid foundation in both front-end and back-end technologies. 
+I am currently seeking a full-stack alternance opportunity in Paris or its surrounding areas, where I can apply my technical skills, collaborate with experienced professionals, and contribute to real-world projects while continuing to grow as a developer.</p>
+</p>
 
-<a target="_blank" href="https://www.wowthemes.net/mundana-jekyll-theme/" class="btn btn-warning d-block mb-2"><i class="fa fa-file"></i> Documentation</a>
 
-<a target="_blank" class="btn btn-danger d-block" href="https://www.wowthemes.net/donate/"><i class="fa fa-coffee"></i> Buy me a coffee</a> 
+<a
+  target="_blank"
+  href="/assets/docs/CV_2026-01-06_Mohammad Haroon_Masah.pdf"
+  class="btn btn-warning d-block mb-2"
+  ><i class="fa fa-file"></i> Download CV</a
+>
+
+<a
+  target="_blank"
+  class="btn btn-danger d-block"
+  href="/contact.html/"
+  ><i class="fa fa-coffee"></i> Contact Me</a
+>
+
     </div>
   </div>
 </div>
