@@ -137,7 +137,7 @@ var documents = [{
     "id": 6,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Categories               Project:                                  		Klivio – Tailwind CSS Edition	: 		  In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . . 	 			In 				Project, 								Jan 07, 2025						                                 		 Klivio – Professional Learning Platform	: 		  Project Overview	 			In 				Project, 								Jan 07, 2025						                                 		🌐 Epitalk – Team Project	: 		  🧩 Overview	 			In 				Project, 								Jan 07, 2025						                                            Team Projects:                  🌐 Epitalk – Team Project             In                 Project,                                  "
+    "body": "          Categories               See more:                                        Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                                                     Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                                                     🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                                          Team Projects:                  🌐 Epitalk – Team Project             In                 See more,                                  "
     }, {
     "id": 7,
     "url": "http://localhost:4000/contact.html",
@@ -147,7 +147,7 @@ var documents = [{
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Mundana Free Jekyll Theme",
-    "body": "                                        Klivio – Tailwind CSS Edition     :            In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and . . .                                 Project,                &lt;/span&gt;      &lt;/small&gt;             Jan 07, 2025                                                                         Klivio – Professional Learning Platform     :                          Project,                              Jan 07, 2025                                                              🌐 Epitalk – Team Project     :                          Project,                              Jan 07, 2025                                       :                   &lt;/span&gt;     &lt;/small&gt;                                              Personal Projects:         		Klivio – Tailwind CSS Edition	: 		  In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . . 	 			In 				Project, 								Jan 07, 2025						        		 Klivio – Professional Learning Platform	: 		  Project Overview	 			In 				Project, 								Jan 07, 2025						        		🌐 Epitalk – Team Project	: 		  🧩 Overview	 			In 				Project, 								Jan 07, 2025						                         Team Projects:                  🌐 Epitalk – Team Project             In                 Project,                           "
+    "body": "                                        Klivio – Tailwind CSS Edition     :            In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and . . .                                 See more,                &lt;/span&gt;      &lt;/small&gt;             Jan 07, 2025                                                                         Klivio – Professional Learning Platform     :                          See more,                              Jan 07, 2025                                                              🌐 Epitalk – Team Project     :                          See more,                              Jan 07, 2025                                       :                   &lt;/span&gt;     &lt;/small&gt;                                              Personal Projects:               Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                             Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                            🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                       Team Projects:                  🌐 Epitalk – Team Project             In                 See more,                           "
     }, {
     "id": 9,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -157,7 +157,7 @@ var documents = [{
     "id": 10,
     "url": "http://localhost:4000/tags.html",
     "title": "Tags",
-    "body": "          Tags               featured:                                  		🌐 Epitalk – Team Project	: 		  🧩 Overview	 			In 				Project, 								Jan 07, 2025						                                            Team Projects:                  🌐 Epitalk – Team Project             In                 Project,                                  "
+    "body": "          Tags               featured:                                        🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                                          Team Projects:                  🌐 Epitalk – Team Project             In                 See more,                                  "
     }, {
     "id": 11,
     "url": "http://localhost:4000/robots.txt",
@@ -260,31 +260,46 @@ function lunr_search(term) {
           
          
             <div class="mb-5 d-flex justify-content-between main-loop-card">
-<div class="pr-3">
-	<h2 class="mb-1 h4 font-weight-bold">
-	<a class="text-dark" href="/project-1/">🌐 Epitalk – Team Project</a>
-	</h2>
-	<p class="excerpt">
-	   🧩 Overview
-	</p>
-	<small class="d-block text-muted">
-		In <span class="catlist">
-		
-		<a class="text-capitalize text-muted smoothscroll" href="/categories.html#project">Project</a><span class="sep">, </span>
-		
-		</span>
-	</small>
-	<small class="text-muted">
-		Jan 07, 2025
-	</small>
-</div>
+  <div class="pr-3">
+    <h2 class="mb-1 h4 font-weight-bold">
+      <a class="text-dark" href="/project-1/"
+        >🌐 Epitalk – Team Project</a
+      >
+    </h2>
+    <p class="excerpt">
+      🧩 Overview
+    </p>
+    <!--------------------------------it's btn in the categories and the btn color is atoumactic in bootstrap ------------------------------>
+    <div class="mt-3 mb-2">
+      
+      <a
+        class="btn btn-outline-danger btn-sm px-3 shadow-sm"
+        href="/project-1/"
+        style="
+          border-radius: 20px;
+          font-weight: 600;
+          font-size: 12px;
+          transition: 0.3s;
+        "
+      >
+        <!----------------------------------------------------------------------------------------------------------------------------------------->
+        See more
+        <i class="fas fa-external-link-alt ml-1" style="font-size: 10px"></i>
+      </a>
+      
+    </div>
 
-	<div class="col-md-3 pr-0 text-right">
-	<a href="/project-1/">
-	<img class="w-100" src="/assets/images/Epitalk.png" alt="🌐 Epitalk – Team Project">
-	</a>
-	</div>
-
+    <small class="text-muted d-block">
+      Jan 07, 2025
+    </small>
+  </div>
+  
+  <div class="col-md-3 pr-0 text-right">
+    <a href="/project-1/">
+      <img class="w-100" src="/assets/images/Epitalk.png" alt="🌐 Epitalk – Team Project">
+    </a>
+  </div>
+  
 </div>
 
           
@@ -315,8 +330,8 @@ function lunr_search(term) {
             
             <a
               class="text-capitalize text-muted smoothscroll"
-              href=" /categories.html#project"
-              >Project</a
+              href=" /categories.html#see more"
+              >See more</a
             ><span class="sep">, </span>
             
           </span>
