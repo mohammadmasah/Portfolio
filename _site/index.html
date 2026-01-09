@@ -137,7 +137,7 @@ var documents = [{
     "id": 6,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Categories               See more:                                        Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                                                     Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                                                     🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                                          Team Projects:                  🌐 Epitalk – Team Project             In                 See more,                                  "
+    "body": "          Categories               See more:                                        Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                                                     Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                                                     🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                                          Team Projects:                  🌐 Epitalk – Team Project                             See more                                      "
     }, {
     "id": 7,
     "url": "http://localhost:4000/contact.html",
@@ -147,7 +147,7 @@ var documents = [{
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Mundana Free Jekyll Theme",
-    "body": "                                        Klivio – Tailwind CSS Edition     :            In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and . . .                                 See more,                &lt;/span&gt;      &lt;/small&gt;             Jan 07, 2025                                                                         Klivio – Professional Learning Platform     :                          See more,                              Jan 07, 2025                                                              🌐 Epitalk – Team Project     :                          See more,                              Jan 07, 2025                                       :                   &lt;/span&gt;     &lt;/small&gt;                                              Personal Projects:               Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                             Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                            🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                       Team Projects:                  🌐 Epitalk – Team Project             In                 See more,                           "
+    "body": "                                        Klivio – Tailwind CSS Edition     :            In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and . . .                                          See more          &lt;/span&gt;                          Jan 07, 2025                                                                              Klivio – Professional Learning Platform     :                          See more,                              Jan 07, 2025                                                              🌐 Epitalk – Team Project     :                          See more,                              Jan 07, 2025                                       :                   &lt;/span&gt;     &lt;/small&gt;                                              Personal Projects:               Klivio – Tailwind CSS Edition  :      In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses . . .                     See more                 Jan 07, 2025                             Klivio – Professional Learning Platform  :      Project Overview                     See more                 Jan 07, 2025                            🌐 Epitalk – Team Project  :      🧩 Overview                     See more                 Jan 07, 2025                                       Team Projects:                  🌐 Epitalk – Team Project                             See more                               "
     }, {
     "id": 9,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -266,17 +266,20 @@ function lunr_search(term) {
           <p class="excerpt">
             In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and ...
           </p>
+          <!-------------------------------first page btn---------------------------------->
           <div>
-            
                 
-                <a class="text-capitalize text-muted smoothscroll" href="/categories.html#see more">See more</a><span class="sep">, </span>
-                
-              </span>
-            </small>
-            <small class="text-muted">
-              Jan 07, 2025
-            </small>
+                <a class="btn btn-outline-danger btn-sm px-3 shadow-sm mt-1" 
+                    href="/categories.html#see more" 
+                   style="border-radius: 20px; font-weight: 600; font-size: 12px; transition: 0.3s;">
+                    See more 
+                  </a> </span>
+                  
+                <small class="text-muted">
+                 Jan 07, 2025
+             </small>
           </div>
+          <!-------------------------------------------------------------------------------->
         </div>
       </div>
     </div>
@@ -298,7 +301,7 @@ function lunr_search(term) {
           <small class="d-block text-muted">
              <span class="catlist">
               
-              <a class="text-capitalize text-muted smoothscroll" href="/categories.html#see more">See more</a><span class="sep">, </span>
+              <a class="text-capitalize text-muted smoothscroll " href="/categories.html#see more">See more</a><span class="sep">, </span>
               
             </span>
           </small>
@@ -323,7 +326,7 @@ function lunr_search(term) {
           <small class="d-block text-muted">
              <span class="catlist">
               
-              <a class="text-capitalize text-muted smoothscroll" href="/categories.html#see more">See more</a><span class="sep">, </span>
+              <a class="text-capitalize text-muted smoothscroll " href="/categories.html#see more">See more</a><span class="sep">, </span>
               
             </span>
           </small>
@@ -522,18 +525,19 @@ function lunr_search(term) {
             >🌐 Epitalk – Team Project</a
           >
         </h6>
-        <span class="d-block text-muted">
-          In
+        <!-----------------------------btn Team project------------------------------>
+        <span class="d-block text-muted font-size: 40px;">
           <span class="catlist">
             
             <a
-              class="text-capitalize text-muted smoothscroll"
+              class="btn btn-outline-danger btn-sm px-3 shadow-sm mt-1 border-radius: 20px; font-size: 12px; transition: 0.3s;"
               href=" /categories.html#see more"
               >See more</a
-            ><span class="sep">, </span>
+            ><span class="sep"> </span>
             
           </span>
         </span>
+        <!------------------------------------------------------------------------------->
       </span>
     </li>
     
