@@ -26,6 +26,22 @@
 
   {% include tracking-header.html %}
 
+  <style>
+    html, body{
+      height: 100%;
+      margin: 0;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+    }
+    .site-content{
+      flex: 1 0 auto;
+    }
+    footer{
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 
 <body class="{% if page.url == "/" %}homefirstpage{% endif %}">
@@ -54,24 +70,25 @@
   </div>
 
   <!-- Content -->
-  <main role="main" class="site-content">
+  <main role="main" class="site-content" style="flex: 1 0 auto; padding-top: 70px;">
     {{ content }}
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-top p-3 text-muted small">
+  <footer class=" border-top p-3 text-muted small"
+  style="background: linear-gradient(135deg, #0f0c2915, #302b6320, #24243e15);">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div>
           <span class="navbar-brand mr-2 mb-0"><strong>Mohammad's Portfolio</strong></span>
-          <span>Copyright © {{ site.time | date: "%Y" }}.</span>
+          
 
           <!--  Github Repo Star Btn-->
-          <a class="text-dark ml-1" target="_blank" href="https://github.com/mohammadrasah/Portfolio"><i class="fab fa-github"></i> View Source on GitHub</a>
-
+          
         </div>
         <div>
-          Customized by <a target="_blank" class="text-dark font-weight-bold" href="https://github.com/mohammadrasah/Portfolio"> Mohammad H. Masah </a>
+          <a class="text-dark ml-1 mr-3" target="_blank" href="https://github.com/mohammadrasah/Portfolio"><i class="fab fa-github"></i> View Source on GitHub</a>
+          Customized by <a target="_blank" class="text-dark font-weight-bold " href="https://github.com/mohammadrasah/Portfolio"> Mohammad H. Masah </a>
         </div>
       </div>
     </div>
