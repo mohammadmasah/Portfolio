@@ -27,8 +27,7 @@ description: "Mohammad H. Masah - Web Development Student Portfolio"
             {{ latest_post.excerpt | strip_html | strip_newlines | truncate: 136 }}
           </p>
           <div>
-            <small class="d-block text-muted">
-              In <span class="catlist">
+            
                 {% for category in latest_post.categories %}
                 <a class="text-capitalize text-muted smoothscroll" href="{{ 'categories.html' | relative_url }}#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
                 {% endfor %}
@@ -112,8 +111,7 @@ description: "Mohammad H. Masah - Web Development Student Portfolio"
           <h2 class="mb-2 h6 font-weight-bold">
             <a class="text-dark" href="{{ fourth_post.url | relative_url }}">{{ fourth_post.title }}</a>
           </h2>
-          <small class="d-block text-muted">
-            In <span class="catlist">
+          
               {% for category in fourth_post.categories %}
               <a class="text-capitalize text-muted smoothscroll" href="{{ 'categories.html' | relative_url }}#{{ category | downcase }}">{{ category }}</a><span class="sep">, </span>
               {% endfor %}

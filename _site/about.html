@@ -42,6 +42,22 @@
 
   <!-- This goes before </head> closing tag, Google Analytics can be placed here --> 
 
+  <!-- <style>
+    html, body{
+      height: 100%;
+      margin: 0;
+    }
+    body{
+      display: flex;
+      flex-direction: column;
+    }
+    .site-content{
+      flex: 1 0 auto;
+    }
+    footer{
+      flex-shrink: 0;
+    } -->
+  </style>
 </head>
 
 <body class="">
@@ -126,12 +142,12 @@ var documents = [{
     "id": 7,
     "url": "http://localhost:4000/contact.html",
     "title": "Contact",
-    "body": "  Please send your message to {{site. name}}. We will reply as soon as possible!   "
+    "body": "  Thank you for visiting my portfolio. Please leave your message below, and I will respond to your inquiry shortly.   "
     }, {
     "id": 8,
     "url": "http://localhost:4000/",
     "title": "Mundana Free Jekyll Theme",
-    "body": " {% if page. url ==  /  %}      {% assign latest_post = site. posts[0] %}              &lt;div class= topfirstimage       style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{ latest_post. image | relative_url }}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;                   {{ latest_post. title }}     :            {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}                        In         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}                          {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}       {% if second_post. image %}               &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;             {% endif %}               {{ second_post. title }}     :                   {% for category in second_post. categories %}       {{ category }},        {% endfor %}                      {{ second_post. date | date: '%b %d, %Y' }}                  {%- assign third_post = site. posts[2] -%}       {% if third_post. image %}               &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{ third_post. image | relative_url }}{% endif %}  alt= {{ third_post. title }} &gt;             {% endif %}               {{ third_post. title }}     :                   {% for category in third_post. categories %}       {{ category }},        {% endfor %}                      {{ third_post. date | date: '%b %d, %Y' }}                  {%- assign fourth_post = site. posts[3] -%}       {% if fourth_post. image %}               &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}/{{ fourth_post. image | relative_url }}{% endif %}  alt= {{ fourth_post. title }} &gt;             {% endif %}               {{ fourth_post. title }}     :            In        {% for category in fourth_post. categories %}       {{ category }},        {% endfor %}                      {{ fourth_post. date | date: '%b %d, %Y' }}                 {% for post in site. posts %}  {% if post. tags contains  sticky  %}                    {{post. title}}             {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}             Read More                          {% endif %} {% endfor %} {% endif %}        Personal Projects:    {% for post in site. posts %}     {% include main-loop-card. html %}   {% endfor %}           {% if paginator. total_pages &gt; 1 %}         {% if paginator. previous_page %}     &laquo; Prev     {% else %}     &laquo;     {% endif %}     {% for page in (1. . paginator. total_pages) %}     {% if page == paginator. page %}     {{ page }}     {% elsif page == 1 %}     {{ page }}     {% else %}     {{ page }}     {% endif %}     {% endfor %}     {% if paginator. next_page %}     Next &raquo;     {% else %}     &raquo;     {% endif %}        {% endif %}          {% include sidebar-featured. html %}   "
+    "body": " {% if page. url ==  /  %}      {% assign latest_post = site. posts[0] %}              &lt;div class= topfirstimage       style= background-image: url({% if latest_post. image contains  ://  %}{{ latest_post. image }}{% else %} {{ latest_post. image | relative_url }}{% endif %}); height: 200px;  background-size: cover;  background-repeat: no-repeat; &gt;&lt;/div&gt;                   {{ latest_post. title }}     :            {{ latest_post. excerpt | strip_html | strip_newlines | truncate: 136 }}                         {% for category in latest_post. categories %}        {{ category }},         {% endfor %}       &lt;/span&gt;      &lt;/small&gt;             {{ latest_post. date | date: '%b %d, %Y' }}                            {%- assign second_post = site. posts[1] -%}       {% if second_post. image %}               &lt;img class= w-100  src= {% if second_post. image contains  ://  %}{{ second_post. image }}{% else %}{{ second_post. image | absolute_url }}{% endif %}  alt= {{ second_post. title }} &gt;             {% endif %}               {{ second_post. title }}     :                   {% for category in second_post. categories %}       {{ category }},        {% endfor %}                      {{ second_post. date | date: '%b %d, %Y' }}                  {%- assign third_post = site. posts[2] -%}       {% if third_post. image %}               &lt;img class= w-100  src= {% if third_post. image contains  ://  %}{{ third_post. image }}{% else %}{{ third_post. image | relative_url }}{% endif %}  alt= {{ third_post. title }} &gt;             {% endif %}               {{ third_post. title }}     :                   {% for category in third_post. categories %}       {{ category }},        {% endfor %}                      {{ third_post. date | date: '%b %d, %Y' }}                  {%- assign fourth_post = site. posts[3] -%}       {% if fourth_post. image %}               &lt;img class= w-100  src= {% if fourth_post. image contains  ://  %}{{ fourth_post. image }}{% else %}/{{ fourth_post. image | relative_url }}{% endif %}  alt= {{ fourth_post. title }} &gt;             {% endif %}               {{ fourth_post. title }}     :             {% for category in fourth_post. categories %}       {{ category }},        {% endfor %}      &lt;/span&gt;     &lt;/small&gt;           {{ fourth_post. date | date: '%b %d, %Y' }}                 {% for post in site. posts %}  {% if post. tags contains  sticky  %}                    {{post. title}}             {{ post. excerpt | strip_html | strip_newlines | truncate: 136 }}             Read More                          {% endif %} {% endfor %} {% endif %}        Personal Projects:    {% for post in site. posts %}     {% include main-loop-card. html %}   {% endfor %}           {% if paginator. total_pages &gt; 1 %}         {% if paginator. previous_page %}     &laquo; Prev     {% else %}     &laquo;     {% endif %}     {% for page in (1. . paginator. total_pages) %}     {% if page == paginator. page %}     {{ page }}     {% elsif page == 1 %}     {{ page }}     {% else %}     {{ page }}     {% endif %}     {% endfor %}     {% if paginator. next_page %}     Next &raquo;     {% else %}     &raquo;     {% endif %}        {% endif %}          {% include sidebar-featured. html %}   "
     }, {
     "id": 9,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -151,7 +167,7 @@ var documents = [{
     "id": 12,
     "url": "http://localhost:4000/project-3/",
     "title": "Klivio – Tailwind CSS Edition",
-    "body": "2025/01/07 - Project Overview: In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses on rapid styling without leaving the HTML. ✨ Key Features:  Tailwind Architecture: Utilized utility-first classes for consistent spacing, typography, and brand identity.  Modular Components: Built reusable UI components including a Hero section with gradient overlays and a grid-based Course Catalog.  Performance Focused: Clean codebase optimized for fast rendering and professional aesthetics.  Modern Branding: Integrated Montserrat typography and Font Awesome icons for a premium look. 🛠️ Tech Stack:       🔗 View Live Demo   📁 Source Code   "
+    "body": "2025/01/07 - In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses on rapid styling without leaving the HTML. ✨ Key Features:  Tailwind Architecture: Utilized utility-first classes for consistent spacing, typography, and brand identity.  Modular Components: Built reusable UI components including a Hero section with gradient overlays and a grid-based Course Catalog.  Performance Focused: Clean codebase optimized for fast rendering and professional aesthetics.  Modern Branding: Integrated Montserrat typography and Font Awesome icons for a premium look. 🛠️ Tech Stack:       🔗 View Live Demo   📁 Source Code   "
     }, {
     "id": 13,
     "url": "http://localhost:4000/project-2/",
@@ -229,7 +245,7 @@ function lunr_search(term) {
   </div>
 
   <!-- Content -->
-  <main role="main" class="site-content">
+  <main role="main" class="site-content" style="flex: 1 0 auto; padding-top: 70px;">
     <div class="container">
   <h3 class="font-weight-bold spanborder"><span>About</span></h3>
   <div class="row">
@@ -309,19 +325,20 @@ I am currently seeking a full-stack alternance opportunity in Paris or its surro
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-top p-3 text-muted small">
+  <footer class=" border-top p-3 text-muted small"
+  style="background: linear-gradient(135deg, #0f0c2915, #302b6320, #24243e15);">
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div>
           <span class="navbar-brand mr-2 mb-0"><strong>Mohammad's Portfolio</strong></span>
-          <span>Copyright © 2026.</span>
+          
 
           <!--  Github Repo Star Btn-->
-          <a class="text-dark ml-1" target="_blank" href="https://github.com/mohammadrasah/Portfolio"><i class="fab fa-github"></i> View Source on GitHub</a>
-
+          
         </div>
         <div>
-          Customized by <a target="_blank" class="text-dark font-weight-bold" href="https://github.com/mohammadrasah/Portfolio"> Mohammad H. Masah </a>
+          <a class="text-dark ml-1 mr-3" target="_blank" href="https://github.com/mohammadrasah/Portfolio"><i class="fab fa-github"></i> View Source on GitHub</a>
+          Customized by <a target="_blank" class="text-dark font-weight-bold " href="https://github.com/mohammadrasah/Portfolio"> Mohammad</a>
         </div>
       </div>
     </div>
