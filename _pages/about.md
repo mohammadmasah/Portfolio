@@ -20,6 +20,7 @@ comments: true
     border-radius: 50%;
     box-shadow: 0 20px 40px rgba(21, 27, 111, 0.4);
     animation: float 4s ease-in-out infinite; 
+    margin-left: 15px;
   }
 </style>
 

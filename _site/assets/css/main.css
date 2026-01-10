@@ -1361,10 +1361,10 @@ pre {
   font-size: 1rem;
   line-height: 1.6;
   color: #495057;
-  background-color: #fff;
+  background-color: #68686d2b;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media screen and (prefers-reduced-motion: reduce) {
     .form-control {
@@ -1458,7 +1458,8 @@ textarea.form-control {
   height: auto; }
 
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; 
+}
 
 .form-text {
   display: block;
@@ -1681,7 +1682,8 @@ textarea.form-control {
       flex: 0 0 auto;
       flex-flow: row wrap;
       align-items: center;
-      margin-bottom: 0; }
+      margin-bottom: 0; 
+    }
     .form-inline .form-control {
       display: inline-block;
       width: auto;

@@ -20,8 +20,8 @@ authors:
     avatar: /assets/images/avatar1.jpg
     bio: "Student at Epitech | Passionate about software development and creating innovative solutions."
     email: "mohammad-haroon.masah@epitech.eu"
-
 defaults:
+
   # all posts
   - scope:
       path: "_posts"

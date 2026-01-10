@@ -5,7 +5,7 @@ permalink: "/contact.html"
 
 <form action="https://formspree.io/f/mqeezkgz" method="POST">    
 <p class="mb-4">Thank you for visiting my portfolio. Please leave your message below, and <strong> I will respond to your inquiry shortly</strong>.</p>
-<div class="form-group row">
+<div class="form-group row ">
 <div class="col-md-6">
 <input class="form-control" type="text" name="name" placeholder="Name*" required>
 </div>
@@ -20,17 +20,17 @@ permalink: "/contact.html"
     footer{
         display: none;
     }
-    .form-control:focus {
+    /* .form-control:focus {
         border-color: #140809ff;
         box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.2);
     }
 body {
-    background: linear-gradient(-45deg, #f8f9fa, #e9ecef, #f1f3f5, #dee2e6) !important;
+    background: linear-gradient(-45deg, #96c6f67c, #c2d6eaad, #a7c1db95, #6eaeef6d) !important;
     background-size: 400% 400% !important;
     animation: gradientAnimation 15s ease infinite !important;
     min-height: 100vh;
     background-attachment: fixed;
-}
+} */
 
 
     
