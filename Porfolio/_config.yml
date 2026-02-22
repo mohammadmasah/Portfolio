@@ -1,0 +1,35 @@
+# Site
+name: "Mohammad H. Masah"
+description: "Student at Epitech | Portfolio"
+url: "https://mohammad-h.dev"
+baseurl: ""
+logo: "assets/images/logo.png"
+email: "mohammad-haroon.masah@epitech.eu"
+
+include: ["_pages"]
+permalink: /:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+
+  # all posts
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+# Paginate
+paginate: 10
+
+

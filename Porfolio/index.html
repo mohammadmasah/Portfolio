@@ -1,0 +1,227 @@
+---
+title: "Mohammad's Portfolio"
+layout: default
+pagination:
+enabled: true
+description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
+---
+
+<div class="container">
+  {% if page.url == "/" %}
+
+  <div class="row align-items-center py-5">
+    <div class="col-md-7">
+      
+
+<h1 class="display-4 font-weight-bold" style="position: relative; z-index: 1;">
+  Hi, I'm <span class="text-danger" id="typewriter"></span><span class="cursor">|</span>
+</h1>
+      <p class="lead text-muted">
+        As a Full-Stack Web Development student (Web@cadémie by EPITECH), I am
+        translating my past experience as an NGO project coordinator into
+        technical strengths.  With an analytical mindset, I am learning to
+        build reliable and intuitive applications using PHP, JavaScript, MySQL,
+        and Docker.  Backed by my professional maturity and rigorous work
+        ethic, I am seeking a 14-month work-study placement (alternance)
+        starting in September 2025 to bring real added value to your team.
+      </p>
+      <div class="mt-4">
+        <a
+          href="{{ 'categories.html#see-more' | relative_url}}"
+          class="btn btn-dark btn-lg px-4 mr-2"
+          >View My Work</a
+        >
+    
+      </div>
+    </div>
+    <div class="col-md-5 text-center d-none d-md-block">
+      <div class="p-4 bg-light rounded shadow-sm">
+        <h5 class="mb-3 font-weight-bold">Technical Stack</h5>
+        <div
+          class="d-flex flex-wrap justify-content-center align-items-center gap-3"
+          style="gap: 15px"
+        >
+          <i
+            class="fab fa-html5 fa-2x tech-icon"
+            title="HTML5"
+            style="color: #e34c26"
+          ></i>
+          <i
+            class="fab fa-css3-alt fa-2x tech-icon"
+            title="CSS3"
+            style="color: #264de4"
+          ></i>
+          <i
+            class="fab fa-js fa-2x tech-icon"
+            title="JavaScript (ES6+)"
+            style="color: #f7df1e"
+          ></i>
+          <i
+            class="fab fa-bootstrap fa-2x tech-icon"
+            title="Bootstrap 5"
+            style="color: #7952b3"
+          ></i>
+          <span
+            class="font-weight-bold tech-icon"
+            style="color: #38bdf8; font-size: 1.2rem"
+            title="Tailwind CSS"
+            >Tailwind</span
+          >
+
+          <i
+            class="fab fa-php fa-2x tech-icon"
+            title="PHP 8"
+            style="color: #777bb4"
+          ></i>
+          <i
+            class="fas fa-database fa-2x tech-icon"
+            title="MySQL / PDO"
+            style="color: #00758f"
+          ></i>
+
+          <i
+            class="fab fa-docker fa-2x tech-icon"
+            title="Docker"
+            style="color: #2496ed"
+          ></i>
+          <i
+            class="fab fa-github fa-2x tech-icon"
+            title="Git & GitHub"
+            style="color: #181717"
+          ></i>
+          <i
+            class="fab fa-figma fa-2x tech-icon"
+            title="Figma"
+            style="color: #f24e1e"
+          ></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr id="projects" class="my-5" />
+
+  <div class="row remove-site-content-margin">
+    <div class="col-12 mb-4">
+      <h3 class="font-weight-bold spanborder">
+        <span>Featured Projects</span>
+      </h3>
+    </div>
+
+    {% assign latest_post = site.posts[0] %}
+    <div class="col-md-6 mb-5">
+      <div class="card border-0 box-shadow h-100">
+        <a href="{{ latest_post.url | relative_url }}">
+          <div
+            class="topfirstimage card-zoom"
+            style="background-image: url({% if latest_post.image contains '://' %}{{ latest_post.image }}{% else %} {{ latest_post.image | relative_url }}{% endif %}); height: 280px; border-radius: 10px 10px 0 0; background-size: cover; background-position: center;"
+          ></div>
+        </a>
+        <div class="card-body d-flex flex-column align-items-start">
+          <h2 class="h4 font-weight-bold">
+            <a class="text-dark" href="{{ latest_post.url | relative_url }}"
+              >{{ latest_post.title }}</a
+            >
+          </h2>
+          <p class="text-muted">
+            {{ latest_post.description | truncate: 120 }}
+          </p>
+          <div class="mt-auto">
+            {% for category in latest_post.categories %}
+            <span
+              class="badge badge-danger px-3 py-2"
+              style="border-radius: 20px"
+              >{{ category }}</span
+            >
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      {% for i in (1..3) %} {% assign p = site.posts[i] %} {% if p %}
+      <div
+        class="mb-4 d-flex align-items-center card-zoom bg-white p-2 rounded shadow-sm"
+      >
+        <div class="col-4 px-0">
+          <a href="{{ p.url | relative_url }}">
+            <img
+              class="rounded w-100"
+              src="{{ p.image | relative_url }}"
+              alt="{{ p.title }}"
+              style="height: 80px; object-fit: cover"
+            />
+          </a>
+        </div>
+        <div class="col-8">
+          <h2 class="mb-1 h6 font-weight-bold">
+            <a class="text-dark" href="{{ p.url | relative_url }}"
+              >{{ p.title }}</a
+            >
+          </h2>
+          <small class="text-muted d-block mb-1"
+            >{{ p.description | truncate: 60 }}</small
+          >
+          <div class="d-flex align-items-center">
+            <span class="badge badge-light border text-capitalize"
+              >{{ p.categories[0] }}</span
+            >
+          </div>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+
+  {% endif %}
+
+  <div class="row mt-5">
+    <div class="col-md-8 main-loop">
+      <h4 class="font-weight-bold spanborder">
+        <span>All Projects & Insights</span>
+      </h4>
+
+      {% for post in site.posts offset:4 %} {% include main-loop-card.html %} {%
+      endfor %} {% if paginator.total_pages > 1 %} {% endif %}
+    </div>
+
+    <div class="col-md-4">
+      <div class="sticky-top" style="top: 100px">
+        {% include sidebar-featured.html %}
+      </div>
+    </div>
+  </div>
+</div>
+<div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8f9fa;"></div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#dc3545" }, 
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.2, "random": false },
+      "size": { "value": 3, "random": true },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#dc3545",
+        "opacity": 0.2,
+        "width": 1
+      },
+      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": true, "mode": "push" },
+        "resize": true
+      }
+    },
+    "retina_detect": true
+  });
+</script>

@@ -1,0 +1,68 @@
+---
+title: "Categories"
+layout: default
+permalink: "/categories.html"
+---
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Last Projects</h1>
+            
+        {% for category in site.categories %} 
+        <!-- <h4 class="font-weight-bold spanborder text-capitalize" id="{{ category[0] | downcase }}"><span>{{ category[0] }}</span></h4> -->
+            
+        {% assign pages_list = category[1] %}
+        {% for post in pages_list %}
+        {% if post.title != null %}
+          {% if group == null or group == post.group %}
+         
+            {% include main-loop-card.html %}
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+
+        {% endfor %}
+
+        </div>
+        
+            <div class="col-md-4">
+        {% include sidebar-featured.html %}    
+    </div>
+        
+    </div>
+</div>
+<div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8f9fa;"></div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#dc3545" }, 
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.2, "random": false },
+      "size": { "value": 3, "random": true },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#dc3545",
+        "opacity": 0.2,
+        "width": 1
+      },
+      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "grab" },
+        "onclick": { "enable": true, "mode": "push" },
+        "resize": true
+      }
+    },
+    "retina_detect": true
+  });
+</script>
