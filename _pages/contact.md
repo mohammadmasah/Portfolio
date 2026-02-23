@@ -7,7 +7,7 @@ permalink: "/contact.html"
     <div class="contact-card shadow-lg">
         <div class="row no-gutters">
             <div class="col-lg-5 contact-info-panel p-5 text-white">
-                <h2 class="font-weight-bold mb-4">Get in Touch</h2>
+                <h2 class="font-weight-bold mb-4 text-white">Get in Touch</h2>
                 <p class="mb-5 opacity-8">I'm open to new opportunities, collaborations, or just a friendly hello. Let's build something amazing together!</p>
                 
                 <div class="contact-links">

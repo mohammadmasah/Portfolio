@@ -5,8 +5,33 @@
 body {
   overflow-x: hidden;
   padding-top: 69.75px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: #000000;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
-
+h1, h2, h3, h4, h5, h6, .display-4 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800 !important; /* ضخامت زیاد برای عناوین */
+    letter-spacing: -0.5px !important; /* فاصله حروف فشرده برای عناوین مدرن */
+    color: #000000 !important;
+    text-transform: none; /* عناوین لازم نیست مثل منو تماماً بزرگ باشند */
+}
+.spanborder span {
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-bottom: 3px solid #dc3545; /* خط قرمز زیر تیترها */
+}
+.btn {
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    border-radius: 50px !important; /* دکمه‌های کاملاً گرد لوکس‌تر هستند */
+    transition: all 0.3s ease !important;
+}
 .site-content {
   margin-top: 30px;
   min-height: 400px;
@@ -413,6 +438,7 @@ a.text-dark:hover {
   text-align: center;
   -webkti-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
 .card .date .day {
   font-size: 16px;
@@ -924,3 +950,45 @@ div.a2a_full_footer {
   background-color: #ff0000;
 }
 /*---------------------------------------------------------------------------------------------*/
+
+
+/* استایل کلی لینک‌های منو */
+.nav-link-luxury {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    letter-spacing: 2px !important; /* فاصله حروف برای ظاهر لوکس */
+    text-transform: uppercase; /* حروف بزرگ برای جدیت بیشتر */
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 10px 0 !important;
+}
+
+/* انیمیشن خط زیر لینک (Hover Effect) */
+.nav-link-luxury::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: #dc3545; /* رنگ قرمز برند تو */
+    transition: width 0.3s ease;
+}
+
+.nav-link-luxury:hover {
+    color: #dc3545 !important;
+}
+
+.nav-link-luxury:hover::after {
+    width: 100%; /* کشیده شدن خط زیرین هنگام هوور */
+}
+
+/* ثابت نگه داشتن نویگیشن در هنگام اسکرول با سایه بسیار ملایم */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* حالت شیشه‌ای لوکس */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
