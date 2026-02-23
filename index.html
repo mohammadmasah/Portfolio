@@ -11,19 +11,21 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
 
   <div class="row align-items-center py-5">
     <div class="col-md-7">
-      
-
-<h1 class="display-4 font-weight-bold" style="position: relative; z-index: 1;">
-  Hi, I'm <span class="text-danger" id="typewriter"></span><span class="cursor">|</span>
-</h1>
+      <h1
+        class="display-4 font-weight-bold"
+        style="position: relative; z-index: 1"
+      >
+        Hi, I'm <span class="text-danger" id="typewriter"></span
+        ><span class="cursor">|</span>
+      </h1>
       <p class="lead text-muted">
         As a Full-Stack Web Development student (Web@cadémie by EPITECH), I am
         translating my past experience as an NGO project coordinator into
-        technical strengths.  With an analytical mindset, I am learning to
-        build reliable and intuitive applications using PHP, JavaScript, MySQL,
-        and Docker.  Backed by my professional maturity and rigorous work
-        ethic, I am seeking a 14-month work-study placement (alternance)
-        starting in September 2025 to bring real added value to your team.
+        technical strengths. With an analytical mindset, I am learning to build
+        reliable and intuitive applications using PHP, JavaScript, MySQL, and
+        Docker. Backed by my professional maturity and rigorous work ethic, I am
+        seeking a 14-month work-study placement (alternance) starting in
+        September 2025 to bring real added value to your team.
       </p>
       <div class="mt-4">
         <a
@@ -31,7 +33,6 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
           class="btn btn-dark btn-lg px-4 mr-2"
           >View My Work</a
         >
-    
       </div>
     </div>
     <div class="col-md-5 text-center d-none d-md-block">
@@ -126,14 +127,14 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
           <p class="text-muted">
             {{ latest_post.description | truncate: 120 }}
           </p>
-          <div class="mt-auto">
-            {% for category in latest_post.categories %}
-            <span
-              class="badge badge-danger px-3 py-2"
+          <div class="mt-3">
+            <a
+              href="{{ latest_post.url | relative_url }}"
+              class="btn btn-danger btn-sm px-4 shadow-sm"
               style="border-radius: 20px"
-              >{{ category }}</span
             >
-            {% endfor %}
+              See more
+            </a>
           </div>
         </div>
       </div>
@@ -163,10 +164,15 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
           <small class="text-muted d-block mb-1"
             >{{ p.description | truncate: 60 }}</small
           >
-          <div class="d-flex align-items-center">
-            <span class="badge badge-light border text-capitalize"
-              >{{ p.categories[0] }}</span
+          <div class="d-flex align-items-center mt-2">
+            <a
+              href="{{ p.url | relative_url }}"
+              class="badge badge-danger text-white px-3 py-2"
+              style="border-radius: 20px; text-decoration: none"
             >
+              See more
+              <i class="fas fa-arrow-right ml-1" style="font-size: 8px"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -193,35 +199,54 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
     </div>
   </div>
 </div>
-<div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8f9fa;"></div>
+<div
+  id="particles-js"
+  style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #f8f9fa;
+  "
+></div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
   particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#dc3545" }, 
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.2, "random": false },
-      "size": { "value": 3, "random": true },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#dc3545",
-        "opacity": 0.2,
-        "width": 1
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: "#dc3545" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2, random: false },
+      size: { value: 3, random: true },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#dc3545",
+        opacity: 0.2,
+        width: 1,
       },
-      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+      },
     },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": { "enable": true, "mode": "grab" },
-        "onclick": { "enable": true, "mode": "push" },
-        "resize": true
-      }
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: true, mode: "push" },
+        resize: true,
+      },
     },
-    "retina_detect": true
+    retina_detect: true,
   });
 </script>

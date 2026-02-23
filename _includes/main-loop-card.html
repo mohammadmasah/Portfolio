@@ -9,24 +9,21 @@
       {{ post.excerpt | strip_html | strip_newlines | truncate: 186}}
     </p>
     <!--------------------------------it's btn in the categories and the btn color is atoumactic in bootstrap ------------------------------>
-    <div class="mt-3 mb-2">
-      {% for category in post.categories %}
-      <a
-        class="btn btn-outline-danger btn-sm px-3 shadow-sm"
-        href="{{ post.url | relative_url }}"
-        style="
-          border-radius: 20px;
-          font-weight: 600;
-          font-size: 12px;
-          transition: 0.3s;
-        "
-      >
-        <!----------------------------------------------------------------------------------------------------------------------------------------->
+<div class="mt-3 mb-2">
+  {% for category in post.categories %}
+    {% unless category == "See more" or category == "see more" %}
+      <span class="badge badge-light border text-muted mr-2 px-3 py-1" style="border-radius: 20px; font-size: 11px;">
         {{ category }}
-        <i class="fas fa-external-link-alt ml-1" style="font-size: 10px"></i>
-      </a>
-      {% endfor %}
-    </div>
+      </span>
+    {% endunless %}
+  {% endfor %}
+
+  <a class="btn btn-outline-danger btn-sm px-4 shadow-sm" 
+     href="{{ post.url | relative_url }}" 
+     style="border-radius: 20px; font-weight: 600; font-size: 12px;">
+    See More <i class="fas fa-arrow-right ml-1"></i>
+  </a>
+</div>
 
     <small class="text-muted d-block">
       {{ post.date | date: '%b %d, %Y' }}
