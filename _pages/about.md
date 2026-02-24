@@ -22,7 +22,7 @@ permalink: "/about.html"
             As a Full-Stack Web Development student at <strong>Web@cadémie by EPITECH Paris</strong>, I am translating my past experience as an NGO project coordinator into technical strengths.
           </p>
           <p class="text-muted">
-            With an analytical mindset, I am learning to build reliable and intuitive applications using <strong>PHP, JavaScript, MySQL, and Docker</strong>. Backed by my professional maturity and rigorous work ethic, I am seeking a 14-month work-study placement starting <strong>Sept 2025</strong>.
+            With an analytical mindset, I am learning to build reliable and intuitive applications using <strong>PHP, JavaScript, MySQL, and Docker</strong>. Backed by my professional maturity and rigorous work ethic, I am seeking a 14-month work-study placement starting <strong>Sept 2026</strong>.
           </p>
         </div>
 
