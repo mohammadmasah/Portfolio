@@ -6,6 +6,12 @@ baseurl: ""
 logo: "assets/images/logo.png"
 email: "mohammad-haroon.masah@epitech.eu"
 
+social:
+  name: "Mohammad Masah"
+  links:
+    - https://www.linkedin.com/in/mohammad-masah
+    - https://github.com/mohammadmasah
+
 include: ["_pages"]
 permalink: /:title/
 
