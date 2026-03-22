@@ -54,7 +54,7 @@ permalink: "/about.html"
           <div class="small"><i class="fas fa-language text-tech-blue mr-2"></i> English, French, Persian</div>
         </div>
 
-        <a target="_blank" href="{{ '/assets/docs/cv_2026-01-06_mohammadharoon_masah.pdf' | relative_url }}" class="btn btn-modern-navy w-100 mb-2 py-2">
+        <a target="_blank" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}" class="btn btn-modern-navy w-100 mb-2 py-2">
           <i class="fas fa-file-download mr-2"></i> Download CV
         </a>
         <a href="/contact.html" class="btn btn-modern-outline w-100 py-2 rounded-12">
