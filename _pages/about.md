@@ -8,7 +8,7 @@ permalink: "/about.html"
 
 <div class="container py-4">
   <div class="row">
-    <div class="col-lg-8 pr-lg-4">
+    <div class="col-lg-8 pr-lg-4 order-2 order-lg-1">
       <div class="glass-content-card p-4 shadow-sm mb-4">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h6 class="text-tech-blue font-weight-bold text-uppercase m-0">My Story</h6>
@@ -40,7 +40,7 @@ permalink: "/about.html"
       </div>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-4 order-1 order-lg-2">
       <div class="profile-sidebar p-3 shadow-sm text-center bg-white" style="border-radius: 25px; border: 1px solid #f1f5f9;">
         <div class="img-frame-modern mb-3">
           <img src="{{ '/assets/images/MASAH.jpg' | relative_url }}" alt="Mohammad" class="img-fluid rounded-20" style="height: 300px; width: 100%; object-fit: cover; object-position: center 22%;">
