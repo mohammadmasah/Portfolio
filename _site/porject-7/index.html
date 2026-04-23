@@ -16,20 +16,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <!-------------------------------------------Seo----------------------------------------------->
       <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Privacy Policy | Mohammad Masah</title>
+<title>SpaceWord – DevOps &amp; Automated Testing | Mohammad Masah</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Privacy Policy" />
+<meta property="og:title" content="SpaceWord – DevOps &amp; Automated Testing" />
+<meta name="author" content="mohammad masah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Student at Epitech Portfolio" />
-<meta property="og:description" content="Student at Epitech Portfolio" />
-<link rel="canonical" href="http://localhost:4000/privacy-policy.html" />
-<meta property="og:url" content="http://localhost:4000/privacy-policy.html" />
+<meta name="description" content="A high-performance game built with a professional CI/CD pipeline, focusing on security and automated testing." />
+<meta property="og:description" content="A high-performance game built with a professional CI/CD pipeline, focusing on security and automated testing." />
+<link rel="canonical" href="http://localhost:4000/porject-7/" />
+<meta property="og:url" content="http://localhost:4000/porject-7/" />
 <meta property="og:site_name" content="Mohammad Masah" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Privacy Policy" />
+<meta property="og:image" content="http://localhost:4000/assets/images/spaceword.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-03-02T00:00:00+01:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/spaceword.png" />
+<meta property="twitter:title" content="SpaceWord – DevOps &amp; Automated Testing" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Student at Epitech Portfolio","headline":"Privacy Policy","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"url":"http://localhost:4000/privacy-policy.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"mohammad masah"},"dateModified":"2026-03-02T00:00:00+01:00","datePublished":"2026-03-02T00:00:00+01:00","description":"A high-performance game built with a professional CI/CD pipeline, focusing on security and automated testing.","headline":"SpaceWord – DevOps &amp; Automated Testing","image":"http://localhost:4000/assets/images/spaceword.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/porject-7/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"mohammad masah"},"url":"http://localhost:4000/porject-7/"}</script>
 <!-- End Jekyll SEO tag -->
 
       <script type="application/ld+json">
@@ -158,22 +162,22 @@ var documents = [{
     "id": 2,
     "url": "http://localhost:4000/author-jane.html",
     "title": "Jane",
-    "body": "                     Jane      Follow     :                                                  Posts by Jane   :       "
+    "body": "                     {{page. title}}      Follow     :            {{ site. authors. jane. site }}           {{ site. authors. jane. bio }}                            Posts by {{page. title}}   :    {% assign posts = site. posts | where: author , jane  %} {% for post in   posts %} {% include main-loop-card. html %} {% endfor %}   "
     }, {
     "id": 3,
     "url": "http://localhost:4000/author-sal.html",
     "title": "Sal",
-    "body": "                    Sal Follow:                                                    Posts by Sal:               "
+    "body": "                    {{page. title}} Follow:         {{ site. authors. sal. site }}         {{ site. authors. sal. bio }}                                   Posts by {{page. title}}:       {% assign posts = site. posts | where: author , sal  %}      {% for post in posts %}      {% include main-loop-card. html %}      {% endfor %}  "
     }, {
     "id": 4,
     "url": "http://localhost:4000/authors-list.html",
     "title": "Authors",
-    "body": "Authors:       "
+    "body": "{{page. title}}:     {% for author in site. authors %}                                         {{ author[1]. name }} :       (View Posts)      {{ author[1]. bio }}                         &nbsp;       &nbsp;                                    {% endfor %}  "
     }, {
     "id": 5,
     "url": "http://localhost:4000/categories.html",
     "title": "Categories",
-    "body": "          Last Projects                                                      SpaceWord – DevOps &amp; Automated Testing  :                 See More       Mar 02, 2026                                                     NEXUS – Modern Social Networking Platform  :      ​NEXUS is a full-stack social networking platform built to bridge the gap between complex backend logic and a fluid, high-performance user interface. This project highlights my expert. . .            See More       Feb 03, 2026                                                     CineLuxe – Admin Dashboard  :      ​CineLuxe is a high-end administrative interface built to streamline cinema operations. This project showcases my ability to develop complex CRUD systems and manage relational databas. . .            See More       Jan 21, 2026                                                     Free CV Generator – PHP Edition  :      ​In the CV Generator project, I developed a functional tool for resume building that focuses on robust data validation and optimized HTML-to-PDF rendering. This project demonstrates m. . .            See More       Jan 10, 2026                                                     Klivio – Tailwind CSS Edition  :      ​In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses. . .            See More       Dec 07, 2025                                                     Klivio – Professional Learning Platform  :      ​Klivio is a modern, responsive landing page designed for an educational platform. The focus of this project was to master UI/UX transition from design to a clean, maintainable codeba. . .            See More       Oct 11, 2025                                                     🌐 Epitalk – Team Project  :      ​Epitalk is a collaborative front-end web application designed for students, developed during my time at Web@cadémie. It simulates a smart assistant platform with a focus on user inte. . .            See More       Oct 10, 2025                                                          Team Projects:                  NEXUS – Modern Social Networking Platform                             See more                                         🌐 Epitalk – Team Project                             See more                                      "
+    "body": "          Last Projects          {% for category in site. categories %}               {% assign pages_list = category[1] %}    {% for post in pages_list %}    {% if post. title != null %}     {% if group == null or group == post. group %}           {% include main-loop-card. html %}     {% endif %}    {% endif %}    {% endfor %}    {% assign pages_list = nil %}    {% assign group = nil %}    {% endfor %}                  {% include sidebar-featured. html %}          "
     }, {
     "id": 6,
     "url": "http://localhost:4000/contact.html",
@@ -183,12 +187,12 @@ var documents = [{
     "id": 7,
     "url": "http://localhost:4000/",
     "title": "Mohammad Masah's Portfolio",
-    "body": "           Hi, I'm |          From law to code:    les mêmes rigueur et capacité d'analyse aujourd'hui au service de    solutions techniques et de résolution de problèmes     I am seeking a 14-month work-study placement (alternance) starting in     September 2026 to bring real added value to your team.           View My Work              Technical Stack                                                 Tailwind                                        REST API                                         Featured Projects   :                                      SpaceWord – DevOps &amp; Automated Testing     :            A high-performance game built with a professional CI/CD pipeline, focusing on security and automated testing.                        See more                                                                    NEXUS – Modern Social Networking Platform     :      A dynamic, real-time social media application designed fo. . .                   See more                                                                        CineLuxe – Admin Dashboard     :      A luxury Cinema Management System with a modern dark them. . .                   See more                                                                        Free CV Generator – PHP Edition     :      A professional PHP-based web application to create, custo. . .                   See more                                           All Projects &amp; Insights   :          Klivio – Tailwind CSS Edition  :      ​In this version of Klivio, I migrated the entire design to Tailwind CSS to demonstrate my ability to build consistent, scalable, and high-performance interfaces. This project focuses. . .            See More       Dec 07, 2025                      Klivio – Professional Learning Platform  :      ​Klivio is a modern, responsive landing page designed for an educational platform. The focus of this project was to master UI/UX transition from design to a clean, maintainable codeba. . .            See More       Oct 11, 2025                     🌐 Epitalk – Team Project  :      ​Epitalk is a collaborative front-end web application designed for students, developed during my time at Web@cadémie. It simulates a smart assistant platform with a focus on user inte. . .            See More       Oct 10, 2025                           Team Projects:                  NEXUS – Modern Social Networking Platform                             See more                                         🌐 Epitalk – Team Project                             See more                                  "
+    "body": " {% if page. url ==  /  %}          Hi, I'm |          From law to code:    les mêmes rigueur et capacité d'analyse aujourd'hui au service de    solutions techniques et de résolution de problèmes     I am seeking a 14-month work-study placement (alternance) starting in     September 2026 to bring real added value to your team.           View My Work              Technical Stack                                                 Tailwind                                        REST API                                         Featured Projects   :     {% assign latest_post = site. posts[0] %}                                 {{ latest_post. title }}     :            {{ latest_post. description | truncate: 120 }}                        See more                         {% for i in (1. . 3) %} {% assign p = site. posts[i] %} {% if p %}                                          {{ p. title }}     :      {{ p. description | truncate: 60 }}                  See more                            {% endif %} {% endfor %}    {% endif %}          All Projects &amp; Insights   :    {% for post in site. posts offset:4 %} {% include main-loop-card. html %} {%   endfor %} {% if paginator. total_pages &gt; 1 %} {% endif %}           {% include sidebar-featured. html %}      "
     }, {
     "id": 8,
     "url": "http://localhost:4000/privacy-policy.html",
     "title": "Privacy Policy",
-    "body": "“Mohammad Masah” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information: For any questions or concerns regarding the privacy policy, please contact us here. "
+    "body": "”{{site. name}}” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used. Collection of Routine Information: This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes. Cookies: Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content. Advertisement and Other Third Parties: Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to opt out of Google’s cookie usage. Links to Third Party Websites: We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own. Security: The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Changes To This Privacy Policy: This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website. Contact Information:       For any questions or concerns regarding the privacy policy, please [contact us here]({{ ‘contact. html’   relative_url }}).    "
     }, {
     "id": 9,
     "url": "http://localhost:4000/tags.html",
@@ -302,46 +306,211 @@ function lunr_search(term) {
 
   <!-- Content -->
   <main role="main" class="site-content" style="flex: 1 0 auto; padding-top: 25px;">
-    <div class="container">
-  <h3 class="font-weight-bold spanborder"><span>Privacy Policy</span></h3>
-  <div class="page-content">
-    <p>“Mohammad Masah” takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.</p>
-
-<h4 id="collection-of-routine-information">Collection of Routine Information</h4>
-
-<p>This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes.</p>
-
-<h4 id="cookies">Cookies</h4>
-
-<p>Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.</p>
-
-<h4 id="advertisement-and-other-third-parties">Advertisement and Other Third Parties</h4>
-
-<p>Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to <a href="http://www.google.com/privacy_ads.html">opt out of Google’s cookie usage</a>.</p>
-
-<h4 id="links-to-third-party-websites">Links to Third Party Websites</h4>
-
-<p>We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.</p>
-
-<h4 id="security">Security</h4>
-
-<p>The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
-
-<h4 id="changes-to-this-privacy-policy">Changes To This Privacy Policy</h4>
-
-<p>This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.</p>
-
-<p>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.</p>
-
-<h4 id="contact-information">Contact Information</h4>
-
-<p>For any questions or concerns regarding the privacy policy, please <a href="/contact.html">contact us here</a>.</p>
-
-    <!-- Comments -->
     
-  </div>
+<div class="container ">
+	<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row  justify-content-between ">
+				<div class=" col-md-6  pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+					<!-- <p class="text-uppercase font-weight-bold">
+						<span class="catlist">
+							
+							<a class="sscroll text-danger" href="/categories.html#see more">see more</a><span class="sep">, </span>
+							
+						</span>
+					</p> -->
+
+					<!----------------------------------btn and date----------------------------------------->
+					<h1 class="display-4 mb-4 ">SpaceWord – DevOps & Automated Testing</h1>
+					<div class="d-flex align-items-center ">
+						
+						<small class="ml-3">  <span><a href="/" class="btn btn-outline-danger btn-sm btn-round ml-1">Back</a></span>
+							<span class="text-muted d-block mt-1">Mar 02, 2026 · <span class="reading-time">
+  
+  
+    2 mins read
+  
+</span>
+    </span>
+						</small>
+					</div>
+				</div>
+				<!------------------------------------------------------------------------------->
+				
+				<div class="col-md-6 pr-0 align-self-center ">
+					<img class="rounded " src="/assets/images/spaceword.png" alt="SpaceWord – DevOps & Automated Testing">
+				</div>
+				
+			</div>
+		</div>
+	</div>
 </div>
 
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+		<!-- Share -->
+		<!-- <div class="col-lg-2 pr-4 mb-4 col-md-12">
+			<div class="sticky-top sticky-top-offset text-center">
+				<div class="text-muted">
+					Share this
+				</div>
+				<div class="share d-inline-block"> -->
+					<!-- AddToAny BEGIN -->
+					<!-- <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+						<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+						<a class="a2a_button_facebook"></a>
+						<a class="a2a_button_twitter"></a>
+					</div>
+					<script async src="https://static.addtoany.com/menu/page.js"></script> -->
+					<!-- AddToAny END -->
+				<!-- </div>
+			</div>
+		</div> -->
+
+		<div class="col-md-12 col-lg-8">
+
+			<!-- Article -->
+			<article class="article-post">
+				<div style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; padding: 10px;">
+
+    <p style="font-size: 1.2rem; color: #555; text-align: center; margin-bottom: 2.5rem;">
+        &#8203;SpaceWord is not just a game; it is a full-stack demonstration of <strong>modern software engineering</strong>. 
+        It features a robust development lifecycle where code quality is guaranteed by automation.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5" style="background: #f8f9fa; padding: 25px; border-radius: 15px; border: 1px solid #eee;">
+    
+    <div class="text-center mx-3"><i class="fab fa-docker fa-2x" style="color: #2496ed;"></i><br /><small style="font-weight: bold;">Docker</small></div>
+    
+    <div class="text-center mx-3"><i class="fas fa-flask fa-2x" style="color: #8c1111;"></i><br /><small style="font-weight: bold;">Mocha</small></div>
+    
+    <div class="text-center mx-3"><i class="fas fa-check-double fa-2x" style="color: #17202c;"></i><br /><small style="font-weight: bold;">Cypress</small></div>
+    
+    <div class="text-center mx-3"><i class="fas fa-infinity fa-2x" style="color: #2088ff;"></i><br /><small style="font-weight: bold;">CI/CD</small></div>
+    
+
+</div>
+
+    <hr style="border-top: 1px solid #eee; margin-bottom: 2.5rem;" />
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3 style="color: #d9534f; border-bottom: 2px solid #d9534f; display: inline-block; padding-bottom: 5px;">
+                <i class="fas fa-flask"></i> Testing Strategy
+            </h3>
+            <p style="margin-top: 15px;">My primary focus was <strong>Zero-Bug Deployment</strong>. I implemented:</p>
+            <ul style="list-style-type: square;">
+                <li><strong>Unit Testing:</strong> Logic validation with Mocha &amp; Chai.</li>
+                <li><strong>Security Tests:</strong> Input sanitization and boundary checks.</li>
+                <li><strong>E2E Testing:</strong> Real-user simulation using Cypress.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <h3 style="color: #0275d8; border-bottom: 2px solid #0275d8; display: inline-block; padding-bottom: 5px;">
+                <i class="fas fa-infinity"></i> DevOps Pipeline
+            </h3>
+            <p style="margin-top: 15px;">The project follows a professional workflow:</p>
+            <ul style="list-style-type: square;">
+                <li><strong>Auto-Build:</strong> Dockerized environment (Nginx Alpine).</li>
+                <li><strong>Auto-Test:</strong> Tests run automatically on every Push.</li>
+                <li><strong>Auto-Deploy:</strong> Verified images sent to Docker Hub.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: #eef2f7; padding: 20px; border-left: 5px solid #0275d8; margin: 30px 0; border-radius: 0 10px 10px 0;">
+        <i class="fas fa-info-circle" style="color: #0275d8; margin-right: 10px;"></i>
+        <strong>Professional Note:</strong> All tests are executed inside Docker containers to ensure environment parity between development and production.
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px; margin-top: 40px; padding-top: 20px;">
+    
+    <a href="https://github.com/mohammadmasah/js13k-spaceWord" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; background-color: #1d2124; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s; min-width: 220px;">
+        <i class="fab fa-github" style="margin-right: 10px;"></i> View Source Code
+    </a>
+
+    <a href="https://mohammadmasah.github.io/js13k-spaceWord/" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; background-color: #d9534f; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(217, 83, 79, 0.3); transition: 0.3s; min-width: 220px;">
+        <i class="fas fa-rocket" style="margin-right: 10px;"></i> Play Live Demo
+    </a>
+
+</div>
+
+</div>
+
+			</article>
+
+			<!-- Tags -->
+			<div class="mb-4">
+				<span class="taglist">
+					
+				</span>
+			</div>
+
+			<!-- Mailchimp Subscribe Form -->
+			
+
+			<!-- Author Box -->
+			
+			<div class="row mt-5">
+				<div class="col-md-2 align-self-center">
+					
+				</div>
+				<!-- <div class="col-md-10">
+					<h5 class="font-weight-bold">Written by  </h5>
+					
+				</div> -->
+			</div>
+			
+
+			<!-- Comments -->
+			
+			<!--  Don't edit anything here. Set your disqus id in _config.yml -->
+
+<div id="comments" class="mt-5">
+    <div id="disqus_thread">
+    </div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+</div>
+			
+
+		</div>
+	</div>
+</div>
+
+<!-- Aletbar Prev/Next -->
+<div class="alertbar">
+	<div class="container">
+		<div class="row prevnextlinks small font-weight-bold">
+			
+			<div class="col-md-6 rightborder pl-0">
+				<a class="text-dark" href="/porject-6/"> <img height="30px" class="mr-1" src="/assets/images/nexus-platform.png">  NEXUS – Modern Social Networking Platform</a>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+
+<style>
+	footer{
+		display: none;
+	}
+	.font{
+		font-size: larger;
+	}
+</style>
   </main>
 
   <!-- Footer -->
