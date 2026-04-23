@@ -12,24 +12,24 @@ body {
 }
 h1, h2, h3, h4, h5, h6, .display-4 {
     font-family: 'Inter', sans-serif !important;
-    font-weight: 800 !important; /* ضخامت زیاد برای عناوین */
-    letter-spacing: -0.5px !important; /* فاصله حروف فشرده برای عناوین مدرن */
+    font-weight: 800 !important; 
+    letter-spacing: -0.5px !important; 
     color: #000000 !important;
-    text-transform: none; /* عناوین لازم نیست مثل منو تماماً بزرگ باشند */
+    text-transform: none; 
 }
 .spanborder span {
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-size: 14px;
-    border-bottom: 3px solid #dc3545; /* خط قرمز زیر تیترها */
+    border-bottom: 3px solid #dc3545; 
 }
 .btn {
     font-weight: 700 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
     font-size: 12px !important;
-    border-radius: 50px !important; /* دکمه‌های کاملاً گرد لوکس‌تر هستند */
+    border-radius: 50px !important; 
     transition: all 0.3s ease !important;
 }
 .site-content {
