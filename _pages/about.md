@@ -15,6 +15,7 @@ permalink: "/about.html"
           <span class="badge badge-info p-2" style="border-radius: 10px; font-size: 0.7rem;">Available for Alternance</span>
         </div>
         
+        
         <h1 class="h2 font-weight-bold mb-3">From Coordination to <span class="text-tech-blue">Code</span></h1>
         
         <div class="about-text text-dark">
@@ -105,4 +106,42 @@ permalink: "/about.html"
       "move": { "enable": true, "speed": 2 }
     }
   });
+</script>
+<div id="ultimate-loader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; display: flex; align-items: center; justify-content: center;">
+  <div class="loader-layer layer-1"></div>
+  <div class="loader-layer layer-2"></div>
+  <div class="loader-layer layer-3"></div>
+  <div class="loader-content">
+    <div class="loader-text-wrapper">
+      <span class="l-text">LOGIC</span>
+      <span class="l-text">CODE</span>
+      <span class="l-text">INNOVATE</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+window.addEventListener('load', () => {
+  const loader = document.getElementById('ultimate-loader');
+  
+ 
+  if (!sessionStorage.getItem('loaderDisplayed')) {
+    
+
+    setTimeout(() => {
+      loader.classList.add('loader-active');
+      
+      setTimeout(() => {
+        loader.style.display = 'none';
+
+        sessionStorage.setItem('loaderDisplayed', 'true');
+      }, 1500);
+    }, 1200);
+
+  } else {
+
+    loader.style.display = 'none';
+  }
+});
 </script>

@@ -212,14 +212,29 @@ backToTopBtn.addEventListener("click", function() {
 });
 
 
+
+
 window.addEventListener('load', () => {
-  // اجازه بده انیمیشن متن کمی اجرا شود
-  setTimeout(() => {
-    document.getElementById('ultimate-loader').classList.add('loader-active');
+  const loader = document.getElementById('ultimate-loader');
+  
+
+  if (!sessionStorage.getItem('loaderDisplayed')) {
     
-    // حذف کامل از دام بعد از اتمام انیمیشن
+
     setTimeout(() => {
-      document.getElementById('ultimate-loader').style.display = 'none';
-    }, 1500);
-  }, 1200); // زمان کل نمایش لودر
+      loader.classList.add('loader-active');
+      
+
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 1500);
+      
+
+      sessionStorage.setItem('loaderDisplayed', 'true');
+    }, 1200);
+
+  } else {
+
+    loader.style.display = 'none';
+  }
 });
