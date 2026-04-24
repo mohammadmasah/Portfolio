@@ -5,6 +5,20 @@ pagination:
 enabled: true
 description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
 ---
+<div id="ultimate-loader">
+  <div class="loader-layer layer-1"></div>
+  <div class="loader-layer layer-2"></div>
+  <div class="loader-layer layer-3"></div>
+  
+  <div class="loader-content">
+    <div class="loader-text-wrapper">
+    <span class="l-text">LOGIC</span>
+    <span class="l-text">CODE</span>
+    <span class="l-text">INNOVATE</span>
+</div>
+  </div>
+</div>
+
 
 <div class="container">
   {% if page.url == "/" %}
@@ -239,6 +253,160 @@ description: "Mohammad H. Masah - Full Stack Web Developer Portfolio"
     background-color: #f8f9fa;
   "
 ></div>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Instrument+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  .cv-wrap {
+    font-family: 'Instrument Sans', sans-serif;
+    margin: 3rem 0;
+  }
+
+  /* افکت شیشه شفاف با بلور قوی */
+  .cv-panel {
+    background: rgba(255, 255, 255, 0.05); /* بسیار شفاف برای دیدن پشت زمینه */
+    backdrop-filter: blur(25px) saturate(160%); /* بلور کردن پشت زمینه */
+    -webkit-backdrop-filter: blur(25px) saturate(160%);
+    
+    border: 1px solid rgba(255, 255, 255, 0.2); /* لبه‌های درخشان شیشه‌ای */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .cv-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+  }
+
+  .cv-grid {
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    gap: 0;
+  }
+
+  .cv-card {
+    background: transparent; 
+    padding: 30px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+  }
+
+  .cv-card:last-child {
+    border-right: none;
+  }
+
+  .cv-card:hover { 
+    background: rgba(255, 255, 255, 0.08); 
+  }
+
+  .cv-card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111; /* رنگ تیره برای خوانایی روی شیشه */
+  }
+
+  .cv-desc {
+    font-size: 13.5px;
+    color: #333; /* متن دیسکریپشن */
+    line-height: 1.65;
+    margin-bottom: 25px;
+    flex-grow: 1;
+  }
+
+  .cv-track {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .cv-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #dc3545, #ff4d5a);
+    border-radius: 10px;
+  }
+
+  .cv-footer {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    .cv-card {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+</style>
+
+<div class="cv-wrap">
+  <div class="cv-panel">
+    <div class="cv-header">
+      <div class="cv-header-left">
+        <span class="cv-pulse-dot"></span>
+        <h3 class="cv-title" style="color: #111;">Current Ventures <small style="opacity: 0.5;">/ On-going</small></h3>
+      </div>
+    </div>
+
+    <div class="cv-grid">
+      <div class="cv-card">
+        <div>
+          <div class="cv-card-top" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+            <div class="cv-card-name"><i class="fas fa-rocket mr-2 text-danger"></i> EpiRoad – AI Hunter</div>
+            <span style="font-weight: 700; color: #dc3545;">75%</span>
+          </div>
+          <p class="cv-desc">
+            Aggregating "Alternance" opportunities via <strong>Python</strong> scraping and <strong>Gemini AI</strong> filtering into a high-performance <strong>Node.js</strong> interface.
+          </p>
+        </div>
+        <div class="cv-track">
+          <div class="cv-bar" style="width: 75%;"></div>
+        </div>
+      </div>
+
+      <div class="cv-card">
+        <div>
+          <div class="cv-card-top" style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+            <div class="cv-card-name"><i class="fab fa-angular mr-2 text-danger"></i> StarForce Explorer</div>
+            <span style="font-weight: 700; color: #dc3545;">40%</span>
+          </div>
+          <p class="cv-desc">
+             A reactive Star Wars encyclopedia using <strong>Angular 18</strong> & <strong>TypeScript</strong>. Implementing <strong>RxJS</strong> streams for a fluid SWAPI experience.
+          </p>
+        </div>
+        <div class="cv-track">
+          <div class="cv-bar" style="width: 40%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+
+      </div>
+    </div>
+    <button id="backToTop" title="Go to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 

@@ -185,4 +185,41 @@ const words = ["Mohammad", "a Web Developer"];
   });
 
 
-  
+  // up botton in home page
+const backToTopBtn = document.getElementById("backToTop");
+
+
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+ 
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    backToTopBtn.style.display = "block";
+    backToTopBtn.style.animation = "fadeIn 0.3s";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+}
+
+
+backToTopBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" 
+  });
+});
+
+
+window.addEventListener('load', () => {
+  // اجازه بده انیمیشن متن کمی اجرا شود
+  setTimeout(() => {
+    document.getElementById('ultimate-loader').classList.add('loader-active');
+    
+    // حذف کامل از دام بعد از اتمام انیمیشن
+    setTimeout(() => {
+      document.getElementById('ultimate-loader').style.display = 'none';
+    }, 1500);
+  }, 1200); // زمان کل نمایش لودر
+});
