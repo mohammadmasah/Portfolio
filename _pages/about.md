@@ -16,26 +16,37 @@ permalink: "/about.html"
         </div>
         
         
-        <h1 class="h2 font-weight-bold mb-3">From Coordination to <span class="text-tech-blue">Code</span></h1>
+        <h1 class="h2 font-weight-bold mb-3">From Law to <span class="text-tech-blue">Code</span></h1>
         
         <div class="about-text text-dark">
-          <p class="lead" style="line-height: 1.7;">
-            As a Full-Stack Web Development student at <strong>Web@cadémie by EPITECH Paris</strong>, I am translating my past experience as an NGO project coordinator into technical strengths.
-          </p>
-          <p class="text-muted">
-            With an analytical mindset, I am learning to build reliable and intuitive applications using <strong>PHP, JavaScript, MySQL, and Docker</strong>. Backed by my professional maturity and rigorous work ethic, I am seeking a 14-month work-study placement starting <strong>Sept 2026</strong>.
+        <p class="lead" style="line-height: 1.7; color: var(--text-muted);">
+          As a Full-Stack Web Development student, I am translating my past experience as a <strong>Human Rights Defender</strong> and Project Coordinator with international organizations, including <strong>Medica Mondiale</strong>, into technical strengths. I hold a university degree in <strong>Law and Political Science</strong> from Herat, Afghainstan, bringing a rigorous analytical approach and strong problem-solving skills to the tech industry.
+        </p>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;">
+            With a strong analytical mindset, I architect and develop reliable and intelligent applications leveraging <strong>React, Node.js, Java, REST APIs, and LangChain AI</strong>. Backed by my professional maturity and rigorous work ethic, I am actively seeking a 14-month work-study placement (alternance) starting <strong>September 2026</strong>.
           </p>
         </div>
 
         <div class="row mt-4 no-gutters text-center">
+            <!-- گزینه اول: تمرکز روی هوش مصنوعی و اتوماسیون -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-check-circle text-tech-blue mr-2"></i><strong>Reliability</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-brain text-tech-blue mr-2"></i><strong>AI Integration</strong>
+            </div>
           </div>
+          
+          <!-- گزینه دوم: تمرکز روی ساختار و معماری مقیاس‌پذیر سیستم -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-layer-group text-tech-blue mr-2"></i><strong>Scalability</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-network-wired text-tech-blue mr-2"></i><strong>Scalable Web Apps</strong>
+            </div>
           </div>
+          
+          <!-- گزینه سوم: تمرکز روی منطق و توسعه کارآمد بک‌اند و فرانت‌اند -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-shield-alt text-tech-blue mr-2"></i><strong>Security</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-code text-tech-blue mr-2"></i><strong>Robust Architecture</strong>
+            </div>
           </div>
         </div>
       </div>

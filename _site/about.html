@@ -155,7 +155,7 @@ var documents = [{
     "id": 1,
     "url": "http://localhost:4000/about.html",
     "title": "About",
-    "body": "               My Story     Available for Alternance                From Coordination to Code                   As a Full-Stack Web Development student at Web@cadémie by EPITECH Paris, I am translating my past experience as an NGO project coordinator into technical strengths.                 With an analytical mindset, I am learning to build reliable and intuitive applications using PHP, JavaScript, MySQL, and Docker. Backed by my professional maturity and rigorous work ethic, I am seeking a 14-month work-study placement starting Sept 2026.                         Reliability                Scalability                Security                                 Online        Mohammad Masah    Full-Stack Developer Student          Paris, France      Epitech Paris      English, French, Persian              Download CV              Contact Me                   LOGIC   CODE   INNOVATE   "
+    "body": "               My Story     Available for Alternance                From Law to Code                 As a Full-Stack Web Development student, I am translating my past experience as a Human Rights Defender and Project Coordinator with international organizations, including Medica Mondiale, into technical strengths. I hold a university degree in Law and Political Science from Herat, Afghainstan, bringing a rigorous analytical approach and strong problem-solving skills to the tech industry.                With a strong analytical mindset, I architect and develop reliable and intelligent applications leveraging React, Node. js, Java, REST APIs, and LangChain AI. Backed by my professional maturity and rigorous work ethic, I am actively seeking a 14-month work-study placement (alternance) starting September 2026.                                      AI Integration                                       Scalable Web Apps                                       Robust Architecture                                       Online        Mohammad Masah    Full-Stack Developer Student          Paris, France      Epitech Paris      English, French, Persian              Download CV              Contact Me                   LOGIC   CODE   INNOVATE   "
     }, {
     "id": 2,
     "url": "http://localhost:4000/author-jane.html",
@@ -185,7 +185,7 @@ var documents = [{
     "id": 7,
     "url": "http://localhost:4000/",
     "title": "Mohammad Masah's Portfolio",
-    "body": "         LOGIC  CODE  INNOVATE  {% if page. url ==  /  %}          Hi, I'm |          From law to code:    the same rigor and analytical skills now applied to technical solutions and problem-solving    I am seeking a 14-month work-study placement (alternance) starting in     September 2026 to bring real added value to your team.           View My Work              Technical Stack                                                 Tailwind                                        REST API                                         Featured Projects   :     {% assign latest_post = site. posts[0] %}                                 {{ latest_post. title }}     :            {{ latest_post. description | truncate: 120 }}                        See more                         {% for i in (1. . 3) %} {% assign p = site. posts[i] %} {% if p %}                                          {{ p. title }}     :      {{ p. description | truncate: 60 }}                  See more                            {% endif %} {% endfor %}    {% endif %}          All Projects &amp; Insights   :    {% for post in site. posts offset:4 %} {% include main-loop-card. html %} {%   endfor %} {% if paginator. total_pages &gt; 1 %} {% endif %}           {% include sidebar-featured. html %}                    Current Ventures / On-going:                          EpiRoad – AI Hunter      75%                Aggregating  Alternance  opportunities via Python scraping and Gemini AI filtering into a high-performance Node. js interface.                                             StarForce Explorer      40%                 A reactive Star Wars encyclopedia using Angular 18 &amp; TypeScript. Implementing RxJS streams for a fluid SWAPI experience.                              &lt;/div&gt;&lt;/div&gt;&lt;button id= backToTop  title= Go to top &gt; &lt;i class= fas fa-chevron-up &gt;&lt;/i&gt;&lt;/button&gt;"
+    "body": "         LOGIC  CODE  INNOVATE  {% if page. url ==  /  %}          Hi, I'm |          From law to code:    the same rigor and analytical skills now applied to technical solutions and problem-solving    I am seeking a 14-month work-study placement (alternance) starting in     September 2026 to bring real added value to your team.           View My Work              Technical Stack                                                 Tailwind                                        REST API                                   Behind The Code:                                      Networking      VivaTech 2026:       Une immersion totale au cœur de l'innovation tech et des échanges inspirants avec les leaders de l'industrie.                                       Innovation      Epitech SUMMIT:       Exploration des dernières tendances technologiques, des architectures cloud et des innovations en automatisation.                   &#10094;   &#10095;                                                                                                &#10094;   &#10095;               Featured Projects   :     {% assign latest_post = site. posts[0] %}                                 {{ latest_post. title }}     :            {{ latest_post. description | truncate: 120 }}                        See more                         {% for i in (1. . 3) %} {% assign p = site. posts[i] %} {% if p %}                                          {{ p. title }}     :      {{ p. description | truncate: 60 }}                  See more                            {% endif %} {% endfor %}    {% endif %}          All Projects &amp; Insights   :    {% for post in site. posts offset:4 %} {% include main-loop-card. html %} {%   endfor %} {% if paginator. total_pages &gt; 1 %} {% endif %}           {% include sidebar-featured. html %}                    Current Ventures / On-going:                          EpiRoad – AI Hunter      75%                Aggregating  Alternance  opportunities via a Python REST API backend and LangChain AI, integrated with a high-performance React interface.                                             StarForce Explorer      100%                 A reactive Star Wars encyclopedia using Angular 18 &amp; TypeScript. Implementing RxJS streams for a fluid SWAPI experience.                              &lt;/div&gt;&lt;/div&gt;&lt;button id= backToTop  title= Go to top &gt; &lt;i class= fas fa-chevron-up &gt;&lt;/i&gt;&lt;/button&gt;"
     }, {
     "id": 8,
     "url": "http://localhost:4000/privacy-policy.html",
@@ -328,26 +328,37 @@ function lunr_search(term) {
         </div>
         
         
-        <h1 class="h2 font-weight-bold mb-3">From Coordination to <span class="text-tech-blue">Code</span></h1>
+        <h1 class="h2 font-weight-bold mb-3">From Law to <span class="text-tech-blue">Code</span></h1>
         
         <div class="about-text text-dark">
-          <p class="lead" style="line-height: 1.7;">
-            As a Full-Stack Web Development student at <strong>Web@cadémie by EPITECH Paris</strong>, I am translating my past experience as an NGO project coordinator into technical strengths.
-          </p>
-          <p class="text-muted">
-            With an analytical mindset, I am learning to build reliable and intuitive applications using <strong>PHP, JavaScript, MySQL, and Docker</strong>. Backed by my professional maturity and rigorous work ethic, I am seeking a 14-month work-study placement starting <strong>Sept 2026</strong>.
+        <p class="lead" style="line-height: 1.7; color: var(--text-muted);">
+          As a Full-Stack Web Development student, I am translating my past experience as a <strong>Human Rights Defender</strong> and Project Coordinator with international organizations, including <strong>Medica Mondiale</strong>, into technical strengths. I hold a university degree in <strong>Law and Political Science</strong> from Herat, Afghainstan, bringing a rigorous analytical approach and strong problem-solving skills to the tech industry.
+        </p>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;">
+            With a strong analytical mindset, I architect and develop reliable and intelligent applications leveraging <strong>React, Node.js, Java, REST APIs, and LangChain AI</strong>. Backed by my professional maturity and rigorous work ethic, I am actively seeking a 14-month work-study placement (alternance) starting <strong>September 2026</strong>.
           </p>
         </div>
 
         <div class="row mt-4 no-gutters text-center">
+            <!-- گزینه اول: تمرکز روی هوش مصنوعی و اتوماسیون -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-check-circle text-tech-blue mr-2"></i><strong>Reliability</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-brain text-tech-blue mr-2"></i><strong>AI Integration</strong>
+            </div>
           </div>
+          
+          <!-- گزینه دوم: تمرکز روی ساختار و معماری مقیاس‌پذیر سیستم -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-layer-group text-tech-blue mr-2"></i><strong>Scalability</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-network-wired text-tech-blue mr-2"></i><strong>Scalable Web Apps</strong>
+            </div>
           </div>
+          
+          <!-- گزینه سوم: تمرکز روی منطق و توسعه کارآمد بک‌اند و فرانت‌اند -->
           <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm"><i class="fas fa-shield-alt text-tech-blue mr-2"></i><strong>Security</strong></div>
+            <div class="value-item-compact shadow-sm">
+              <i class="fas fa-code text-tech-blue mr-2"></i><strong>Robust Architecture</strong>
+            </div>
           </div>
         </div>
       </div>

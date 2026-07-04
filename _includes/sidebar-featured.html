@@ -14,7 +14,7 @@
           <span class="catlist">
             {% for category in post.categories %}
             <a
-              class="btn btn-outline-danger btn-sm px-3 shadow-sm mt-1 border-radius: 20px; font-size: 12px; transition: 0.3s;"
+              class="btn btn-dark  btn-sm px-3 shadow-sm mt-1 border-radius: 20px; font-size: 12px; transition: 0.3s;"
               href=" {{ 'categories.html' | relative_url }}#{{ category | downcase }}"
               >{{ category }}</a
             ><span class="sep"> </span>

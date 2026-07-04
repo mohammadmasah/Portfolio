@@ -31,16 +31,16 @@ permalink: "/contact.html"
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="small font-weight-bold text-dark-blue">NAME</label>
-                            <input class="form-control custom-input" type="text" name="name"  required>
+                            <input class="form-control custom-input" type="text" name="name" placeholder="e.g. John Doe" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="small font-weight-bold text-dark-blue">EMAIL ADDRESS</label>
-                            <input class="form-control custom-input" type="email" name="_replyto" placeholder="" required>
+                            <input class="form-control custom-input" type="email" name="_replyto" placeholder="your.email@example.com" required>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label class="small font-weight-bold text-dark-blue">MESSAGE</label>
-                        <textarea rows="5" class="form-control custom-input" name="message" placeholder="How can I help you?" required></textarea>
+                        <textarea rows="5" class="form-control custom-input" name="message" placeholder="Let's build something great together" required></textarea>
                     </div>
                     <button class="btn btn-dark-blue btn-block py-3 font-weight-bold shadow-sm mt-4 text-white" type="submit">
                         Send Message <i class="fas fa-paper-plane ml-2"></i>
