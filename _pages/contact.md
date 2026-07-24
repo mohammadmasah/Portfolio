@@ -27,7 +27,7 @@ permalink: "/contact.html"
             </div>
 
             <div class="col-lg-7 p-5 bg-white-glass">
-                <form action="https://formspree.io/f/mqeezkgz" method="POST">
+                <form id="contact-form" action="https://formspree.io/f/mqeezkgz" method="POST">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="small font-weight-bold text-dark-blue">NAME</label>
@@ -42,12 +42,27 @@ permalink: "/contact.html"
                         <label class="small font-weight-bold text-dark-blue">MESSAGE</label>
                         <textarea rows="5" class="form-control custom-input" name="message" placeholder="Let's build something great together" required></textarea>
                     </div>
-                    <button class="btn btn-dark-blue btn-block py-3 font-weight-bold shadow-sm mt-4 text-white" type="submit">
-                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    <button id="submit-btn" class="btn btn-dark-blue btn-block py-3 font-weight-bold shadow-sm mt-4 text-white" type="submit">
+                        <span id="btn-text">Send Message <i class="fas fa-paper-plane ml-2"></i></span>
+                        <span id="btn-spinner" class="d-none"><i class="fas fa-spinner fa-spin mr-2"></i>Sending...</span>
                     </button>
                 </form>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- 🌟 پاپ‌آپ شیک (Success Modal) 🌟 -->
+<div id="success-modal" class="modal-overlay d-none">
+    <div class="modal-card">
+        <div class="success-icon-wrap">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="font-weight-bold text-dark-blue mb-2">Message Sent!</h3>
+        <p class="text-muted mb-4">Thank you for reaching out, Mohammad! Your message has been sent successfully. I will get back to you as soon as possible.</p>
+        <button id="close-modal-btn" class="btn btn-dark-blue text-white px-4 py-2 font-weight-bold rounded-pill">
+            Got it, thanks!
+        </button>
     </div>
 </div>
 
@@ -62,7 +77,6 @@ permalink: "/contact.html"
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    
     .contact-info-panel {
         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     }
@@ -97,13 +111,11 @@ permalink: "/contact.html"
         transition: 0.3s;
     }
 
-    
     .custom-input:focus {
         box-shadow: none;
         border-color: #0f172a;
     }
 
-   
     .btn-dark-blue {
         background-color: #0f172a;
         border: none;
@@ -117,11 +129,63 @@ permalink: "/contact.html"
 
     .text-dark-blue { color: #0f172a; }
     .opacity-8 { opacity: 0.8; }
+
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .modal-overlay.show {
+        opacity: 1;
+    }
+
+    .modal-card {
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 24px;
+        max-width: 440px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        transform: scale(0.8);
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .modal-overlay.show .modal-card {
+        transform: scale(1);
+    }
+
+    .success-icon-wrap {
+        font-size: 4rem;
+        color: #10b981;
+        margin-bottom: 15px;
+        animation: popIn 0.5s ease-out;
+    }
+
+    @keyframes popIn {
+        0% { transform: scale(0); }
+        80% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
 </style>
 
 <div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8fafc;"></div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 <script>
+  // ۱. تنظیمات ذرات background
   particlesJS("particles-js", {
     "particles": {
       "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
@@ -143,5 +207,62 @@ permalink: "/contact.html"
       "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
     },
     "retina_detect": true
+  });
+
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const subject = urlParams.get('subject');
+  if (subject) {
+    const textarea = document.querySelector('textarea[name="message"]');
+    if (textarea) {
+      textarea.value = "Hello Mohammad,\n\nI would like to request code access for the " + subject + " project.";
+    }
+  }
+
+
+  const form = document.getElementById('contact-form');
+  const modal = document.getElementById('success-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const btnText = document.getElementById('btn-text');
+  const btnSpinner = document.getElementById('btn-spinner');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    btnText.classList.add('d-none');
+    btnSpinner.classList.remove('d-none');
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset(); 
+    
+        modal.classList.remove('d-none');
+        setTimeout(() => modal.classList.add('show'), 10);
+      } else {
+        alert("Oops! There was a problem submitting your form. Please try again.");
+      }
+    } catch (error) {
+      alert("Oops! There was a network error. Please try again.");
+    } finally {
+
+      btnText.classList.remove('d-none');
+      btnSpinner.classList.add('d-none');
+    }
+  });
+
+
+  closeModalBtn.addEventListener('click', function() {
+    modal.classList.remove('show');
+    setTimeout(() => modal.classList.add('d-none'), 300);
   });
 </script>
