@@ -31,7 +31,7 @@ permalink: "/contact.html"
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="small font-weight-bold text-dark-blue">NAME</label>
-                            <input class="form-control custom-input" type="text" name="name" placeholder="e.g. John Doe" required>
+                            <input id="user-name-input" class="form-control custom-input" type="text" name="name" placeholder="e.g. John Doe" required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label class="small font-weight-bold text-dark-blue">EMAIL ADDRESS</label>
@@ -59,7 +59,10 @@ permalink: "/contact.html"
             <i class="fas fa-check-circle"></i>
         </div>
         <h3 class="font-weight-bold text-dark-blue mb-2">Message Sent!</h3>
-        <p class="text-muted mb-4">Thank you for reaching out, Mohammad! Your message has been sent successfully. I will get back to you as soon as possible.</p>
+        <!-- پیام شخصی‌سازی‌شده براساس اسم فرستنده -->
+        <p id="modal-success-message" class="text-muted mb-4">
+            Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.
+        </p>
         <button id="close-modal-btn" class="btn btn-dark-blue text-white px-4 py-2 font-weight-bold rounded-pill">
             Got it, thanks!
         </button>
@@ -130,7 +133,6 @@ permalink: "/contact.html"
     .text-dark-blue { color: #0f172a; }
     .opacity-8 { opacity: 0.8; }
 
-
     .modal-overlay {
         position: fixed;
         top: 0;
@@ -185,7 +187,7 @@ permalink: "/contact.html"
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
-  // ۱. تنظیمات ذرات background
+  // ۱. تنظیمات ذرات Background
   particlesJS("particles-js", {
     "particles": {
       "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
@@ -209,7 +211,7 @@ permalink: "/contact.html"
     "retina_detect": true
   });
 
-
+  // ۲. مدیریت پارامتر لینک درخواست کد
   const urlParams = new URLSearchParams(window.location.search);
   const subject = urlParams.get('subject');
   if (subject) {
@@ -219,12 +221,14 @@ permalink: "/contact.html"
     }
   }
 
-
+  // ۳. مدیریت ارسال فرم به صورت AJAX و استخراج نام فرستنده
   const form = document.getElementById('contact-form');
   const modal = document.getElementById('success-modal');
   const closeModalBtn = document.getElementById('close-modal-btn');
   const btnText = document.getElementById('btn-text');
   const btnSpinner = document.getElementById('btn-spinner');
+  const userNameInput = document.getElementById('user-name-input');
+  const modalSuccessMessage = document.getElementById('modal-success-message');
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -244,6 +248,17 @@ permalink: "/contact.html"
       });
 
       if (response.ok) {
+        // خواندن اسم وارد شده توسط کاربر
+        const enteredName = userNameInput.value.trim();
+        const firstName = enteredName ? enteredName.split(' ')[0] : '';
+
+        // تنظیم متن مودال بر اساس اسم فرستنده
+        if (firstName) {
+          modalSuccessMessage.textContent = `Thank you for reaching out, ${firstName}! Your message has been sent successfully. I will get back to you as soon as possible.`;
+        } else {
+          modalSuccessMessage.textContent = `Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.`;
+        }
+
         form.reset(); 
     
         modal.classList.remove('d-none');
@@ -254,13 +269,12 @@ permalink: "/contact.html"
     } catch (error) {
       alert("Oops! There was a network error. Please try again.");
     } finally {
-
       btnText.classList.remove('d-none');
       btnSpinner.classList.add('d-none');
     }
   });
 
-
+  // ۴. بستن مودال
   closeModalBtn.addEventListener('click', function() {
     modal.classList.remove('show');
     setTimeout(() => modal.classList.add('d-none'), 300);
