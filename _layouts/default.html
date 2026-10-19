@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% include loader-head.html %}
       <!-- Google Tag Manager -->
       {% include gtm_head.html %}
     <!-- End Google Tag Manager -->
@@ -74,6 +75,7 @@
   </style>
 </head>
 <body class="{% if page.url == "/" %}homefirstpage{% endif %}">
+  {% include loader.html %}
 
   <!-- Google Tag Manager -->
    <noscript>

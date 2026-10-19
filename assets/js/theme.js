@@ -210,31 +210,3 @@ backToTopBtn.addEventListener("click", function() {
     behavior: "smooth" 
   });
 });
-
-
-
-
-window.addEventListener('load', () => {
-  const loader = document.getElementById('ultimate-loader');
-  
-
-  if (!sessionStorage.getItem('loaderDisplayed')) {
-    
-
-    setTimeout(() => {
-      loader.classList.add('loader-active');
-      
-
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 1500);
-      
-
-      sessionStorage.setItem('loaderDisplayed', 'true');
-    }, 1200);
-
-  } else {
-
-    loader.style.display = 'none';
-  }
-});

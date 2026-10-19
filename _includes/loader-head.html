@@ -1,0 +1,51 @@
+<style>
+  /* Hidden before first paint, including when JavaScript or storage is unavailable. */
+  #ultimate-loader { display: none !important; }
+  html.show-intro #ultimate-loader { display: flex !important; pointer-events: auto; }
+  html.show-intro { overflow: hidden; }
+  @media (prefers-reduced-motion: reduce) {
+    #ultimate-loader .l-text { animation: none; }
+    #ultimate-loader .loader-layer, #ultimate-loader .loader-content { transition: none; }
+  }
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    try {
+      // Shared by all pages and tabs, and retained after closing the browser.
+      if (localStorage.getItem('portfolioWelcomeSeen')) return;
+      localStorage.setItem('portfolioWelcomeSeen', 'true');
+      // Preserve visits recorded by the previous implementation.
+      if (sessionStorage.getItem('loaderDisplayed')) return;
+      sessionStorage.setItem('loaderDisplayed', 'true');
+    } catch (error) { return; }
+    root.classList.add('show-intro');
+    var holdTimer, exitTimer, safetyTimer;
+    function finish() {
+      root.classList.remove('show-intro');
+      var loader = document.getElementById('ultimate-loader');
+      if (loader) loader.remove();
+      clearTimeout(holdTimer);
+      clearTimeout(exitTimer);
+      clearTimeout(safetyTimer);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!root.classList.contains('show-intro')) return;
+      // Hold the original animation for three seconds, then play its layered exit.
+      holdTimer = setTimeout(function () {
+        var loader = document.getElementById('ultimate-loader');
+        if (!loader) { finish(); return; }
+        loader.classList.add('loader-active');
+        exitTimer = setTimeout(finish,
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1500);
+      }, 3000);
+    }, { once: true });
+    // Never leave a blocked page if another script or external resource stalls.
+    safetyTimer = setTimeout(finish, 8000);
+    window.addEventListener('pagehide', finish);
+    window.addEventListener('pageshow', function (event) {
+      if (event.persisted) finish();
+    });
+    document.addEventListener('keydown', finish, { once: true });
+  }());
+</script>
