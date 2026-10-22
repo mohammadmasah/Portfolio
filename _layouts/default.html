@@ -52,6 +52,26 @@
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
 
+  {% if page.home_design or page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  {% endif %}
+
+  {% if page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}">
+  {% endif %}
+
+  {% if page.project_catalog %}
+  <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+  {% endif %}
+
+  {% if page.contact_design %}
+  <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+  {% endif %}
+
+  {% if page.about_design %}
+  <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+  {% endif %}
+
   <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
@@ -74,7 +94,7 @@
     } -->
   </style>
 </head>
-<body class="{% if page.url == "/" %}homefirstpage{% endif %}">
+<body class="{% if page.url == "/" %}homefirstpage{% endif %}{% if page.home_design or page.layout == 'post' %} home-redesign{% endif %}">
   {% include loader.html %}
 
   <!-- Google Tag Manager -->
@@ -89,7 +109,11 @@
     <div class="container">
       <!-- <a class="navbar-brand" href="{{ '/' | relative_url }}"><strong>{{site.name}}</strong></a> -->
      <a class="navbar-brand" href="{{ '/' | relative_url }}">
+    {% if page.home_design or page.layout == 'post' %}
+    <span class="hp-nav-brand"><span class="hp-code-logo" aria-hidden="true"><span>&lt;</span><span class="hp-code-slash">/</span><span>&gt;</span></span> Mohammad Masah</span>
+    {% else %}
     <img src="{{ '/assets/docs/logo.png' | relative_url }}" alt="Logo" style="height: 40px; width: auto; ">
+    {% endif %}
 </a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
