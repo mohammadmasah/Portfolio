@@ -1,0 +1,36 @@
+- url: /porject-9/
+  title: AltLearn
+  category: Learning platform
+  image: /assets/images/AltLearn-hero.png
+  description: A learning platform with courses, lessons, and quizzes. I built the admin and teacher interfaces and connected them to the team’s API.
+  stack: [React, Node.js, MongoDB]
+- url: /project-11/
+  title: TrackIt — Job Search & AI Interviews
+  category: Backend & AI engineering
+  image: /assets/images/job-tracker-hero.png
+  description: Track applications and practise interviews with contextual AI. Built with FastAPI and LangChain, using local Ollama or your own OpenAI, Gemini or Claude API key.
+  stack: [FastAPI, LangChain, Ollama, PostgreSQL, Tailwind CSS, React, Docker]
+- url: /project-10/
+  title: AI Newsletter Automation
+  category: Workflow automation
+  image: /assets/images/n8n-hero.png
+  description: An automated newsletter and trial-management workflow connecting AI-generated content with Google Workspace.
+  stack: [n8n, Gemini, Docker]
+- url: /project-8/
+  title: Star Wars Fleet
+  category: Frontend development
+  image: /assets/images/Star-wars.png
+  description: An interactive fleet directory with data grids, infinite scrolling, and persistent application state.
+  stack: [Angular, TypeScript, AG Grid]
+- url: /porject-7/
+  title: SpaceWord
+  category: Testing & delivery
+  image: /assets/images/spaceword.png
+  description: A browser game backed by automated tests, a CI/CD pipeline, and a containerised development workflow.
+  stack: [Docker, Cypress, GitHub Actions]
+- url: /project-5/
+  title: CineLuxe
+  category: Web application
+  image: /assets/images/my-cinema.png
+  description: A cinema administration dashboard for managing films, screening rooms, and day-to-day operations.
+  stack: [PHP, MySQL, JavaScript]
