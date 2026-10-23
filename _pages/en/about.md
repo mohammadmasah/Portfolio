@@ -19,8 +19,8 @@ permalink: /en/about.html
       <p class="hp-eyebrow">ABOUT ME</p>
       <h1 id="about-title">Mohammad Masah.<br><em>A different path.<br>A practical mindset.</em></h1>
       <p class="about-role">Full-Stack Developer <span aria-hidden="true">/</span> AI Automation</p>
-      <p class="about-lead">I’m a web development student at Epitech Paris, building applications with a focus on backend APIs, AI integration and automation.</p>
-      <p class="about-summary">Before writing code, I worked in human rights and project coordination. Today, I bring the same attention to people, structure and problem-solving to software development.</p>
+      <p class="about-lead">As a Full-Stack Web Development student at Epitech Paris, I build modern applications by combining rigorous coding practices with the power of AI and automation.</p>
+      <p class="about-summary">Before programming, I worked in the coordination of humanitarian and protection projects. Today, I bring that same organisational rigour, collaborative mindset and strong ability to solve complex problems to software development.</p>
       <div class="hp-actions"><a class="hp-button" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">Let’s connect <span aria-hidden="true">↗</span></a><a class="hp-button hp-button-secondary" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">View résumé <span aria-hidden="true">↓</span></a></div>
       <p class="about-opportunity">Interested in a work-study opportunity in web development.</p>
     </div>

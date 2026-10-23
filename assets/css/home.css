@@ -27,6 +27,8 @@ body.home-redesign { --hp-header-height: 72px; padding-top: var(--hp-header-heig
 .portfolio-home h1 { font-size: 25px; font-weight: 500 !important; letter-spacing: -.025em !important; line-height: 1.25; margin: 0 0 24px; }
 .portfolio-home h1 > span { display: block; font-size: clamp(44px, 4.5vw, 64px); line-height: 1.06; font-weight: 720; letter-spacing: -.045em; margin-top: 12px; }
 .hp-period { color: var(--hp-accent); }
+.portfolio-home h1.hp-hero-title { font-size: clamp(36px, 4vw, 58px); font-weight: 700 !important; line-height: 1.12; letter-spacing: -.04em !important; text-wrap: balance; }
+.hp-hero-title em { color: var(--hp-accent); font-style: normal; }
 .portfolio-home h1 .hp-hero-specialty { display: block; margin-top: 12px; font-size: .48em; line-height: 1.3; font-weight: 500; letter-spacing: -.02em; color: var(--hp-accent); }
 .hp-intro { color: var(--hp-muted); font-size: 14px; line-height: 1.85; max-width: 470px; margin-bottom: 26px; }
 .hp-actions { display: flex; gap: 12px; flex-wrap: wrap; }
