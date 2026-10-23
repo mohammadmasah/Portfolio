@@ -1,120 +1,48 @@
 ---
-title: "About"
-layout: page
-permalink: "/about.html"
+title: About
+layout: default
+home_design: true
+about_design: true
+description: Meet Mohammad Masah, a full-stack development student at Epitech Paris with a background in law, human rights and project coordination, focused on backend development and AI.
+
+permalink: /about.html
 ---
-
-
-
-<div class="container py-4">
-  <div class="row">
-    <div class="col-lg-8 pr-lg-4 order-2 order-lg-1">
-      <div class="glass-content-card p-4 shadow-sm mb-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h6 class="text-tech-blue font-weight-bold text-uppercase m-0">My Story</h6>
-          <span class="badge badge-info p-2" style="border-radius: 10px; font-size: 0.7rem;">Available for Alternance</span>
-        </div>
-        
-        
-        <h1 class="h2 font-weight-bold mb-3">From Law to <span class="text-tech-blue">Code</span></h1>
-        
-        <div class="about-text text-dark">
-        <p class="lead" style="line-height: 1.7; color: var(--text-muted);">
-          As a Full-Stack Web Development student, I am translating my past experience as a <strong>Human Rights Defender</strong> and Project Coordinator with international organizations, including <strong>Medica Mondiale</strong>, into technical strengths. I hold a university degree in <strong>Law and Political Science</strong> from Herat, Afghainstan, bringing a rigorous analytical approach and strong problem-solving skills to the tech industry.
-        </p>
-          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.95rem;">
-            With a strong analytical mindset, I architect and develop reliable and intelligent applications leveraging <strong>React, Node.js, Java, REST APIs, and LangChain AI</strong>. Backed by my professional maturity and rigorous work ethic, I am actively seeking a 14-month work-study placement (alternance) starting <strong>September 2026</strong>.
-          </p>
-        </div>
-
-        <div class="row mt-4 no-gutters text-center">
-            <!-- گزینه اول: تمرکز روی هوش مصنوعی و اتوماسیون -->
-          <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm">
-              <i class="fas fa-brain text-tech-blue mr-2"></i><strong>AI Integration</strong>
-            </div>
-          </div>
-          
-          <!-- گزینه دوم: تمرکز روی ساختار و معماری مقیاس‌پذیر سیستم -->
-          <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm">
-              <i class="fas fa-network-wired text-tech-blue mr-2"></i><strong>Scalable Web Apps</strong>
-            </div>
-          </div>
-          
-          <!-- گزینه سوم: تمرکز روی منطق و توسعه کارآمد بک‌اند و فرانت‌اند -->
-          <div class="col-md-4 px-1 mb-2">
-            <div class="value-item-compact shadow-sm">
-              <i class="fas fa-code text-tech-blue mr-2"></i><strong>Robust Architecture</strong>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="portfolio-home about-page">
+  <section class="about-hero hp-shell" aria-labelledby="about-title">
+    <div class="about-introduction">
+      <p class="hp-eyebrow">ABOUT ME</p>
+      <h1 id="about-title">Mohammad Masah.<br><em>A different path.<br>A practical mindset.</em></h1>
+      <p class="about-role">Full-Stack Developer <span aria-hidden="true">/</span> AI Automation</p>
+      <p class="about-lead">I’m a web development student at Epitech Paris, building applications with a focus on backend APIs, AI integration and automation.</p>
+      <p class="about-summary">Before writing code, I worked in human rights and project coordination. Today, I bring the same attention to people, structure and problem-solving to software development.</p>
+      <div class="hp-actions"><a class="hp-button" href="{{ '/contact.html' | relative_url }}">Let’s connect <span aria-hidden="true">↗</span></a><a class="hp-button hp-button-secondary" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">View résumé <span aria-hidden="true">↓</span></a></div>
+      <p class="about-opportunity">Interested in a work-study opportunity in web development.</p>
     </div>
+    <aside class="about-profile" aria-label="Profile at a glance">
+      <div class="hp-window-bar"><span class="hp-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>THE PERSON BEHIND THE CODE</span><span aria-hidden="true">&lt;/&gt;</span></div>
+      <div class="about-portrait"><img src="{{ '/assets/images/MASAH.jpg' | relative_url }}" alt="Portrait of Mohammad Masah" fetchpriority="high"></div>
+      <div class="about-profile-body"><p class="about-profile-name">Mohammad Masah</p><p class="about-profile-role">Learning. Building. Improving.</p><dl class="about-facts"><div><dt>Based in</dt><dd>Paris, France</dd></div><div><dt>Studying at</dt><dd>Epitech Paris</dd></div><div><dt>Languages</dt><dd>French, English, Persian</dd></div></dl></div>
+    </aside>
+  </section>
 
-    <div class="col-lg-4 order-1 order-lg-2">
-      <div class="profile-sidebar p-3 shadow-sm text-center bg-white" style="border-radius: 25px; border: 1px solid #f1f5f9;">
-        <div class="img-frame-modern mb-3">
-          <img src="{{ '/assets/images/MASAH.jpg' | relative_url }}" alt="Mohammad" class="img-fluid rounded-20" style="height: 300px; width: 100%; object-fit: cover; object-position: center 22%;">
-          <div class="live-status">Online</div>
-        </div>
-        <h5 class="font-weight-bold mb-1" style="color: #0f172a">Mohammad Masah</h5>
-        <p class="text-tech-blue small font-weight-bold mb-3">Full-Stack Developer Student</p>
-        <div class="info-list text-left mb-4 bg-light p-3 rounded-15">
-          <div class="small mb-2"><i class="fas fa-map-marker-alt text-tech-blue mr-2"></i> Paris, France</div>
-          <div class="small mb-2"><i class="fas fa-university text-tech-blue mr-2"></i> Epitech Paris</div>
-          <div class="small"><i class="fas fa-language text-tech-blue mr-2"></i> English, French, Persian</div>
-        </div>
+  <section class="about-story hp-shell" aria-labelledby="about-story-title">
+    <div class="about-section-heading"><p class="hp-eyebrow">MY JOURNEY</p><h2 id="about-story-title">From law<br> to code.</h2><p>A change of field.<br>The same drive to solve problems.</p></div>
+    <ol class="about-timeline">
+      <li><span class="about-step" aria-hidden="true">01</span><div><span class="hp-label">FOUNDATION</span><h3>Law & Political Science</h3><p>I earned my university degree in Herat, Afghanistan. Studying law taught me to work through complex information, question assumptions and build a clear argument.</p></div></li>
+      <li><span class="about-step" aria-hidden="true">02</span><div><span class="hp-label">PROFESSIONAL EXPERIENCE</span><h3>Human rights & project coordination</h3><p>Working as a Human Rights Defender and Project Coordinator with international organizations, including Medica Mondiale, strengthened my communication, teamwork and sense of responsibility.</p></div></li>
+      <li><span class="about-step" aria-hidden="true">03</span><div><span class="hp-label">TODAY</span><h3>Full-stack development at Epitech</h3><p>I’m putting that analytical mindset into practice through web applications, REST APIs and AI-powered tools, connecting React interfaces to the services behind them.</p></div></li>
+    </ol>
+  </section>
 
-        <a target="_blank" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}" class="btn btn-modern-navy w-100 mb-2 py-2">
-          <i class="fas fa-file-download mr-2"></i> Download CV
-        </a>
-        <a href="/contact.html" class="btn btn-modern-outline w-100 py-2 rounded-12">
-          <i class="fas fa-paper-plane mr-2"></i> Contact Me
-        </a>
-      </div>
+  <section class="about-focus hp-shell" aria-labelledby="about-focus-title">
+    <div class="hp-section-top"><div><p class="hp-eyebrow">WHAT I BUILD</p><h2 id="about-focus-title">My technical focus.</h2></div><p>Explore the projects behind the skills.</p></div>
+    <div class="about-focus-grid">
+      <article class="about-focus-card"><span class="about-focus-icon" aria-hidden="true">{ }</span><h3>Backend & APIs</h3><p>Application logic, REST endpoints, authentication and database integration—the foundations behind a useful web application.</p><div class="hp-tags"><span>FastAPI</span><span>Node.js</span><span>Laravel</span><span>PostgreSQL</span></div><a class="hp-project-link" href="{{ '/porject-6/' | relative_url }}">Explore NEXUS <span aria-hidden="true">↗</span></a></article>
+      <article class="about-focus-card"><span class="about-focus-icon" aria-hidden="true">✳</span><h3>AI integration & automation</h3><p>Context-aware assistants, local models and connected workflows. TrackIt brings these ideas into job-search and interview preparation.</p><div class="hp-tags"><span>LangChain</span><span>Ollama</span><span>n8n</span><span>LLM APIs</span></div><a class="hp-project-link" href="{{ '/project-11/' | relative_url }}">Explore TrackIt <span aria-hidden="true">↗</span></a></article>
+      <article class="about-focus-card"><span class="about-focus-icon" aria-hidden="true">&gt;_</span><h3>Testing & delivery</h3><p>Automated tests, containerized environments and repeatable builds. I use these tools to make projects easier to run and maintain.</p><div class="hp-tags"><span>Docker</span><span>GitHub Actions</span><span>Cypress</span><span>Git</span></div><a class="hp-project-link" href="{{ '/porject-7/' | relative_url }}">Explore SpaceWord <span aria-hidden="true">↗</span></a></article>
     </div>
+  </section>
 
-  </div>
+  <section class="about-connect hp-shell" aria-labelledby="about-connect-title"><div><p class="hp-eyebrow">THE NEXT CHAPTER</p><h2 id="about-connect-title">Let’s build and learn together.</h2><p>I’d love to discuss your project, your team or a work-study opportunity.</p></div><div class="about-connect-actions"><a class="hp-button" href="{{ '/contact.html' | relative_url }}">Start a conversation <span aria-hidden="true">↗</span></a><a class="hp-text-link" href="{{ '/categories.html#see-more' | relative_url }}">Browse all projects <span aria-hidden="true">↗</span></a></div></section>
+  <footer class="hp-footer hp-shell"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="https://github.com/mohammadmasah">GitHub ↗</a><a href="https://www.linkedin.com/in/mohammad-masah">LinkedIn ↗</a><a href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">Résumé ↗</a></div></footer>
 </div>
-
-<style>
-  :root { --tech-blue: #38bdf8; --dark-navy: #0f172a; }
-  .text-tech-blue { color: var(--tech-blue) !important; }
-  .glass-content-card { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 25px; border: 1px solid rgba(0,0,0,0.05); }
-  .rounded-20 { border-radius: 20px; }
-  .rounded-15 { border-radius: 15px; }
-  .rounded-12 { border-radius: 12px; }
-  .img-frame-modern { position: relative; border-radius: 20px; overflow: hidden; }
-  .live-status { position: absolute; top: 10px; right: 10px; background: #22c55e; color: white; font-size: 10px; padding: 2px 10px; border-radius: 20px; font-weight: bold; }
-  .value-item-compact { background: #f8fafc; padding: 12px; border-radius: 15px; font-size: 0.85rem; }
-  
-  .btn-modern-navy { background: var(--dark-navy); color: white !important; border-radius: 12px; font-weight: 700; border: none; transition: 0.3s; }
-  .btn-modern-navy:hover { background: #334155; transform: translateY(-2px); }
-  
-  .btn-modern-outline { border: 2px solid var(--dark-navy); color: var(--dark-navy) !important; border-radius: 12px; font-weight: 700; transition: 0.3s; }
-  .btn-modern-outline:hover { background: var(--dark-navy); color: white !important; }
-
-  .lang-switcher-wrapper { display: inline-flex; background: #fff; border-radius: 30px; padding: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
-  .lang-btn { padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; color: #64748b; text-decoration: none !important; transition: 0.3s; }
-  .lang-btn.active { background: var(--dark-navy); color: #fff !important; }
-  .lang-btn:hover:not(.active) { color: var(--tech-blue); }
-
-  #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8f9fa; }
-</style>
-
-<div id="particles-js"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 80 },
-      "color": { "value": "#dc3545" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.2 },
-      "size": { "value": 3, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#dc3545", "opacity": 0.2, "width": 1 },
-      "move": { "enable": true, "speed": 2 }
-    }
-  });
-</script>
