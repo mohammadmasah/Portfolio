@@ -1,0 +1,27 @@
+project-11:
+  filters: [backend, ai]
+project-10:
+  filters: [ai, delivery]
+porject-9:
+  filters: [frontend, backend]
+project-8:
+  filters: [frontend]
+porject-7:
+  filters: [delivery]
+porject-6:
+  category: Full-stack application
+  filters: [backend, frontend]
+project-5:
+  filters: [backend]
+project-4:
+  category: Backend & document generation
+  filters: [backend]
+project-3:
+  category: Responsive interface
+  filters: [frontend]
+project-2:
+  category: Responsive interface
+  filters: [frontend]
+project-1:
+  category: Interactive learning
+  filters: [frontend]

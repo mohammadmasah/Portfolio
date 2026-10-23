@@ -52,7 +52,7 @@
     }
     
     
-    $('.site-content').css('margin-top', $('header').outerHeight() + 'px');
+    // The fixed navigation offset is handled by CSS; content headers stay in normal flow.
 
 
 function loadSearch(){
@@ -181,7 +181,7 @@ const words = ["Mohammad", "a Web Developer"];
 
   
   document.addEventListener("DOMContentLoaded", function() {
-    type();
+    if (typewriterElement) type();
   });
 
 
@@ -194,6 +194,7 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
+  if (!backToTopBtn) return;
  
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     backToTopBtn.style.display = "block";
@@ -204,7 +205,7 @@ function scrollFunction() {
 }
 
 
-backToTopBtn.addEventListener("click", function() {
+if (backToTopBtn) backToTopBtn.addEventListener("click", function() {
   window.scrollTo({
     top: 0,
     behavior: "smooth" 
