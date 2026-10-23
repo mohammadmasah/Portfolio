@@ -1,0 +1,66 @@
+{
+  "project-11": {
+    "filters": [
+      "backend",
+      "ai"
+    ]
+  },
+  "project-10": {
+    "filters": [
+      "ai",
+      "delivery"
+    ]
+  },
+  "porject-9": {
+    "filters": [
+      "frontend",
+      "backend"
+    ]
+  },
+  "project-8": {
+    "filters": [
+      "frontend"
+    ]
+  },
+  "porject-7": {
+    "filters": [
+      "delivery"
+    ]
+  },
+  "porject-6": {
+    "category": "Application full-stack",
+    "filters": [
+      "backend",
+      "frontend"
+    ]
+  },
+  "project-5": {
+    "filters": [
+      "backend"
+    ]
+  },
+  "project-4": {
+    "category": "Backend et génération de documents",
+    "filters": [
+      "backend"
+    ]
+  },
+  "project-3": {
+    "category": "Interface adaptative",
+    "filters": [
+      "frontend"
+    ]
+  },
+  "project-2": {
+    "category": "Interface adaptative",
+    "filters": [
+      "frontend"
+    ]
+  },
+  "project-1": {
+    "category": "Apprentissage interactif",
+    "filters": [
+      "frontend"
+    ]
+  }
+}

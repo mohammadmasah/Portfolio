@@ -1,0 +1,80 @@
+---
+layout: post
+title: "Free CV Generator – PHP Edition"
+image: "/assets/images/cv.png"
+description: "A professional PHP-based web application to create, customize, and export high-quality resumes as PDFs."
+author: mohammad masah
+tags: []
+categories: [See more]
+
+slug: project-4
+date: 2026-01-10
+fr_url: /project-4/
+en_url: /en/project-4/
+lang: en
+locale: en_GB
+---
+
+&#8203;A professional PHP-based web application designed to create, customize, and export high-quality, print-ready resumes as PDFs with real-time validation.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        The <strong>CV Generator</strong> is a functional tool focusing on <strong>robust data validation</strong> 
+        and optimized HTML-to-PDF rendering for seamless resume building.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+        <div class="text-center mx-3"><i class="fab fa-php fa-2x"></i><br><small>PHP 8</small></div>
+        <div class="text-center mx-3"><i class="fas fa-file-pdf fa-2x"></i><br><small>Dompdf</small></div>
+        <div class="text-center mx-3"><i class="fab fa-js fa-2x"></i><br><small>Vanilla JS</small></div>
+        <div class="text-center mx-3">
+            <i class="fas fa-layer-group fa-2x"></i>
+            <br>
+            <small>Bootstrap</small>
+        </div>
+        <div class="text-center mx-3"><i class="fas fa-box-open fa-2x"></i><br><small>Composer</small></div>
+        <div class="text-center mx-3"><i class="fas fa-check-circle fa-2x"></i><br><small>RegEx</small></div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-magic"></i> User Experience
+            </h3>
+            <p>Focusing on interactivity and ease of use:</p>
+            <ul>
+                <li><strong>Real-time Preview:</strong> Instant updates while typing for a smooth UX.</li>
+                <li><strong>Dynamic Fields:</strong> Unlimited sections for education and experience via Vanilla JS.</li>
+                <li><strong>Responsive Design:</strong> Fully accessible on mobile-first architecture.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-cogs"></i> Technical Logic
+            </h3>
+            <p>Robust backend and data processing:</p>
+            <ul>
+                <li><strong>Smart Validation:</strong> Advanced RegEx for email, phone, and URLs.</li>
+                <li><strong>High-Fidelity Export:</strong> Dompdf integration for print-ready conversion.</li>
+                <li><strong>Asset Management:</strong> Using Composer for dependency handling.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-file-export"></i>
+        <strong>Technical Highlight:</strong> This project solves the challenge of converting dynamic HTML/CSS styles into pixel-perfect PDF documents using optimized rendering engines.
+    </div>
+
+    <div class="project-actions">
+        <a href="https://github.com/mohammadmasah/CV-Generator" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Source Code
+        </a>
+    </div>
+
+</div>

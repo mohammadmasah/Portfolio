@@ -1,5 +1,6 @@
+{% include locale.html %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ language }}">
 <head>
   {% include loader-head.html %}
       <!-- Google Tag Manager -->
@@ -13,13 +14,18 @@
   
   <!-------------------------------------------Seo----------------------------------------------->
       {% seo %}
+      {% assign french_url = page.fr_url | default: page.url %}
+      {% assign english_url = page.en_url | default: '/en/' %}
+      <link rel="alternate" hreflang="fr" href="{{ french_url | absolute_url }}">
+      <link rel="alternate" hreflang="en" href="{{ english_url | absolute_url }}">
+      <link rel="alternate" hreflang="x-default" href="{{ french_url | absolute_url }}">
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Mohammad Masah",
           "url": "https://mohammad-h.dev",
-          "jobTitle": "Student at Epitech | Developer",
+          "jobTitle": {% if language == "fr" %}"Étudiant à Epitech | Développeur"{% else %}"Student at Epitech | Developer"{% endif %},
           "sameAs": [
             "https://www.linkedin.com/in/mohammad-masah",
             "https://github.com/mohammadmasah"
@@ -48,6 +54,8 @@
 
   <!-- Bootstrap Modified -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/languages.css' | relative_url }}">
 
   <!-- Theme Stylesheet -->
   <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
@@ -92,7 +100,6 @@
     footer{
       flex-shrink: 0;
     } -->
-  </style>
 </head>
 <body class="{% if page.url == "/" %}homefirstpage{% endif %}{% if page.home_design or page.layout == 'post' %} home-redesign{% endif %}">
   {% include loader.html %}
@@ -107,24 +114,25 @@
   <!-- Navbar -->
   <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-      <!-- <a class="navbar-brand" href="{{ '/' | relative_url }}"><strong>{{site.name}}</strong></a> -->
-     <a class="navbar-brand" href="{{ '/' | relative_url }}">
+      <!-- <a class="navbar-brand" href="{{ '/' | prepend: locale_prefix | relative_url }}"><strong>{{site.name}}</strong></a> -->
+     <a class="navbar-brand" href="{{ '/' | prepend: locale_prefix | relative_url }}">
     {% if page.home_design or page.layout == 'post' %}
     <span class="hp-nav-brand"><span class="hp-code-logo" aria-hidden="true"><span>&lt;</span><span class="hp-code-slash">/</span><span>&gt;</span></span> Mohammad Masah</span>
     {% else %}
     <img src="{{ '/assets/docs/logo.png' | relative_url }}" alt="Logo" style="height: 40px; width: auto; ">
     {% endif %}
 </a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="{{ t.toggle_nav }}">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto d-flex align-items-center">
           {% include menu-header.html %}
         </ul>
-        <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <div class="navbar-nav ml-auto d-flex align-items-center">
           {% include search-lunr.html %}
-        </ul>
+          {% include language-switch.html %}
+        </div>
       </div>
     </div>
     

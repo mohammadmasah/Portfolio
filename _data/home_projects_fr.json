@@ -1,0 +1,78 @@
+[
+  {
+    "url": "/porject-9/",
+    "title": "AltLearn",
+    "category": "Plateforme pédagogique",
+    "image": "/assets/images/AltLearn-hero.png",
+    "description": "Une plateforme avec cours, leçons et quiz. J’ai développé les interfaces administrateur et enseignant et les ai reliées à l’API de l’équipe.",
+    "stack": [
+      "React",
+      "Node.js",
+      "MongoDB"
+    ]
+  },
+  {
+    "url": "/project-11/",
+    "title": "TrackIt — Candidatures et entretiens avec IA",
+    "category": "Développement backend et IA",
+    "image": "/assets/images/job-tracker-hero.png",
+    "description": "Suivi des candidatures et préparation aux entretiens avec une IA contextualisée. Développé avec FastAPI et LangChain, pour utiliser Ollama en local ou votre clé API OpenAI, Gemini ou Claude.",
+    "stack": [
+      "FastAPI",
+      "LangChain",
+      "Ollama",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "React",
+      "Docker"
+    ]
+  },
+  {
+    "url": "/project-10/",
+    "title": "Newsletter IA automatisée",
+    "category": "Automatisation de workflows",
+    "image": "/assets/images/n8n-hero.png",
+    "description": "Un workflow de newsletter et de gestion des essais qui relie les contenus générés par l’IA aux services Google Workspace.",
+    "stack": [
+      "n8n",
+      "Gemini",
+      "Docker"
+    ]
+  },
+  {
+    "url": "/project-8/",
+    "title": "Star Wars Fleet",
+    "category": "Développement frontend",
+    "image": "/assets/images/Star-wars.png",
+    "description": "Un répertoire interactif de vaisseaux avec tableaux de données, défilement infini et persistance de l’état de l’application.",
+    "stack": [
+      "Angular",
+      "TypeScript",
+      "AG Grid"
+    ]
+  },
+  {
+    "url": "/porject-7/",
+    "title": "SpaceWord",
+    "category": "Tests et déploiement",
+    "image": "/assets/images/spaceword.png",
+    "description": "Un jeu dans le navigateur accompagné de tests automatisés, d’un pipeline CI/CD et d’un environnement de développement conteneurisé.",
+    "stack": [
+      "Docker",
+      "Cypress",
+      "GitHub Actions"
+    ]
+  },
+  {
+    "url": "/project-5/",
+    "title": "CineLuxe",
+    "category": "Application web",
+    "image": "/assets/images/my-cinema.png",
+    "description": "Un tableau de bord d’administration de cinéma pour gérer les films, les salles et les opérations quotidiennes.",
+    "stack": [
+      "PHP",
+      "MySQL",
+      "JavaScript"
+    ]
+  }
+]

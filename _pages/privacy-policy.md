@@ -1,43 +1,41 @@
 ---
-title: "Privacy Policy"
-permalink: "/privacy-policy.html"
+title: "Politique de confidentialité"
+
+fr_url: /privacy-policy.html
+en_url: /en/privacy-policy.html
+lang: fr
+locale: fr_FR
+permalink: /privacy-policy.html
 ---
+{% include locale.html %}
+« {{ site.name }} » prend votre vie privée au sérieux. Cette politique explique comment vos informations personnelles sont collectées et utilisées.
 
-"{{site.name}}" takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.
+#### Collecte d’informations courantes
 
-
-#### Collection of Routine Information
-
-This website track basic information about their visitors. This information includes, but is not limited to, IP addresses, browser details, timestamps and referring pages. None of this information can personally identify specific visitor to this website. The information is tracked for routine administration and maintenance purposes.
-
+Ce site enregistre des informations de base sur ses visiteurs, notamment les adresses IP, les informations sur le navigateur, les horodatages et les pages d’origine. Ces informations ne permettent pas, à elles seules, d’identifier un visiteur précis. Elles sont recueillies à des fins d’administration et de maintenance courantes.
 
 #### Cookies
 
-Where necessary, this website uses cookies to store information about a visitor’s preferences and history in order to better serve the visitor and/or present the visitor with customized content.
+Lorsque cela est nécessaire, ce site utilise des cookies pour mémoriser les préférences et l’historique de navigation d’un visiteur afin d’améliorer le service et de lui présenter un contenu personnalisé.
 
+#### Publicité et autres tiers
 
-#### Advertisement and Other Third Parties
+Les partenaires publicitaires et d’autres tiers peuvent utiliser des cookies, des scripts ou des balises web pour suivre l’activité des visiteurs et afficher des publicités ou d’autres informations utiles. Ce suivi est effectué directement par ces tiers, sur leurs propres serveurs, et relève de leurs politiques de confidentialité. Ce site n’a ni accès ni contrôle sur ces cookies, scripts ou balises. Découvrez comment [désactiver l’utilisation des cookies publicitaires de Google](http://www.google.com/privacy_ads.html).
 
-Advertising partners and other third parties may use cookies, scripts and/or web beacons to track visitor activities on this website in order to display advertisements and other useful information. Such tracking is done directly by the third parties through their own servers and is subject to their own privacy policies. This website has no access or control over these cookies, scripts and/or web beacons that may be used by third parties. Learn how to [opt out of Google’s cookie usage](http://www.google.com/privacy_ads.html).
+#### Liens vers des sites tiers
 
+Ce site contient des liens externes à titre d’information. Nous ne sommes pas responsables des politiques de confidentialité de ces sites, qui peuvent différer de la nôtre.
 
-#### Links to Third Party Websites
+#### Sécurité
 
-We have included links on this website for your use and reference. We are not responsible for the privacy policies on these websites. You should be aware that the privacy policies of these websites may differ from our own.
+La sécurité de vos informations personnelles nous importe. Toutefois, aucune méthode de transmission sur Internet ni de stockage électronique n’est totalement sûre. Nous nous efforçons de protéger vos informations par des moyens raisonnables, sans pouvoir garantir une sécurité absolue.
 
+#### Modifications de cette politique de confidentialité
 
-#### Security
+Cette politique reste en vigueur jusqu’à sa modification. Toute modification prend effet dès sa publication sur cette page.
 
-The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
+Nous nous réservons le droit de mettre à jour cette politique à tout moment et vous invitons à la consulter régulièrement. En cas de modification importante, nous vous en informerons à l’adresse e-mail que vous nous avez communiquée ou par une annonce visible sur le site.
 
+#### Coordonnées
 
-#### Changes To This Privacy Policy
-
-This Privacy Policy is effective and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
-
-We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.
-
-
-#### Contact Information
-
-For any questions or concerns regarding the privacy policy, please [contact us here]({{ 'contact.html' | relative_url }}).
+Pour toute question concernant cette politique de confidentialité, veuillez [me contacter]({{ '/contact.html' | relative_url }}).

@@ -1,6 +1,8 @@
 # Site
 name: "Mohammad Masah"
-description: "Student at Epitech | Portfolio"
+description: "Étudiant à Epitech | Portfolio"
+lang: fr
+locale: fr_FR
 url: "https://mohammad-h.dev"
 baseurl: ""
 logo: "assets/images/logo.png"
@@ -18,7 +20,6 @@ permalink: /:title/
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-seo-tag
 
 
@@ -35,7 +36,16 @@ defaults:
     values:
       layout: page
 
-# Paginate
-paginate: 10
 
 
+
+# English project pages use a native Jekyll collection (no extra plugin).
+collections:
+  projects_en:
+    output: true
+    permalink: /en/:name/
+
+# Development checks and maintenance notes are not published.
+exclude:
+  - scripts
+  - docs

@@ -1,29 +1,8 @@
 <div class="sticky-top sticky-top-offset">
-  <h4 class="font-weight-bold spanborder"><span>Team Projects</span></h4>
+  <h4 class="font-weight-bold spanborder"><span>{{ t.team_projects }}</span></h4>
   <ol class="list-featured card-zoom">
-    {% for post in site.tags.featured %}
-    <li class="mb-4">
-      <span>
-        <h6 class="font-weight-bold">
-          <a href="{{ post.url | relative_url }}" class="text-dark"
-            >{{ post.title }}</a
-          >
-        </h6>
-        <!-----------------------------btn Team project------------------------------>
-        <span class="d-block text-muted font-size: 40px;">
-          <span class="catlist">
-            {% for category in post.categories %}
-            <a
-              class="btn btn-dark  btn-sm px-3 shadow-sm mt-1 border-radius: 20px; font-size: 12px; transition: 0.3s;"
-              href=" {{ 'categories.html' | relative_url }}#{{ category | downcase }}"
-              >{{ category }}</a
-            ><span class="sep"> </span>
-            {% endfor %}
-          </span>
-        </span>
-        <!------------------------------------------------------------------------------->
-      </span>
-    </li>
-    {% endfor %}
+    {% for project in all_projects %}{% if project.tags contains 'featured' %}
+    <li class="mb-4"><h6 class="font-weight-bold"><a href="{{ project.url | relative_url }}" class="text-dark">{{ project.title }}</a></h6><a class="btn btn-dark btn-sm" href="{{ project.url | relative_url }}">{{ t.see_more }}</a></li>
+    {% endif %}{% endfor %}
   </ol>
 </div>

@@ -1,0 +1,103 @@
+---
+layout: post
+title: "Klivio – Professional Learning Platform"
+image: "/assets/images/Kilio1.png"
+description: "A high-fidelity landing page designed using semantic HTML5 and advanced CSS3."
+author: mohammad masah
+tags: []
+categories: [See more]
+
+slug: project-2
+date: 2025-10-11
+fr_url: /project-2/
+en_url: /en/project-2/
+lang: en
+locale: en_GB
+---
+
+&#8203;A modern, responsive landing page for an educational platform, focusing on high-quality CSS Grid layouts, semantic SEO, and professional UI/UX transitions.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        <strong>Klivio</strong> is a demonstration of modern web aesthetics, built to bridge the gap between 
+        premium design assets and a clean, maintainable codebase.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+        
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-html5 fa-2x"></i>
+            </div>
+            <small>HTML5</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-css3-alt fa-2x"></i>
+            </div>
+            <small>CSS3</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-th fa-2x"></i>
+            </div>
+            <small>Grid</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-laptop-code fa-2x"></i>
+            </div>
+            <small>Responsive</small>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-paint-brush"></i> UI Architecture
+            </h3>
+            <p>Focusing on professional design standards:</p>
+            <ul>
+                <li><strong>Hero Architecture:</strong> Multi-layered gradients with high-quality assets.</li>
+                <li><strong>CSS Grid:</strong> Advanced layouts for popular and recent course catalogs.</li>
+                <li><strong>Modern Aesthetics:</strong> Professional lead-generation and social proof sections.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-search"></i> Technical SEO
+            </h3>
+            <p>Optimized for accessibility and ranking:</p>
+            <ul>
+                <li><strong>Semantic HTML:</strong> 100% compliant tags for superior SEO structure.</li>
+                <li><strong>Accessibility:</strong> Built to be readable by screen readers and crawlers.</li>
+                <li><strong>Optimized Assets:</strong> Fast-loading visuals for better user retention.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-lightbulb"></i>
+        <strong>Design Note:</strong> The project successfully translates complex Figma/Design concepts into a responsive, pixel-perfect web experience.
+    </div>
+
+    <div class="project-actions">
+        <a href="https://github.com/mohammadmasah/Klivio-static" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Code
+        </a>
+        <a href="https://mohammadmasah.github.io/Klivio-static/" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+    </div>
+
+</div>

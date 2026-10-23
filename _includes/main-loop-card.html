@@ -1,16 +1,18 @@
+{% assign localized_post = all_projects | where: "slug", post.slug | first %}
+{% assign card_post = localized_post | default: post %}
 <div class="mb-5 d-flex justify-content-between main-loop-card card-zoom">
   <div class="pr-3 ">
     <h2 class="mb-1 h4 font-weight-bold">
-      <a class="text-dark" href="{{post.url | relative_url }}"
-        >{{ post.title }}</a
+      <a class="text-dark" href="{{card_post.url | relative_url }}"
+        >{{ card_post.title }}</a
       >
     </h2>
     <p class="excerpt">
-      {{ post.excerpt | strip_html | strip_newlines | truncate: 186}}
+      {{ card_post.excerpt | strip_html | strip_newlines | truncate: 186}}
     </p>
     <!--------------------------------it's btn in the categories and the btn color is atoumactic in bootstrap ------------------------------>
 <div class="mt-3 mb-2">
-  {% for category in post.categories %}
+  {% for category in card_post.categories %}
     {% unless category == "See more" or category == "see more" %}
       <span class="badge badge-light border text-muted mr-2 px-3 py-1" style="border-radius: 20px; font-size: 11px;">
         {{ category }}
@@ -18,22 +20,22 @@
     {% endunless %}
   {% endfor %}
 
-  <a class="btn btn-outline-dark btn-sm px-4 shadow-sm" 
-     href="{{ post.url | relative_url }}" 
+  <a class="btn btn-outline-dark btn-sm px-4 shadow-sm"
+     href="{{ card_post.url | relative_url }}"
      style="border-radius: 20px; font-weight: 600; font-size: 12px;">
-    See More <i class="fas fa-arrow-right ml-1"></i>
+    {{ t.see_more }} <i class="fas fa-arrow-right ml-1"></i>
   </a>
 </div>
 
     <small class="text-muted d-block">
-      {{ post.date | date: '%b %d, %Y' }}
+      {{ card_post.date | date: '%d/%m/%Y' }}
     </small>
   </div>
-  {% if post.image %}
+  {% if card_post.image %}
   <div class="col-md-3 pr-0 text-right">
-    <a href="{{ post.url | relative_url }}">
-      <img class="w-100" src="{% if post.image contains "://" %}{{ post.image
-      }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title
+    <a href="{{ card_post.url | relative_url }}">
+      <img class="w-100" src="{% if card_post.image contains "://" %}{{ card_post.image
+      }}{% else %}{{ card_post.image | relative_url }}{% endif %}" alt="{{ card_post.title
       }}">
     </a>
   </div>

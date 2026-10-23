@@ -1,0 +1,71 @@
+---
+title: Projects
+layout: default
+home_design: true
+searchable: true
+project_catalog: true
+description: Explore my projects in backend development, AI integration, web applications and automation.
+
+fr_url: /categories.html
+en_url: /en/categories.html
+lang: en
+locale: en_GB
+permalink: /en/categories.html
+---
+{% include locale.html %}
+<div class="portfolio-home project-catalog hp-shell" id="see-more">
+  <header class="catalog-header">
+    <div>
+      <p class="hp-eyebrow">MY WORK</p>
+      <h1>Projects built to <em>solve problems.</em></h1>
+      <p class="catalog-intro">From backend APIs and contextual AI to complete web applications.<br>Explore what I built, how it works, and the technology behind it.</p>
+    </div>
+    <div class="catalog-total"><strong>{{ site.posts.size | prepend: '0' | slice: -2, 2 }}</strong><span>projects documented<br>Code, features & implementation</span></div>
+  </header>
+
+  <div class="catalog-controls" hidden>
+    <div class="catalog-filters" role="group" aria-label="Filter projects by discipline">
+      <button type="button" data-filter="all" aria-pressed="true">All projects</button>
+      <button type="button" data-filter="backend" aria-pressed="false">Backend</button>
+      <button type="button" data-filter="ai" aria-pressed="false">AI & automation</button>
+      <button type="button" data-filter="frontend" aria-pressed="false">Frontend</button>
+      <button type="button" data-filter="delivery" aria-pressed="false">Testing & delivery</button>
+    </div>
+    <label class="catalog-search"><span class="sr-only">Search projects or technologies</span><span aria-hidden="true">⌕</span><input type="search" placeholder="Search projects or tech…" autocomplete="off" id="catalog-search"></label>
+  </div>
+  <div class="catalog-results"><p id="catalog-count" role="status" aria-live="polite" aria-atomic="true">{{ site.posts.size }} projects</p><span>Latest work first</span></div>
+
+  <div class="hp-project-grid catalog-grid" id="catalog-grid">
+    {% for post in all_projects %}
+    {% assign curated = home_projects | where: 'url', post.fr_url | first %}
+    {% assign details = project_data[post.slug] %}
+    {% assign catalog = catalog_data[post.slug] %}
+    {% assign title = curated.title | default: post.title %}
+    {% assign description = curated.description | default: post.description %}
+    {% assign category = curated.category | default: catalog.category | default: 'Web development' %}
+    {% assign stack = curated.stack | default: details.stack %}
+    <a class="hp-project catalog-card{% if post.slug == 'project-11' %} catalog-featured{% endif %}" href="{{ post.url | relative_url }}" data-categories="{{ catalog.filters | join: ' ' }}" data-search="{{ title | append: ' ' | append: description | append: ' ' | append: category | escape }} {{ details.stack | join: ' ' | escape }} {{ stack | join: ' ' | escape }}" aria-labelledby="title-{{ post.slug }}">
+      <div class="hp-project-image">
+        <img src="{{ post.image | relative_url }}" alt="" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} width="680" height="400">
+        {% if post.slug == 'project-11' %}<span class="catalog-featured-label">FEATURED PROJECT</span>{% endif %}
+      </div>
+      <div class="hp-project-details">
+        <div class="catalog-meta"><span class="hp-label">{{ category }}</span><span>{{ post.date | date: '%Y' }}</span></div>
+        <h2 id="title-{{ post.slug }}">{{ title }}</h2>
+        <p>{{ description }}</p>
+        {% if post.slug == 'project-11' %}<ul class="catalog-highlights"><li>Context-aware AI & interview practice</li><li>FastAPI backend · JWT & HttpOnly cookies</li><li>Local desktop app & Docker environment</li></ul>{% endif %}
+        <div class="hp-tags">{% for tech in stack %}<span>{{ tech }}</span>{% endfor %}</div>
+        <div class="hp-project-link">Explore the project <span aria-hidden="true">↗</span></div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="catalog-empty" hidden>
+    <h2>No matching projects</h2>
+    <p>Try another technology or explore all the projects.</p>
+    <button class="hp-button" type="button" id="catalog-reset">Show all projects</button>
+  </div>
+  <section class="catalog-contact" aria-labelledby="catalog-contact-title"><div><p class="hp-eyebrow">LET’S CONNECT</p><h2 id="catalog-contact-title">Have a project in mind?</h2><p>Let’s talk about the application, API or automation you want to build.</p></div><a class="hp-button hp-button-secondary" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">Get in touch <span aria-hidden="true">↗</span></a></section>
+  <footer class="hp-footer"><span>Mohammad Masah · Full-Stack Developer & AI Automation</span><div><a href="{{ '/' | prepend: locale_prefix | relative_url }}">Home</a><a href="#see-more">Back to top ↑</a></div></footer>
+</div>
+<script src="{{ '/assets/js/projects.js' | relative_url }}" defer></script>

@@ -1,9 +1,14 @@
 ---
-title: "Authors"
+title: "Auteurs"
 layout: default
-permalink: "/authors-list.html"
----
 
+fr_url: /authors-list.html
+en_url: /en/authors-list.html
+lang: fr
+locale: fr_FR
+permalink: /authors-list.html
+---
+{% include locale.html %}
 <div class="container">
 <h4 class="font-weight-bold spanborder"><span>{{page.title}}</span></h4>
     <div class="row gap-y listrecent listrecent listauthor">
@@ -15,7 +20,7 @@ permalink: "/authors-list.html"
             <div class="col-md-9">
             <a href="{{ 'author' | relative_url }}-{{ author[1].name | slugify }}">
             <h4 class="text-dark mb-0"> {{ author[1].name }} </h4>
-            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(View Posts)</small>
+            <small class="d-inline-block mt-1 mb-3 font-weight-normal">(Voir les articles)</small>
             <div class="excerpt">{{ author[1].bio }}</div>
             </a>
             <div class="icon-block mt-3 d-flex justify-content-between">

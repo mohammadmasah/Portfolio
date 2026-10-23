@@ -1,0 +1,99 @@
+---
+layout: post
+title: "Epitalk"
+image: "/assets/images/Epitalk.png"
+description: "An interactive educational platform built with HTML, CSS, and JavaScript."
+author: mohammad masah
+tags: [featured]
+categories: [See more]
+
+slug: project-1
+date: 2025-10-10
+fr_url: /project-1/
+en_url: /en/project-1/
+lang: en
+locale: en_GB
+---
+
+&#8203;Epitalk is a collaborative educational application featuring an interactive chatbot interface and a dynamic student ID generator, developed using Vanilla JavaScript.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        <strong>Epitalk</strong> is a collaborative front-end application developed at <strong>Web@cadémie</strong>, 
+        designed to simulate a smart assistant platform for student interaction.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+        
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-js fa-2x"></i>
+            </div>
+            <small>JavaScript</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-html5 fa-2x"></i>
+            </div>
+            <small>HTML5</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-css3-alt fa-2x"></i>
+            </div>
+            <small>CSS3</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-users fa-2x"></i>
+            </div>
+            <small>Teamwork</small>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-id-card"></i> My Primary Role
+            </h3>
+            <p>Developed the core dynamic features:</p>
+            <ul>
+                <li><strong>ID Generator:</strong> A dynamic tool creating personalized student cards in real-time.</li>
+                <li><strong>DOM Manipulation:</strong> Efficiently updating the UI based on user input data.</li>
+                <li><strong>Data Handling:</strong> Managing user-provided assets for card generation.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-comments"></i> Platform Logic
+            </h3>
+            <p>Collaborative features of the assistant:</p>
+            <ul>
+                <li><strong>Chatbot UI:</strong> An interactive interface designed for rapid student Q&A.</li>
+                <li><strong>Auth Simulation:</strong> A clean, secure-looking login flow for access control.</li>
+                <li><strong>Interactive UX:</strong> Smooth transitions and responsive design for students.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-hands-helping"></i>
+        <strong>Collaboration Note:</strong> This project highlights my ability to work within a developer team, integrating my JavaScript components into a larger, shared codebase.
+    </div>
+
+    <div class="project-actions">
+        <a href="https://github.com/mohammadmasah/Epitalk-Team-Project" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Source Code
+        </a>
+    </div>
+
+</div>

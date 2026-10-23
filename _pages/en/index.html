@@ -1,0 +1,59 @@
+---
+title: "Mohammad Masah — Full-Stack Developer"
+layout: default
+description: "Mohammad Masah, full-stack developer and Epitech student. Explore my web applications, learning platforms, AI tools, and automation projects."
+home_design: true
+searchable: true
+
+fr_url: /
+en_url: /en/
+lang: en
+locale: en_GB
+permalink: /en/
+---
+{% include locale.html %}
+<div class="portfolio-home">
+  <section class="hp-hero hp-shell" aria-labelledby="hero-title">
+    <div class="hp-hero-copy">
+      <h1 id="hero-title">Mohammad Masah<span>Full-Stack<br>Developer<span class="hp-period">.</span><span class="hp-hero-specialty">AI Automation</span></span></h1>
+      <p class="hp-intro">I build web applications, APIs, and automation tools.<br>An Epitech student bringing an analytical mindset from law to software development.</p>
+      <div class="hp-actions"><a class="hp-button" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="hp-button hp-button-secondary" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">View résumé <span aria-hidden="true">↓</span></a></div>
+      <div class="hp-proof"><div><strong>+10</strong><span>Projects documented</span></div><div><strong>Web + AI</strong><span>Applications & automation</span></div><div><strong>Epitech</strong><span>Web development student</span></div></div>
+    </div>
+    {% assign spotlight = home_projects | where: "url", "/project-11/" | first %}
+    <a class="hp-spotlight" href="{{ spotlight.url | prepend: locale_prefix | relative_url }}" aria-label="Explore {{ spotlight.title | escape }}, my featured project">
+      <div class="hp-window-bar"><span class="hp-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>PROJECT SPOTLIGHT</span><span aria-hidden="true">↗</span></div>
+      <div class="hp-spotlight-image"><img src="{{ spotlight.image | relative_url }}" alt="{{ spotlight.title | escape }} project preview" width="800" height="500" fetchpriority="high"></div>
+      <div class="hp-spotlight-body"><span class="hp-label">{{ spotlight.category }}</span><h2>{{ spotlight.title }}<span aria-hidden="true">↗</span></h2><p>{{ spotlight.description }}</p><div class="hp-tags">{% for tech in spotlight.stack %}<span>{{ tech }}</span>{% endfor %}</div></div>
+    </a>
+  </section>
+
+
+  <section class="hp-shell hp-section" id="projects" aria-labelledby="work-title">
+    <div class="hp-section-top"><div><p class="hp-eyebrow">01 / SELECTED PROJECTS</p><h2 id="work-title">What I’ve built<span>.</span></h2><p>Real applications. Different challenges. A look at the work behind the code.</p></div><a class="hp-text-link" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}">All {{ site.posts.size }} projects <span aria-hidden="true">↗</span></a></div>
+    <div class="hp-project-grid">
+      {% for project in home_projects %}
+      <article class="hp-project">
+        <a class="hp-project-image" href="{{ project.url | prepend: locale_prefix | relative_url }}" aria-label="Explore {{ project.title | escape }}"><img src="{{ project.image | relative_url }}" alt="{{ project.title | escape }} project preview" width="800" height="500" loading="lazy"><span class="hp-project-number">0{{ forloop.index }}</span></a>
+        <div class="hp-project-details"><p class="hp-label">{{ project.category }}</p><h3><a href="{{ project.url | prepend: locale_prefix | relative_url }}">{{ project.title }}</a></h3><p>{{ project.description }}</p><div class="hp-tags">{% for tech in project.stack %}<span>{{ tech }}</span>{% endfor %}</div><a class="hp-project-link" href="{{ project.url | prepend: locale_prefix | relative_url }}">View project <span aria-hidden="true">↗</span></a></div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="hp-skills-section" aria-labelledby="skills-title"><div class="hp-shell hp-section">
+    <div class="hp-section-top"><div><p class="hp-eyebrow">02 / TECHNICAL SKILLS</p><h2 id="skills-title">From interface to infrastructure<span>.</span></h2></div></div>
+    <div class="hp-skills-grid">
+      <div class="hp-skill"><span class="hp-skill-icon" aria-hidden="true">&lt;/&gt;</span><h3>Frontend development</h3><p>Responsive interfaces, component-based applications, and API integration.</p><div class="hp-tags"><span>React</span><span>Angular</span><span>TypeScript</span><span>HTML / CSS</span><span>Tailwind</span></div></div>
+      <div class="hp-skill"><span class="hp-skill-icon" aria-hidden="true">{ }</span><h3>Backend development</h3><p>Application logic, authentication, REST APIs, and database integration.</p><div class="hp-tags"><span>PHP / Laravel</span><span>Python</span><span>Java</span><span>SQL</span><span>Node.js</span></div></div>
+      <div class="hp-skill"><span class="hp-skill-icon" aria-hidden="true">⌘</span><h3>Automation & delivery</h3><p>Connected workflows, automated testing, and repeatable deployments.</p><div class="hp-tags"><span>n8n</span><span>LangChain</span><span>LLM (Ollama)</span><span>Docker</span><span>GitHub Actions</span><span>Cypress</span></div></div>
+    </div>
+  </div></section>
+
+  <section class="hp-about hp-shell hp-section" aria-labelledby="about-title"><div><p class="hp-eyebrow">03 / MY BACKGROUND</p><h2 id="about-title">From law to code.</h2></div><div><p>Before writing code, I learned to analyse complex problems through law. At Epitech, I’m applying that same discipline to web development: understanding requirements, working with a team, and turning ideas into usable software.</p><a class="hp-text-link" href="{{ '/about.html' | prepend: locale_prefix | relative_url }}">More about my journey <span aria-hidden="true">↗</span></a></div></section>
+
+  <section class="hp-contact hp-shell" aria-labelledby="contact-title"><div><p class="hp-eyebrow"><span class="hp-dot"></span> LET’S CONNECT</p><h2 id="contact-title">Looking for a developer?</h2><p>I’d love to hear about your project or work-study opportunity.</p></div><div class="hp-contact-actions"><a class="hp-button" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">Start a conversation <span aria-hidden="true">↗</span></a><a class="hp-text-link" href="https://www.linkedin.com/in/mohammad-masah">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div></section>
+  <footer class="hp-footer hp-shell"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="https://github.com/mohammadmasah">GitHub ↗</a><a href="https://www.linkedin.com/in/mohammad-masah">LinkedIn ↗</a><a href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">Résumé ↗</a></div><a href="#hero-title">Back to top ↑</a></footer>
+</div>
+<button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+

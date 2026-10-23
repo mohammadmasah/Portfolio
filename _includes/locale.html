@@ -1,0 +1,14 @@
+{%- assign language = page.lang | default: 'fr' -%}
+{%- assign t = site.data.translations[language] -%}
+{%- assign locale_prefix = '' -%}
+{%- assign home_projects = site.data.home_projects_fr -%}
+{%- assign all_projects = site.posts -%}
+{%- assign project_data = site.data.project_pages_fr -%}
+{%- assign catalog_data = site.data.project_catalog_fr -%}
+{%- if language == 'en' -%}
+  {%- assign locale_prefix = '/en' -%}
+  {%- assign home_projects = site.data.home_projects -%}
+  {%- assign all_projects = site.projects_en | sort: 'date' | reverse -%}
+  {%- assign project_data = site.data.project_pages -%}
+  {%- assign catalog_data = site.data.project_catalog -%}
+{%- endif -%}

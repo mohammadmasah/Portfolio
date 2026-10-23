@@ -1,41 +1,44 @@
 ---
 layout: default
 ---
-{% assign project_info = site.data.project_pages[page.slug] %}
+{% include locale.html %}
+{% assign project_info = project_data[page.slug] %}
 <div class="portfolio-home project-page">
   <header class="project-hero hp-shell">
-    <a class="project-back" href="{{ '/categories.html#see-more' | relative_url }}"><span aria-hidden="true">←</span> All projects</a>
+    <a class="project-back" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}"><span aria-hidden="true">←</span> {{ t.all_projects }}</a>
     <div class="project-hero-grid">
       <div>
-        <p class="hp-eyebrow">PROJECT CASE STUDY <span aria-hidden="true">/</span> {{ page.date | date: '%Y' }}</p>
+        <p class="hp-eyebrow">{{ t.case_study }} <span aria-hidden="true">/</span> {{ page.date | date: '%Y' }}</p>
         <h1>{{ page.title }}</h1>
         <p class="project-description">{{ page.description }}</p>
-        <div class="hp-tags" aria-label="Project technologies">{% for tech in project_info.stack %}<span>{{ tech }}</span>{% endfor %}</div>
-        <div class="project-hero-actions">{% for resource in project_info.resources %}{% if forloop.first or page.hero_resources %}<a class="hp-button" href="{% if resource.url contains '://' %}{{ resource.url }}{% else %}{{ resource.url | relative_url }}{% endif %}">{{ resource.label }} <span aria-hidden="true">↗</span></a>{% endif %}{% endfor %}<a class="hp-text-link" href="#project-overview">Explore the details <span aria-hidden="true">↓</span></a></div>
+        <div class="hp-tags" aria-label="{{ t.technologies }}">{% for tech in project_info.stack %}<span>{{ tech }}</span>{% endfor %}</div>
+        <div class="project-hero-actions">{% for resource in project_info.resources %}{% if forloop.first or page.hero_resources %}<a class="hp-button" href="{% if resource.url contains '://' %}{{ resource.url }}{% else %}{{ resource.url | relative_url }}{% endif %}">{{ resource.label }} <span aria-hidden="true">↗</span></a>{% endif %}{% endfor %}<a class="hp-text-link" href="#project-overview">{{ t.details }} <span aria-hidden="true">↓</span></a></div>
       </div>
       {% if page.image %}
-      <figure class="project-cover"><div class="hp-window-bar"><span class="hp-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>PROJECT PREVIEW</span><span aria-hidden="true">↗</span></div><img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | relative_url }}{% endif %}" alt="{{ page.title | escape }} — project preview" width="900" height="600" fetchpriority="high"><figcaption>Project preview · {{ page.date | date: '%Y' }}</figcaption></figure>
+      <figure class="project-cover"><div class="hp-window-bar"><span class="hp-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>{{ t.preview }}</span><span aria-hidden="true">↗</span></div><img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | relative_url }}{% endif %}" alt="{{ page.title | escape }} — {{ t.preview_caption }}" width="900" height="600" fetchpriority="high"><figcaption>{{ t.preview_caption }} · {{ page.date | date: '%Y' }}</figcaption></figure>
       {% endif %}
     </div>
   </header>
 
   <div class="project-main hp-shell">
     <section class="project-details" id="project-overview" aria-labelledby="project-overview-title">
-      <p class="hp-eyebrow">INSIDE THE PROJECT</p>
-      <h2 id="project-overview-title">{{ page.overview_title | default: 'Project overview' }}</h2>
+      <p class="hp-eyebrow">{{ t.inside }}</p>
+      <h2 id="project-overview-title">{{ page.overview_title | default: t.overview }}</h2>
       <article class="project-body">{{ content }}</article>
       {% if site.disqus and page.comments != false %}{% include comments.html %}{% endif %}
     </section>
-    <aside class="project-sidebar" aria-label="Project information">
-      <div class="project-info-card"><span class="hp-label">PROJECT DETAILS</span><dl><div><dt>Developer</dt><dd>Mohammad Masah</dd></div><div><dt>Published</dt><dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %Y' }}</time></dd></div><div><dt>Technology stack</dt><dd><div class="hp-tags">{% for tech in project_info.stack %}<span>{{ tech }}</span>{% endfor %}</div></dd></div></dl>{% if project_info.resources.size > 0 %}<div class="project-resource-links">{% for resource in project_info.resources %}<a href="{% if resource.url contains '://' %}{{ resource.url }}{% else %}{{ resource.url | relative_url }}{% endif %}">{{ resource.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}</div>
-      <div class="project-question"><h3>Want to know more?</h3><p>Let’s talk about the implementation or a similar project.</p><a class="hp-text-link" href="{{ '/contact.html' | relative_url }}">Get in touch <span aria-hidden="true">↗</span></a></div>
+    <aside class="project-sidebar" aria-label="{{ t.information }}">
+      <div class="project-info-card"><span class="hp-label">{{ t.project_details }}</span><dl><div><dt>{{ t.developer }}</dt><dd>Mohammad Masah</dd></div><div><dt>{{ t.published }}</dt><dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% assign month_index = page.date | date: '%m' | minus: 1 %}{{ t.months[month_index] }} {{ page.date | date: '%Y' }}</time></dd></div><div><dt>{{ t.stack }}</dt><dd><div class="hp-tags">{% for tech in project_info.stack %}<span>{{ tech }}</span>{% endfor %}</div></dd></div></dl>{% if project_info.resources.size > 0 %}<div class="project-resource-links">{% for resource in project_info.resources %}<a href="{% if resource.url contains '://' %}{{ resource.url }}{% else %}{{ resource.url | relative_url }}{% endif %}">{{ resource.label }} <span aria-hidden="true">↗</span></a>{% endfor %}</div>{% endif %}</div>
+      <div class="project-question"><h3>{{ t.more_question }}</h3><p>{{ t.more_description }}</p><a class="hp-text-link" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">{{ t.get_in_touch }} <span aria-hidden="true">↗</span></a></div>
     </aside>
   </div>
 
-  <section class="project-more hp-shell" aria-labelledby="project-more-title"><div class="hp-section-top"><div><p class="hp-eyebrow">KEEP EXPLORING</p><h2 id="project-more-title">More of my work<span>.</span></h2></div><a class="hp-text-link" href="{{ '/categories.html#see-more' | relative_url }}">All projects <span aria-hidden="true">↗</span></a></div><div class="project-next-grid">
-    {% if page.previous %}<a class="project-next-card" href="{{ page.previous.url | relative_url }}"><span class="hp-label">PREVIOUS PROJECT</span><h3>{{ page.previous.title }}</h3><span class="project-next-arrow" aria-hidden="true">↗</span></a>{% endif %}
-    {% if page.next %}<a class="project-next-card" href="{{ page.next.url | relative_url }}"><span class="hp-label">NEXT PROJECT</span><h3>{{ page.next.title }}</h3><span class="project-next-arrow" aria-hidden="true">↗</span></a>{% endif %}
+  {% assign previous_project = nil %}{% assign next_project = nil %}
+  {% for project in all_projects %}{% if project.slug == page.slug %}{% assign older = forloop.index0 | plus: 1 %}{% assign newer = forloop.index0 | minus: 1 %}{% assign previous_project = all_projects[older] %}{% if newer >= 0 %}{% assign next_project = all_projects[newer] %}{% endif %}{% endif %}{% endfor %}
+  <section class="project-more hp-shell" aria-labelledby="project-more-title"><div class="hp-section-top"><div><p class="hp-eyebrow">{{ t.keep_exploring }}</p><h2 id="project-more-title">{{ t.more_work }}<span>.</span></h2></div><a class="hp-text-link" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}">{{ t.all_projects }} <span aria-hidden="true">↗</span></a></div><div class="project-next-grid">
+    {% if previous_project %}<a class="project-next-card" href="{{ previous_project.url | relative_url }}"><span class="hp-label">{{ t.previous }}</span><h3>{{ previous_project.title }}</h3><span class="project-next-arrow" aria-hidden="true">↗</span></a>{% endif %}
+    {% if next_project %}<a class="project-next-card" href="{{ next_project.url | relative_url }}"><span class="hp-label">{{ t.next }}</span><h3>{{ next_project.title }}</h3><span class="project-next-arrow" aria-hidden="true">↗</span></a>{% endif %}
   </div></section>
-  <footer class="hp-footer hp-shell"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="{{ '/' | relative_url }}">Home</a><a href="https://github.com/mohammadmasah">GitHub ↗</a><a href="{{ '/contact.html' | relative_url }}">Contact ↗</a></div></footer>
+  <footer class="hp-footer hp-shell"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="{{ '/' | prepend: locale_prefix | relative_url }}">{{ t.home }}</a><a href="https://github.com/mohammadmasah">GitHub ↗</a><a href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">Contact ↗</a></div></footer>
 </div>
-<button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+<button id="backToTop" title="{{ t.back_to_top }}" aria-label="{{ t.back_to_top }}">↑</button>

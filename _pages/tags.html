@@ -1,16 +1,21 @@
 ---
-title: "Tags"
+title: "Thèmes"
 layout: default
-permalink: "/tags.html"
----
 
+fr_url: /tags.html
+en_url: /en/tags.html
+lang: fr
+locale: fr_FR
+permalink: /tags.html
+---
+{% include locale.html %}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Tags</h1>
+        <h1 class="font-weight-bold title h6 text-uppercase mb-4">Thèmes</h1>
             
         {% for tag in site.tags %} 
-        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] | downcase }}"><span>{{ tag[0] }}</span></h4>
+        <h4 class="font-weight-bold spanborder text-capitalize" id="{{ tag[0] | downcase }}"><span>{% case tag[0] %}{% when 'featured' %}À la une{% when 'AI' %}IA{% else %}{{ tag[0] }}{% endcase %}</span></h4>
             
         {% assign pages_list = tag[1] %}
         {% for post in pages_list %}

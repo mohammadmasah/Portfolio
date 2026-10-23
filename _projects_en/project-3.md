@@ -1,0 +1,109 @@
+---
+layout: post
+title: "Klivio – Tailwind CSS Edition"
+image: "/assets/images/Kilio2.png"
+description: "A high-performance educational interface built using Tailwind CSS and Utility-First principles."
+author: mohammad masah
+tags: []
+categories: [See more]
+
+slug: project-3
+date: 2025-12-07
+fr_url: /project-3/
+en_url: /en/project-3/
+lang: en
+locale: en_GB
+---
+
+&#8203;A high-performance educational interface built using Tailwind CSS and Utility-First principles to demonstrate scalable and fast UI development.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        In this version of <strong>Klivio</strong>, I migrated the entire design to <strong>Tailwind CSS</strong> 
+        to showcase rapid styling, consistency, and professional-grade performance.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+    
+    <div class="text-center mx-3">
+        <div class="project-tech-icon">
+            TW
+        </div>
+        <small>Tailwind</small>
+    </div>
+
+    <div class="text-center mx-3">
+        <div class="project-tech-icon">
+            <i class="fab fa-html5 fa-2x"></i>
+        </div>
+        <small>HTML5</small>
+    </div>
+
+    <div class="text-center mx-3">
+        <div class="project-tech-icon">
+            <i class="fab fa-css3-alt fa-2x"></i>
+        </div>
+        <small>CSS3</small>
+    </div>
+
+    <div class="text-center mx-3">
+        <div class="project-tech-icon">
+            <i class="fab fa-font-awesome fa-2x"></i>
+        </div>
+        <small>Icons</small>
+    </div>
+
+    <div class="text-center mx-3">
+        <div class="project-tech-icon">
+            <i class="fas fa-mobile-alt fa-2x"></i>
+        </div>
+        <small>Responsive</small>
+    </div>
+
+</div>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-layer-group"></i> Architecture
+            </h3>
+            <p>Built with modern utility-first principles:</p>
+            <ul>
+                <li><strong>Utility-First:</strong> Clean codebase without bulky custom CSS files.</li>
+                <li><strong>Scalable Design:</strong> Consistent spacing and typography system.</li>
+                <li><strong>Montserrat Branding:</strong> Premium look with modern typography integration.</li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-th-large"></i> Components
+            </h3>
+            <p>Reusable and modular UI elements:</p>
+            <ul>
+                <li><strong>Hero Section:</strong> Modern header with sleek gradient overlays.</li>
+                <li><strong>Course Catalog:</strong> Responsive grid-based layout for content.</li>
+                <li><strong>Fast Rendering:</strong> Optimized for rapid load times and aesthetics.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-check-circle"></i>
+        <strong>Technical Highlight:</strong> This migration reduced the CSS bundle size significantly while maintaining a high level of design fidelity across all viewports.
+    </div>
+
+    <div class="project-actions">
+        <a href="https://github.com/mohammadmasah/Klivio-tailwind" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Code
+        </a>
+        <a href="https://mohammadmasah.github.io/Klivio-tailwind/" target="_blank" 
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+    </div>
+
+</div>

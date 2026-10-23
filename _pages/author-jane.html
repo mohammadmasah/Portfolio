@@ -1,9 +1,14 @@
 ---
 title: "Jane"
 layout: default
-permalink: "/author-jane.html"
----
 
+fr_url: /author-jane.html
+en_url: /en/author-jane.html
+lang: fr
+locale: fr_FR
+permalink: /author-jane.html
+---
+{% include locale.html %}
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -12,7 +17,7 @@ permalink: "/author-jane.html"
           <h2 class="font-weight-bold">
             {{page.title}}
             <span class="small btn btn-outline-success btn-sm btn-round"
-              ><a href="{{ site.authors.jane.twitter }}">Follow</a></span
+              ><a href="{{ site.authors.jane.twitter }}">Suivre</a></span
             >
           </h2>
           <p>
@@ -33,7 +38,7 @@ permalink: "/author-jane.html"
         </div>
       </div>
       <h4 class="font-weight-bold spanborder">
-        <span>Posts by {{page.title}}</span>
+        <span>Articles de {{page.title}}</span>
       </h4>
       {% assign posts = site.posts | where:"author","jane" %} {% for post in
       posts %} {% include main-loop-card.html %} {% endfor %}

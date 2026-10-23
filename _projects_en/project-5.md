@@ -1,0 +1,76 @@
+---
+layout: post
+title: "CineLuxe – Admin Dashboard"
+image: "/assets/images/my-cinema.png"
+description: "A luxury Cinema Management System with a modern dark theme, designed for movie and hall operations."
+author: mohammad masah
+tags: []
+categories: [See more]
+
+slug: project-5
+date: 2026-01-21
+fr_url: /project-5/
+en_url: /en/project-5/
+lang: en
+locale: en_GB
+---
+
+&#8203;A luxury Cinema Management System with a modern dark theme, designed for seamless operations of movies, halls, and screening schedules using PHP and MySQL.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        <strong>CineLuxe</strong> is a high-end administrative interface built to streamline cinema operations,
+        combining complex <strong>CRUD logic</strong> with a premium cinematic user experience.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+        <div class="text-center mx-3"><i class="fab fa-php fa-2x"></i><br><small>PHP 8</small></div>
+        <div class="text-center mx-3"><i class="fas fa-database fa-2x"></i><br><small>MySQL</small></div>
+        <div class="text-center mx-3"><i class="fab fa-js fa-2x"></i><br><small>JavaScript</small></div>
+        <div class="text-center mx-3"><i class="fab fa-css3-alt fa-2x"></i><br><small>Tailwind</small></div>
+        <div class="text-center mx-3"><i class="fab fa-docker fa-2x"></i><br><small>Docker</small></div>
+        <div class="text-center mx-3"><i class="fas fa-server fa-2x"></i><br><small>PDO</small></div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-film"></i> Movie Management
+            </h3>
+            <p>Advanced administration tools for theater content:</p>
+            <ul>
+                <li><strong>Full CRUD:</strong> Manage movie titles, metadata, and posters.</li>
+                <li><strong>Hall System:</strong> Control Standard, IMAX, and 4DX theater rooms.</li>
+                <li><strong>Soft Delete:</strong> Deactivate halls without losing historical database records.</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-calendar-alt"></i> Scheduling
+            </h3>
+            <p>Smart relational database architecture:</p>
+            <ul>
+                <li><strong>Dynamic Slots:</strong> Link movies to halls and specific time slots.</li>
+                <li><strong>Secure PDO:</strong> Robust protection against SQL injection attacks.</li>
+                <li><strong>Glassmorphism UI:</strong> A sleek dark theme with modern CSS overlays.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-lightbulb"></i>
+        <strong>Technical Highlight:</strong> This system uses a relational MySQL structure with foreign keys to ensure data consistency between movies, schedules, and halls.
+    </div>
+
+    <div class="project-actions">
+        <a href="https://github.com/mohammadmasah/Cinema-Management-System" target="_blank"
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Source Code
+        </a>
+    </div>
+
+</div>

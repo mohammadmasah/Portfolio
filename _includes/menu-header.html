@@ -1,18 +1,3 @@
-<li class="nav-item mx-2">
-  <a class="nav-link nav-link-luxury" href="{{ 'categories.html#see-more' | relative_url}}">PROJECTS</a>
-</li>
-<li class="nav-item mx-2">
-  <a class="nav-link nav-link-luxury" href="{{ 'contact.html' | relative_url }}">CONTACT</a>
-</li>
-<li class="nav-item mx-2">
-  <a class="nav-link nav-link-luxury" href="{{ 'about.html' | relative_url }}">ABOUT</a>
-</li>
-
-
-
-
-
-
-
-
-
+<li class="nav-item mx-2"><a class="nav-link nav-link-luxury" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}">{{ t.projects }}</a></li>
+<li class="nav-item mx-2"><a class="nav-link nav-link-luxury" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">{{ t.contact }}</a></li>
+<li class="nav-item mx-2"><a class="nav-link nav-link-luxury" href="{{ '/about.html' | prepend: locale_prefix | relative_url }}">{{ t.about }}</a></li>

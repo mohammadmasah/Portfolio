@@ -1,0 +1,188 @@
+{
+  "project-1": {
+    "stack": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Travail en équipe"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code source",
+        "url": "https://github.com/mohammadmasah/Epitalk-Team-Project"
+      }
+    ]
+  },
+  "project-2": {
+    "stack": [
+      "HTML5",
+      "CSS3",
+      "Grid",
+      "Adaptatif"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code",
+        "url": "https://github.com/mohammadmasah/Klivio-static"
+      },
+      {
+        "label": "Voir la démo",
+        "url": "https://mohammadmasah.github.io/Klivio-static/"
+      }
+    ]
+  },
+  "project-3": {
+    "stack": [
+      "Tailwind",
+      "HTML5",
+      "CSS3",
+      "Icônes",
+      "Adaptatif"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code",
+        "url": "https://github.com/mohammadmasah/Klivio-tailwind"
+      },
+      {
+        "label": "Voir la démo",
+        "url": "https://mohammadmasah.github.io/Klivio-tailwind/"
+      }
+    ]
+  },
+  "project-4": {
+    "stack": [
+      "PHP 8",
+      "Dompdf",
+      "Vanilla JS",
+      "Bootstrap",
+      "Composer",
+      "RegEx"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code source",
+        "url": "https://github.com/mohammadmasah/CV-Generator"
+      }
+    ]
+  },
+  "project-5": {
+    "stack": [
+      "PHP 8",
+      "MySQL",
+      "JavaScript",
+      "Tailwind",
+      "Docker",
+      "PDO"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code source",
+        "url": "https://github.com/mohammadmasah/Cinema-Management-System"
+      }
+    ]
+  },
+  "porject-6": {
+    "stack": [
+      "React",
+      "Laravel",
+      "PHP 8",
+      "Tailwind",
+      "Spring",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "resources": [
+      {
+        "label": "Java (Spring Boot)",
+        "url": "https://github.com/mohammadmasah/NEXUS-Platform-JAVA-spring-boot-"
+      },
+      {
+        "label": "PHP (Laravel)",
+        "url": "https://github.com/mohammadmasah/NEXUS-Platform"
+      }
+    ]
+  },
+  "porject-7": {
+    "stack": [
+      "Docker",
+      "Mocha",
+      "Cypress",
+      "CI/CD"
+    ],
+    "resources": [
+      {
+        "label": "Voir le code source",
+        "url": "https://github.com/mohammadmasah/js13k-spaceWord"
+      },
+      {
+        "label": "Jouer à la démo",
+        "url": "https://mohammadmasah.github.io/js13k-spaceWord/"
+      }
+    ]
+  },
+  "project-11": {
+    "stack": [
+      "FastAPI",
+      "LangChain",
+      "Ollama",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "React",
+      "Docker",
+      "GitHub Actions"
+    ],
+    "resources": [
+      {
+        "label": "Télécharger TrackIt",
+        "url": "https://github.com/mohammadmasah/Job-Tracker-Aggregator/releases/tag/v1.0.0"
+      },
+      {
+        "label": "Voir le code sur GitHub",
+        "url": "https://github.com/mohammadmasah/Job-Tracker-Aggregator"
+      }
+    ]
+  },
+  "project-8": {
+    "stack": [
+      "Angular 19",
+      "AG Grid",
+      "Docker",
+      "Vitest"
+    ],
+    "resources": [
+      {
+        "label": "Voir le dépôt",
+        "url": "https://github.com/mohammadmasah/Star-wars"
+      }
+    ]
+  },
+  "porject-9": {
+    "stack": [
+      "React & Vite",
+      "Node & Express",
+      "MongoDB Atlas",
+      "JWT / Zod"
+    ],
+    "resources": [
+      {
+        "label": "Voir le dépôt",
+        "url": "https://github.com/mohammadmasah/Altlearn"
+      }
+    ]
+  },
+  "project-10": {
+    "stack": [
+      "Moteur n8n",
+      "Gemini AI",
+      "Docker",
+      "API Google"
+    ],
+    "resources": [
+      {
+        "label": "Voir le dépôt",
+        "url": "https://github.com/mohammadmasah/persona.git"
+      }
+    ]
+  }
+}

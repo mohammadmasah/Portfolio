@@ -1,0 +1,101 @@
+---
+layout: post
+title: "Star Wars Fleet"
+image: "/assets/images/Star-wars.png"
+description: "A high-performance Angular application featuring AG Grid, infinite scrolling, and real-time data persistence."
+author: mohammad masah
+tags: []
+categories: [See more]
+
+slug: project-8
+date: 2026-4-30
+fr_url: /project-8/
+en_url: /en/project-8/
+lang: en
+locale: en_GB
+---
+
+&#8203;Star Wars Fleet is a professional data management application built with Angular 19, focusing on high-performance grid operations, state persistence, and modern CI/CD integration.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        This project demonstrates <strong>Enterprise-grade Frontend Engineering</strong> using AG Grid, 
+        efficient state management, and automated Dockerized deployment pipelines.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-angular fa-2x"></i>
+            </div>
+            <small>Angular 19</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-table fa-2x"></i>
+            </div>
+            <small>AG Grid</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-docker fa-2x"></i>
+            </div>
+            <small>Docker</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-vial fa-2x"></i>
+            </div>
+            <small>Vitest</small>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-microchip"></i> Performance & Grid
+            </h3>
+            <p>Focusing on <strong>Seamless Data Handling</strong>, I implemented:</p>
+            <ul>
+                <li><strong>Infinite Scroll:</strong> AG Grid Row Model for background fetching.</li>
+                <li><strong>Silent Loading:</strong> No-loader behavior for sub-page requests.</li>
+                <li><strong>State Persistence:</strong> LocalStorage integration for editable cells.</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-cogs"></i> Technical Workflow
+            </h3>
+            <p>A professional development infrastructure:</p>
+            <ul>
+                <li><strong>CI/CD Integration:</strong> Automated testing on every pull request.</li>
+                <li><strong>Environment Parity:</strong> Fully containerized app using Docker.</li>
+                <li><strong>Unit Testing:</strong> High coverage using Vitest and TestBed.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-star"></i>
+        <strong>Implementation Note:</strong> The app fetches data from the SWAPI API and merges it with client-side edits, ensuring data survive page refreshes while keeping the UI highly responsive.
+    </div>
+
+    <div class="project-actions">
+
+        <a href="https://github.com/mohammadmasah/Star-wars" target="_blank"
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Repository
+        </a>
+
+    </div>
+
+</div>

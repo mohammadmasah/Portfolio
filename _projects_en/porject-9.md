@@ -1,0 +1,101 @@
+---
+layout: post
+title: "AltLearn – Full-Stack LMS Platform"
+image: "/assets/images/AltLearn-hero.png"
+description: "A comprehensive Learning Management System built for Epitech Web@académie using React, Node.js, and MongoDB."
+author: mohammad masah
+tags: [featured]
+categories: [See more]
+
+slug: porject-9
+date: 2026-5-17
+fr_url: /porject-9/
+en_url: /en/porject-9/
+lang: en
+locale: en_GB
+---
+
+&#8203;AltLearn is a custom-built Learning Management System (LMS) designed for Epitech, featuring a decoupled architecture with a Node.js REST API and a dynamic React frontend.
+
+<div class="project-overview">
+
+    <p class="project-lead">
+        This project showcase robust <strong>Client-Side Architecture</strong>, full API integration, 
+        and fluid user experiences across distinct teacher (Admin) and student roles.
+    </p>
+
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-5 project-panel project-tech-list">
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-react fa-2x"></i>
+            </div>
+            <small>React & Vite</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fab fa-node-js fa-2x"></i>
+            </div>
+            <small>Node & Express</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-database fa-2x"></i>
+            </div>
+            <small>MongoDB Atlas</small>
+        </div>
+
+        <div class="text-center mx-3">
+            <div class="project-tech-icon">
+                <i class="fas fa-shield-alt fa-2x"></i>
+            </div>
+            <small>JWT / Zod</small>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-laptop-code"></i> Frontend Leadership
+            </h3>
+            <p>I was fully responsible for engineering the comprehensive Admin & Teacher experience:</p>
+            <ul>
+                <li><strong>Interactive UI:</strong> Developed all React pages including Sing up, Login , Courses, Lessons, and Quizzes views.</li>
+                <li><strong>State & Routing:</strong> Implemented secure client-side routing for protected Admin/Student roles.</li>
+                <li><strong>API Wiring:</strong> Connected frontend views to the Express REST API via an optimized Vite proxy.</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <h3>
+                <i class="fas fa-server"></i> System Architecture
+            </h3>
+            <p>The platform relies on a secure and scalable backend infrastructure:</p>
+            <ul>
+                <li><strong>Data Validation:</strong> Strict Zod schema validation guarding database integrity on every route.</li>
+                <li><strong>Role Management:</strong> Distinct authentication workflows for student progress and teacher dashboards.</li>
+                <li><strong>Automated Workflows:</strong> Strict Git Flow with mandatory peer reviews and Trello task tracking.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="project-callout">
+        <i class="fas fa-users"></i>
+        <strong>Collaboration Note:</strong> Built in a highly coordinated 3-person team. I worked closely with the backend engineers to sync Mongoose schemas (User, Course, Attempt) directly with dynamic UI state updates.
+    </div>
+
+    <div class="project-actions">
+
+        <a href="https://github.com/mohammadmasah/Altlearn" target="_blank"
+           class="hp-button" rel="noopener noreferrer">
+            <i class="fab fa-github"></i> View Repository
+        </a>
+
+    </div>
+
+</div>

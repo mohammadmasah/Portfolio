@@ -1,0 +1,5 @@
+<nav class="language-switch" aria-label="{{ t.language }}">
+  <a href="{{ french_url | relative_url }}" lang="fr" hreflang="fr" aria-label="Français" {% if language == 'fr' %}aria-current="page"{% endif %} data-language-link>FR</a>
+  <a href="{{ english_url | relative_url }}" lang="en" hreflang="en" aria-label="English" {% if language == 'en' %}aria-current="page"{% endif %} data-language-link>EN</a>
+</nav>
+<script src="{{ '/assets/js/languages.js' | relative_url }}" defer></script>
