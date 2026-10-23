@@ -5,7 +5,7 @@ lang: fr
 locale: fr_FR
 url: "https://mohammad-h.dev"
 baseurl: ""
-logo: "assets/images/logo.png"
+logo: "assets/images/favicon/android-chrome-512x512.png"
 email: "mohammad-haroon.masah@epitech.eu"
 
 social:
