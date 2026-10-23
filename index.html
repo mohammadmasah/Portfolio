@@ -18,7 +18,7 @@ permalink: /
       <h1 id="hero-title" class="hp-hero-title">Développeur Web Full-Stack <em>&amp; Automatisation IA</em></h1>
       <p class="hp-intro">Allier la rigueur du développement Full-Stack à la puissance des intégrations IA (LLM &amp; Automation) pour concevoir des applications web intelligentes, performantes et scalables.</p>
       <div class="hp-actions"><a class="hp-button" href="#projects">Découvrir mes projets <span aria-hidden="true">↗</span></a><a class="hp-button hp-button-secondary" href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">Voir mon CV <span aria-hidden="true">↓</span></a></div>
-      <div class="hp-proof"><div><strong>+10</strong><span>Projets documentés</span></div><div><strong>Web + IA</strong><span>Applications et automatisation</span></div><div><strong>Epitech</strong><span>Étudiant en développement web</span></div></div>
+      <div class="hp-proof"><div><strong class="hp-project-count"><span class="sr-only">+10</span><span data-project-count aria-hidden="true">+10</span></strong><span>Projets documentés</span></div><div><strong>Web + IA</strong><span>Applications et automatisation</span></div><div><strong>Epitech</strong><span>Étudiant en développement web</span></div></div>
     </div>
     {% assign spotlight = home_projects | where: "url", "/project-11/" | first %}
     <a class="hp-spotlight" href="{{ spotlight.url | prepend: locale_prefix | relative_url }}" aria-label="Découvrir {{ spotlight.title | escape }}, mon projet à la une">
@@ -57,3 +57,4 @@ permalink: /
 </div>
 <button id="backToTop" title="Retour en haut" aria-label="Retour en haut">↑</button>
 
+<script src="{{ '/assets/js/project-count.js' | relative_url }}" defer></script>
