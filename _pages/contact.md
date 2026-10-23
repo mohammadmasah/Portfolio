@@ -1,282 +1,47 @@
 ---
-title: "Contact"
-permalink: "/contact.html"
+title: Contact
+layout: default
+home_design: true
+contact_design: true
+description: Get in touch with Mohammad Masah about backend development, AI integration, web applications or a work-study opportunity.
+
+permalink: /contact.html
 ---
+<div class="portfolio-home contact-page hp-shell">
+  <div class="contact-layout">
+    <section class="contact-intro" aria-labelledby="contact-title">
+      <p class="hp-eyebrow">LET’S CONNECT</p>
+      <h1 id="contact-title">Let’s build<br>something <em>useful.</em></h1>
+      <p class="contact-lead">Have an idea, a technical challenge, or a work-study opportunity? I’d love to hear about it.</p>
+      <div class="contact-specialties" aria-label="Areas of interest"><span>Backend development</span><span>AI & automation</span><span>Web applications</span></div>
+      <div class="contact-channels">
+        <a class="contact-channel contact-email" href="mailto:{{ site.email }}"><span class="contact-channel-icon" aria-hidden="true">@</span><span><span class="contact-channel-label">EMAIL ME DIRECTLY</span><strong>{{ site.email }}</strong></span><span class="contact-channel-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-channel" href="https://www.linkedin.com/in/mohammad-masah"><span class="contact-channel-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></span><span><span class="contact-channel-label">LINKEDIN</span><strong>Let’s connect professionally</strong></span><span class="contact-channel-arrow" aria-hidden="true">↗</span></a>
+        <a class="contact-channel" href="https://github.com/mohammadmasah"><span class="contact-channel-icon" aria-hidden="true"><i class="fab fa-github"></i></span><span><span class="contact-channel-label">GITHUB</span><strong>Explore my code & contributions</strong></span><span class="contact-channel-arrow" aria-hidden="true">↗</span></a>
+      </div>
+      <div class="contact-location"><span aria-hidden="true">◎</span> Based in France <span class="contact-location-divider" aria-hidden="true">/</span> Epitech student</div>
+    </section>
 
-<div class="container py-5">
-    <div class="contact-card shadow-lg">
-        <div class="row no-gutters">
-            <div class="col-lg-5 contact-info-panel p-5 text-white">
-                <h2 class="font-weight-bold mb-4 text-white">Get in Touch</h2>
-                <p class="mb-5 opacity-8">I'm open to new opportunities, collaborations, or just a friendly hello. Let's build something amazing together!</p>
-                
-                <div class="contact-links">
-                    <a href="mailto:mohammad-haroon.masah@epitech.eu" class="d-flex align-items-center mb-4 text-white text-decoration-none info-item">
-                        <div class="icon-box mr-3"><i class="fas fa-envelope"></i></div>
-                        <span>mohammad-haroon.masah@epitech.eu</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mohammad-masah" target="_blank" class="d-flex align-items-center mb-4 text-white text-decoration-none info-item">
-                        <div class="icon-box mr-3"><i class="fab fa-linkedin"></i></div>
-                        <span>linkedin.com/in/mohammad-masah</span>
-                    </a>
-                    <div class="d-flex align-items-center text-white info-item">
-                        <div class="icon-box mr-3"><i class="fas fa-map-marker-alt"></i></div>
-                        <span>Based in France</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-7 p-5 bg-white-glass">
-                <form id="contact-form" action="https://formspree.io/f/mqeezkgz" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label class="small font-weight-bold text-dark-blue">NAME</label>
-                            <input id="user-name-input" class="form-control custom-input" type="text" name="name" placeholder="e.g. John Doe" required>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label class="small font-weight-bold text-dark-blue">EMAIL ADDRESS</label>
-                            <input class="form-control custom-input" type="email" name="_replyto" placeholder="your.email@example.com" required>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label class="small font-weight-bold text-dark-blue">MESSAGE</label>
-                        <textarea rows="5" class="form-control custom-input" name="message" placeholder="Let's build something great together" required></textarea>
-                    </div>
-                    <button id="submit-btn" class="btn btn-dark-blue btn-block py-3 font-weight-bold shadow-sm mt-4 text-white" type="submit">
-                        <span id="btn-text">Send Message <i class="fas fa-paper-plane ml-2"></i></span>
-                        <span id="btn-spinner" class="d-none"><i class="fas fa-spinner fa-spin mr-2"></i>Sending...</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
+    <section class="contact-form-panel" aria-labelledby="contact-form-title">
+      <div class="hp-window-bar"><span class="hp-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>START A CONVERSATION</span><span aria-hidden="true">↗</span></div>
+      <div class="contact-form-body">
+        <h2 id="contact-form-title">Tell me what you have in mind.</h2>
+        <p class="contact-form-intro">A little context is a great place to start.</p>
+        <form id="contact-form" action="https://formspree.io/f/mqeezkgz" method="POST">
+          <div class="contact-field-row">
+            <div class="contact-field"><label for="contact-name">Your name <span aria-hidden="true">*</span></label><input id="contact-name" type="text" name="name" autocomplete="name" placeholder="Alex Martin" required maxlength="120"></div>
+            <div class="contact-field"><label for="contact-email">Email address <span aria-hidden="true">*</span></label><input id="contact-email" type="email" name="_replyto" autocomplete="email" placeholder="alex@example.com" required maxlength="254"></div>
+          </div>
+          <div class="contact-field"><label for="contact-subject">Subject <span class="contact-optional">(optional)</span></label><input id="contact-subject" type="text" name="subject" placeholder="A project, an opportunity, a question…" maxlength="200"></div>
+          <div class="contact-field"><label for="contact-message">Your message <span aria-hidden="true">*</span></label><textarea id="contact-message" name="message" rows="6" placeholder="What would you like to build or discuss?" required maxlength="10000"></textarea></div>
+          <div class="contact-submit-row"><span>Fields marked * are required.</span><button class="hp-button" id="contact-submit" type="submit"><span id="contact-submit-label">Send message</span><span aria-hidden="true">↗</span></button></div>
+          <p class="contact-feedback" id="contact-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p class="contact-form-note">Your name and email help me reply to your message.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+  <div class="contact-work"><span>Want to see what I’m working on?</span><a class="hp-text-link" href="{{ '/categories.html#see-more' | relative_url }}">Explore my projects <span aria-hidden="true">↗</span></a></div>
+  <footer class="hp-footer"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">View résumé ↗</a></div></footer>
 </div>
-
-<!-- 🌟 پاپ‌آپ شیک (Success Modal) 🌟 -->
-<div id="success-modal" class="modal-overlay d-none">
-    <div class="modal-card">
-        <div class="success-icon-wrap">
-            <i class="fas fa-check-circle"></i>
-        </div>
-        <h3 class="font-weight-bold text-dark-blue mb-2">Message Sent!</h3>
-        <!-- پیام شخصی‌سازی‌شده براساس اسم فرستنده -->
-        <p id="modal-success-message" class="text-muted mb-4">
-            Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.
-        </p>
-        <button id="close-modal-btn" class="btn btn-dark-blue text-white px-4 py-2 font-weight-bold rounded-pill">
-            Got it, thanks!
-        </button>
-    </div>
-</div>
-
-<style>
-    footer { display: none; }
-    
-    .contact-card {
-        border-radius: 20px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .contact-info-panel {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    }
-
-    .icon-box {
-        width: 40px;
-        height: 40px;
-        background: rgba(255, 255, 255, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        font-size: 1.2rem;
-        color: #38bdf8; 
-    }
-
-    .info-item:hover {
-        transform: translateX(10px);
-        color: #38bdf8 !important;
-    }
-
-    .bg-white-glass {
-        background: rgba(255, 255, 255, 0.95);
-    }
-
-    .custom-input {
-        border: none;
-        border-bottom: 2px solid #e2e8f0;
-        border-radius: 0;
-        padding-left: 0;
-        background: transparent !important;
-        transition: 0.3s;
-    }
-
-    .custom-input:focus {
-        box-shadow: none;
-        border-color: #0f172a;
-    }
-
-    .btn-dark-blue {
-        background-color: #0f172a;
-        border: none;
-        transition: 0.3s;
-    }
-
-    .btn-dark-blue:hover {
-        background-color: #334155;
-        transform: translateY(-2px);
-    }
-
-    .text-dark-blue { color: #0f172a; }
-    .opacity-8 { opacity: 0.8; }
-
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-
-    .modal-overlay.show {
-        opacity: 1;
-    }
-
-    .modal-card {
-        background: #ffffff;
-        padding: 40px 30px;
-        border-radius: 24px;
-        max-width: 440px;
-        width: 90%;
-        text-align: center;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        transform: scale(0.8);
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .modal-overlay.show .modal-card {
-        transform: scale(1);
-    }
-
-    .success-icon-wrap {
-        font-size: 4rem;
-        color: #10b981;
-        margin-bottom: 15px;
-        animation: popIn 0.5s ease-out;
-    }
-
-    @keyframes popIn {
-        0% { transform: scale(0); }
-        80% { transform: scale(1.2); }
-        100% { transform: scale(1); }
-    }
-</style>
-
-<div id="particles-js" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; background-color: #f8fafc;"></div>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-<script>
-  // ۱. تنظیمات ذرات Background
-  particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#0f172a" }, 
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.1, "random": false },
-      "size": { "value": 3, "random": true },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#0f172a",
-        "opacity": 0.1,
-        "width": 1
-      },
-      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
-    },
-    "retina_detect": true
-  });
-
-  // ۲. مدیریت پارامتر لینک درخواست کد
-  const urlParams = new URLSearchParams(window.location.search);
-  const subject = urlParams.get('subject');
-  if (subject) {
-    const textarea = document.querySelector('textarea[name="message"]');
-    if (textarea) {
-      textarea.value = "Hello Mohammad,\n\nI would like to request code access for the " + subject + " project.";
-    }
-  }
-
-  // ۳. مدیریت ارسال فرم به صورت AJAX و استخراج نام فرستنده
-  const form = document.getElementById('contact-form');
-  const modal = document.getElementById('success-modal');
-  const closeModalBtn = document.getElementById('close-modal-btn');
-  const btnText = document.getElementById('btn-text');
-  const btnSpinner = document.getElementById('btn-spinner');
-  const userNameInput = document.getElementById('user-name-input');
-  const modalSuccessMessage = document.getElementById('modal-success-message');
-
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    btnText.classList.add('d-none');
-    btnSpinner.classList.remove('d-none');
-
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        // خواندن اسم وارد شده توسط کاربر
-        const enteredName = userNameInput.value.trim();
-        const firstName = enteredName ? enteredName.split(' ')[0] : '';
-
-        // تنظیم متن مودال بر اساس اسم فرستنده
-        if (firstName) {
-          modalSuccessMessage.textContent = `Thank you for reaching out, ${firstName}! Your message has been sent successfully. I will get back to you as soon as possible.`;
-        } else {
-          modalSuccessMessage.textContent = `Thank you for reaching out! Your message has been sent successfully. I will get back to you as soon as possible.`;
-        }
-
-        form.reset(); 
-    
-        modal.classList.remove('d-none');
-        setTimeout(() => modal.classList.add('show'), 10);
-      } else {
-        alert("Oops! There was a problem submitting your form. Please try again.");
-      }
-    } catch (error) {
-      alert("Oops! There was a network error. Please try again.");
-    } finally {
-      btnText.classList.remove('d-none');
-      btnSpinner.classList.add('d-none');
-    }
-  });
-
-  // ۴. بستن مودال
-  closeModalBtn.addEventListener('click', function() {
-    modal.classList.remove('show');
-    setTimeout(() => modal.classList.add('d-none'), 300);
-  });
-</script>
+<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
