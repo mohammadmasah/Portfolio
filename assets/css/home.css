@@ -66,6 +66,11 @@ body.home-redesign { --hp-header-height: 72px; padding-top: var(--hp-header-heig
 .hp-project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
 .hp-carousel { display: grid; grid-template-columns: 40px minmax(0, 1fr) 40px; align-items: center; gap: 12px; margin-inline: -52px; }
 .hp-carousel-track { grid-column: 2; grid-row: 1; display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 44px) / 3); gap: 22px; overflow-x: auto; padding: 12px 0; scroll-behavior: auto; scrollbar-width: none; }
+.hp-carousel-track {
+  --carousel-fade-width: 64px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--carousel-fade-width), #000 calc(100% - var(--carousel-fade-width)), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 var(--carousel-fade-width), #000 calc(100% - var(--carousel-fade-width)), transparent);
+}
 .hp-carousel-track::-webkit-scrollbar { display: none; }
 .hp-carousel .hp-project { min-width: 0; position: relative; text-decoration: none; transform-origin: center; }
 .hp-carousel .hp-project:hover, .hp-carousel .hp-project:focus-visible { transform: scale(1.018); z-index: 1; border-color: var(--hp-accent); }
@@ -136,7 +141,7 @@ body.home-redesign { --hp-header-height: 72px; padding-top: var(--hp-header-heig
   .hp-section-top { align-items: flex-start; flex-direction: column; gap: 18px; }
   .hp-project-grid, .hp-skills-grid, .hp-about { grid-template-columns: 1fr; }
   .hp-carousel { grid-template-columns: 30px minmax(0, 1fr) 30px; gap: 8px; }
-  .hp-carousel-track { grid-auto-columns: 100%; }
+  .hp-carousel-track { grid-auto-columns: 100%; --carousel-fade-width: 24px; }
   .hp-carousel-arrow { width: 30px; height: 42px; font-size: 20px; }
   .hp-about { gap: 24px; }
   .hp-contact { flex-direction: column; align-items: flex-start; padding: 26px; margin-bottom: 30px; }
