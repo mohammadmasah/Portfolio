@@ -1,0 +1,26 @@
+{% if language == 'en' %}
+  {% assign carousel_previous = 'Previous projects' %}
+  {% assign carousel_next = 'Next projects' %}
+  {% assign carousel_pause = 'Pause slideshow' %}
+  {% assign carousel_play = 'Play slideshow' %}
+  {% assign carousel_view = 'View project' %}
+{% else %}
+  {% assign carousel_previous = 'Projets précédents' %}
+  {% assign carousel_next = 'Projets suivants' %}
+  {% assign carousel_pause = 'Mettre en pause' %}
+  {% assign carousel_play = 'Lancer le diaporama' %}
+  {% assign carousel_view = 'Voir le projet' %}
+{% endif %}
+<div class="hp-carousel" data-project-carousel role="region" aria-labelledby="work-title">
+  <button class="hp-carousel-arrow hp-carousel-previous" type="button" aria-label="{{ carousel_previous }}" aria-controls="project-slides" hidden><span aria-hidden="true">&lt;</span></button>
+  <div class="hp-carousel-track" id="project-slides">
+    {% for project in home_projects %}
+    <a class="hp-project" href="{{ project.url | prepend: locale_prefix | relative_url }}" aria-labelledby="carousel-project-{{ forloop.index }}">
+      <div class="hp-project-image"><img src="{{ project.image | relative_url }}" alt="" width="800" height="500" loading="lazy"><span class="hp-project-number">0{{ forloop.index }}</span></div>
+      <div class="hp-project-details"><p class="hp-label">{{ project.category }}</p><h3 id="carousel-project-{{ forloop.index }}">{{ project.title }}</h3><p>{{ project.description }}</p><div class="hp-tags">{% for tech in project.stack %}<span>{{ tech }}</span>{% endfor %}</div><span class="hp-project-link">{{ carousel_view }} <span aria-hidden="true">↗</span></span></div>
+    </a>
+    {% endfor %}
+  </div>
+  <button class="hp-carousel-arrow hp-carousel-next" type="button" aria-label="{{ carousel_next }}" aria-controls="project-slides" hidden><span aria-hidden="true">&gt;</span></button>
+  <button class="hp-carousel-toggle" type="button" data-pause-label="{{ carousel_pause }}" data-play-label="{{ carousel_play }}" hidden>{{ carousel_pause }}</button>
+</div>

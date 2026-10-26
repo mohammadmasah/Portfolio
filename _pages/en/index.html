@@ -31,14 +31,7 @@ permalink: /en/
 
   <section class="hp-shell hp-section" id="projects" aria-labelledby="work-title">
     <div class="hp-section-top"><div><p class="hp-eyebrow">01 / SELECTED PROJECTS</p><h2 id="work-title">What I’ve built<span>.</span></h2><p>Real applications. Different challenges. A look at the work behind the code.</p></div><a class="hp-text-link" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}">All {{ site.posts.size }} projects <span aria-hidden="true">↗</span></a></div>
-    <div class="hp-project-grid">
-      {% for project in home_projects %}
-      <article class="hp-project">
-        <a class="hp-project-image" href="{{ project.url | prepend: locale_prefix | relative_url }}" aria-label="Explore {{ project.title | escape }}"><img src="{{ project.image | relative_url }}" alt="{{ project.title | escape }} project preview" width="800" height="500" loading="lazy"><span class="hp-project-number">0{{ forloop.index }}</span></a>
-        <div class="hp-project-details"><p class="hp-label">{{ project.category }}</p><h3><a href="{{ project.url | prepend: locale_prefix | relative_url }}">{{ project.title }}</a></h3><p>{{ project.description }}</p><div class="hp-tags">{% for tech in project.stack %}<span>{{ tech }}</span>{% endfor %}</div><a class="hp-project-link" href="{{ project.url | prepend: locale_prefix | relative_url }}">View project <span aria-hidden="true">↗</span></a></div>
-      </article>
-      {% endfor %}
-    </div>
+    {% include project-carousel.html %}
   </section>
 
   <section class="hp-skills-section" aria-labelledby="skills-title"><div class="hp-shell hp-section">
@@ -58,3 +51,4 @@ permalink: /en/
 <button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
 
 <script src="{% include asset-url.html path='/assets/js/project-count.js' %}" defer></script>
+<script src="{% include asset-url.html path='/assets/js/project-carousel.js' %}" defer></script>
