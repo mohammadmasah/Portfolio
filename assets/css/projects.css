@@ -32,8 +32,8 @@
 .catalog-card .hp-project-link > span { font-size: 18px; }
 .catalog-card:hover .hp-project-link { color: var(--hp-accent); }
 .project-catalog .catalog-featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.05fr 1fr; padding: 12px; border-color: #68444f; gap: 24px; background: linear-gradient(115deg, #25212a, #1d1e25 70%); }
-.catalog-featured .hp-project-image { aspect-ratio: auto; min-height: 310px; }
-.catalog-featured .hp-project-image img { position: absolute; inset: 0; }
+.catalog-featured .hp-project-image { align-self: center; width: 100%; aspect-ratio: auto; min-height: 0; }
+.catalog-featured .hp-project-image img { position: static; height: auto; object-fit: contain; }
 .catalog-featured-label { position: absolute; top: 16px; left: 16px; padding: 8px 11px; border-radius: 4px; color: #fff; background: #14151af0; font: 10px/1.5 ui-monospace, monospace; letter-spacing: .08em; }
 .project-catalog .catalog-featured h2 { font-size: clamp(24px, 2.6vw, 32px); }
 .catalog-featured .hp-project-details { padding: 18px 18px 14px 0; }
@@ -62,7 +62,6 @@
   .catalog-intro br { display: none; }
   .catalog-filters button { padding: 9px 10px; }
   .project-catalog .catalog-featured { display: flex; gap: 0; }
-  .catalog-featured .hp-project-image { aspect-ratio: 1.7; min-height: 0; }
   .catalog-featured .hp-project-details { padding: 20px 14px 12px; }
   .catalog-contact { flex-direction: column; align-items: flex-start; padding-block: 36px; margin-top: 32px; }
 }
