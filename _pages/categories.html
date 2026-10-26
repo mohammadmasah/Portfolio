@@ -68,4 +68,4 @@ permalink: /categories.html
   <section class="catalog-contact" aria-labelledby="catalog-contact-title"><div><p class="hp-eyebrow">ÉCHANGEONS</p><h2 id="catalog-contact-title">Un projet en tête ?</h2><p>Discutons de l’application, de l’API ou de l’automatisation que vous souhaitez créer.</p></div><a class="hp-button hp-button-secondary" href="{{ '/contact.html' | prepend: locale_prefix | relative_url }}">Me contacter <span aria-hidden="true">↗</span></a></section>
   <footer class="hp-footer"><span>Mohammad Masah · Développeur full-stack et automatisation IA</span><div><a href="{{ '/' | prepend: locale_prefix | relative_url }}">Accueil</a><a href="#see-more">Retour en haut ↑</a></div></footer>
 </div>
-<script src="{{ '/assets/js/projects.js' | relative_url }}" defer></script>
+<script src="{% include asset-url.html path='/assets/js/projects.js' %}" defer></script>

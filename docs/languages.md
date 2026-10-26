@@ -24,3 +24,5 @@ node scripts/check_language_ui.js /tmp/portfolio-bilingual-check
 Les tests vérifient les pages jumelles, les liens internes, les ancres, les index de recherche et les comportements interactifs dans les deux langues. Les envois du formulaire sont simulés.
 
 Après un changement de `_config.yml`, relancer `jekyll serve` pour charger la collection anglaise. La pagination de l’ancien thème n’est pas utilisée : la liste des projets affiche tous les projets et les filtre dans chaque langue.
+
+Les fichiers CSS et JavaScript passent par `_includes/asset-url.html`. Leur URL contient la révision GitHub Pages (`?v=…`), ou la date du build local, afin de renouveler le cache à chaque publication.

@@ -50,4 +50,4 @@ permalink: /contact.html
   <div class="contact-work"><span>Envie de découvrir mes réalisations ?</span><a class="hp-text-link" href="{{ '/categories.html#see-more' | prepend: locale_prefix | relative_url }}">Découvrir mes projets <span aria-hidden="true">↗</span></a></div>
   <footer class="hp-footer"><span>© {{ site.time | date: '%Y' }} Mohammad Masah</span><div><a href="{{ '/' | prepend: locale_prefix | relative_url }}">Accueil</a><a href="{{ '/assets/docs/MASAH_Mohammad Haroon_CV.pdf' | relative_url }}">Voir mon CV ↗</a></div></footer>
 </div>
-<script src="{{ '/assets/js/contact.js' | relative_url }}" defer></script>
+<script src="{% include asset-url.html path='/assets/js/contact.js' %}" defer></script>

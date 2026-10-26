@@ -1,11 +1,13 @@
 """Validate the generated bilingual site: python3 scripts/check_languages.py BUILD_DIR."""
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 import json
 import sys
 
 root = Path(sys.argv[1])
+expected_asset_version = sys.argv[2] if len(sys.argv) > 2 else None
+asset_versions = set()
 
 
 class Page(HTMLParser):
@@ -13,6 +15,7 @@ class Page(HTMLParser):
         super().__init__()
         self.lang = None
         self.links = []
+        self.assets = []
         self.switches = []
         self.alternates = {}
         self.ids = []
@@ -23,6 +26,9 @@ class Page(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        asset = a.get('src', a.get('href', ''))
+        if tag in ('link', 'script') and asset.startswith(('/assets/css/', '/assets/js/')):
+            self.assets.append(asset)
         if tag == 'html':
             self.lang = a['lang']
         if 'id' in a:
@@ -82,6 +88,14 @@ for route in routes:
             fragment = urlsplit(href).fragment
             if fragment and target.suffix == '.html':
                 assert unquote(fragment) in Page(target).ids, (url, href, 'missing anchor')
+        assert page.assets, (url, 'missing local assets')
+        for asset in page.assets:
+            assert file_for(asset).is_file(), (url, asset)
+            version = parse_qs(urlsplit(asset).query).get('v', [])
+            assert len(version) == 1 and version[0], (url, 'unversioned asset', asset)
+            if expected_asset_version:
+                assert version[0] == expected_asset_version, (url, asset)
+            asset_versions.add(version[0])
         documents = json.loads(page.search_text)
         assert len(documents) == 15, (url, 'search document count', len(documents))
         assert len({doc['url'] for doc in documents}) == 15
@@ -93,6 +107,8 @@ for route in routes:
             assert page.cards[0]['href'] == prefix + '/project-11/'
             assert all(card.get('data-search') for card in page.cards)
 
+assert len(asset_versions) == 1, ('inconsistent asset versions', asset_versions)
+
 # The English collection must not pollute the French project count or feed.
 assert '/en/' not in (root / 'feed.xml').read_text()
-print(f'PASS: {len(routes) * 2} localized pages, paired language switches, internal links, anchors, search indexes and 11 projects per language.')
+print(f'PASS: {len(routes) * 2} localized pages, paired language switches, internal links, anchors, search indexes, versioned assets and 11 projects per language.')

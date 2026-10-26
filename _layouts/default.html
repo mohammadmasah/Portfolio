@@ -53,31 +53,31 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
 
   <!-- Bootstrap Modified -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/main.css' %}">
 
-  <link rel="stylesheet" href="{{ '/assets/css/languages.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/languages.css' %}">
 
   <!-- Theme Stylesheet -->
-  <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/theme.css' %}">
 
   {% if page.home_design or page.layout == 'post' %}
-  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/home.css' %}">
   {% endif %}
 
   {% if page.layout == 'post' %}
-  <link rel="stylesheet" href="{{ '/assets/css/project.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/project.css' %}">
   {% endif %}
 
   {% if page.project_catalog %}
-  <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/projects.css' %}">
   {% endif %}
 
   {% if page.contact_design %}
-  <link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/contact.css' %}">
   {% endif %}
 
   {% if page.about_design %}
-  <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+  <link rel="stylesheet" href="{% include asset-url.html path='/assets/css/about.css' %}">
   {% endif %}
 
   <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
@@ -171,7 +171,7 @@
   <!-- Scripts: popper, bootstrap, theme, lunr -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <script src="{% include asset-url.html path='/assets/js/theme.js' %}"></script>
 
   {% include tracking-footer.html %}
 
